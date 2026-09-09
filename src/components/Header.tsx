@@ -46,7 +46,7 @@ export const Header: React.FC<HeaderProps> = ({
   const navItems: { id: ScreenId; index: string; label: string }[] = [
     { id: 'overview', index: '01', label: 'OVERVIEW' },
     { id: 'operations', index: '02', label: 'OPERATIONS' },
-    { id: 'case-studies', index: '03', label: 'CASE DOSSIER' },
+    { id: 'case-studies', index: '03', label: 'CASE STUDIES' },
     { id: 'dispatches', index: '04', label: 'FIELD LOGS' },
     { id: 'arsenal', index: '05', label: 'ARSENAL' },
     { id: 'transmission', index: '06', label: 'TRANSMISSION' }
@@ -116,7 +116,7 @@ export const Header: React.FC<HeaderProps> = ({
               </span>
             </div>
             <span className="text-[11px] font-mono-tech tracking-wider text-[#8d9099]">
-              KINETIC OBSIDIAN // SYSTEMS DOSSIER
+              KINETIC OBSIDIAN // SYSTEMS ARCHIVE
             </span>
           </div>
         </button>
@@ -255,7 +255,7 @@ export const Header: React.FC<HeaderProps> = ({
               className="flex-1 py-2 bg-[#18191d] border border-[rgba(255,255,255,0.15)] text-xs font-mono-tech text-[#8d9099] flex items-center justify-center space-x-2"
             >
               <Search size={13} />
-              <span>SEARCH DOSSIER</span>
+              <span>SEARCH PROJECTS</span>
             </button>
             <button
               onClick={() => {

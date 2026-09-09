@@ -60,7 +60,7 @@ export const InteractiveTerminal: React.FC<InteractiveTerminalProps> = ({
           text: `AVAILABLE DIRECTIVES:
   status        - Output global consensus & node telemetry
   projects, ls  - Enumerate operations ledger and project codes
-  open <id>     - Load dossier for project (e.g. open neuron-k, aethel-net)
+  open <id>     - Load details for project (e.g. open neuron-k, aethel-net)
   benchmark     - Run synthetic cycle latency benchmark test
   whoami        - Display identity registry and security clearance
   screen <name> - Jump to screen (overview, operations, case-studies, dispatches, arsenal, transmission)
@@ -89,7 +89,7 @@ export const InteractiveTerminal: React.FC<InteractiveTerminalProps> = ({
         ).join('\n');
         newLogs.push({
           type: 'output',
-          text: `ACTIVE EVIDENCE LEDGER:\n${projList}\nTip: Type "open <id>" to view dossier.`
+          text: `ACTIVE EVIDENCE LEDGER:\n${projList}\nTip: Type "open <id>" to view project details.`
         });
         break;
 
@@ -102,7 +102,7 @@ export const InteractiveTerminal: React.FC<InteractiveTerminalProps> = ({
             (p) => p.id.toLowerCase() === targetId || p.index === targetId
           );
           if (match) {
-            newLogs.push({ type: 'output', text: `Accessing dossier for [${match.title}]...` });
+            newLogs.push({ type: 'output', text: `Accessing details for [${match.title}]...` });
             onSelectProject(match.id);
           } else {
             newLogs.push({ type: 'error', text: `Project id "${targetId}" not found in registry.` });

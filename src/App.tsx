@@ -18,18 +18,19 @@ function ScrollToTop() {
 }
 
 export default function App() {
-  const [isAiAssistantOpen, setIsAiAssistantOpen] = useState(false);
+  const [isQnAOpen, setIsQnAOpen] = useState(false);
 
   return (
     <HashRouter>
       <ScrollToTop />
       <div className="min-h-screen bg-[#090a0c] text-[#e3e2e5] font-body selection:bg-[#ff2a3b] selection:text-white flex flex-col justify-between">
-        <NavigationHeader onToggleAiAssistant={() => setIsAiAssistantOpen(!isAiAssistantOpen)} />
+        <NavigationHeader onToggleQnA={() => setIsQnAOpen(!isQnAOpen)} />
         
         <main className="w-full pt-16 bg-[#090a0c] flex-1">
           <Routes>
             <Route path="/" element={<OverviewPage />} />
             <Route path="/overview" element={<OverviewPage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/projects-and-dossier" element={<ProjectsPage />} />
             <Route path="/resume-and-credentials" element={<ResumePage />} />
             <Route path="/contact" element={<ContactPage />} />
@@ -38,10 +39,10 @@ export default function App() {
 
         <NavigationFooter />
 
-        {/* AI Assistant Drawer connecting to backend /api/assistant/chat with client fallback */}
+        {/* Quick Q&A / FAQ Drawer connecting to backend /api/assistant/chat with client fallback */}
         <AiAssistantDrawer
-          isOpen={isAiAssistantOpen}
-          onClose={() => setIsAiAssistantOpen(false)}
+          isOpen={isQnAOpen}
+          onClose={() => setIsQnAOpen(false)}
         />
       </div>
     </HashRouter>

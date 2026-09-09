@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 interface NavigationHeaderProps {
-  onToggleAiAssistant?: () => void;
+  onToggleQnA?: () => void;
 }
 
-export const NavigationHeader: React.FC<NavigationHeaderProps> = ({ onToggleAiAssistant }) => {
+export const NavigationHeader: React.FC<NavigationHeaderProps> = ({ onToggleQnA }) => {
   const location = useLocation();
   const currentPath = location.pathname;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -39,14 +39,14 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({ onToggleAiAs
             Overview
           </Link>
           <Link
-            to="/projects-and-dossier"
+            to="/projects"
             className={`font-mono text-[13px] uppercase tracking-wider h-full flex items-center transition-colors border-b-2 ${
-              currentPath === "/projects-and-dossier"
+              currentPath === "/projects" || currentPath === "/projects-and-dossier"
                 ? "text-[#ffffff] border-[#ff2a3b] font-semibold"
                 : "text-[#8d9099] border-transparent hover:text-[#ffffff]"
             }`}
           >
-            Projects &amp; Dossier
+            Projects &amp; Work
           </Link>
           <Link
             to="/resume-and-credentials"
@@ -70,17 +70,17 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({ onToggleAiAs
           </Link>
         </nav>
 
-        {/* Right Status Indicator & AI Assistant & Profile Avatar */}
+        {/* Right Status Indicator & Quick Q&A & Profile Avatar */}
         <div className="flex items-center gap-3 shrink-0">
-          {/* AI Assistant Quick Trigger */}
-          {onToggleAiAssistant && (
+          {/* Quick Q&A Trigger */}
+          {onToggleQnA && (
             <button
-              onClick={onToggleAiAssistant}
-              className="hidden lg:flex items-center gap-1.5 px-2.5 py-1 bg-[#121316] border border-[#ff2a3b]/40 text-[#ff2a3b] hover:bg-[#ff2a3b] hover:text-[#ffffff] text-[11px] font-mono tracking-wider transition-all"
-              title="Query AI Assistant about Nakshatra's coursework and skills"
+              onClick={onToggleQnA}
+              className="hidden lg:flex items-center gap-1.5 px-2.5 py-1 bg-[#121316] border border-[#ff2a3b]/40 text-[#ff2a3b] hover:bg-[#ff2a3b] hover:text-[#ffffff] text-[11px] font-mono tracking-wider transition-all cursor-pointer"
+              title="Quick Q&A about Nakshatra's coursework, projects, and availability"
             >
-              <span className="material-symbols-outlined text-[14px]">smart_toy</span>
-              <span>ASK AI</span>
+              <span className="material-symbols-outlined text-[14px]">quiz</span>
+              <span>QUICK Q&amp;A</span>
             </button>
           )}
 
@@ -123,11 +123,11 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({ onToggleAiAs
             Overview
           </Link>
           <Link
-            to="/projects-and-dossier"
+            to="/projects"
             onClick={() => setMobileMenuOpen(false)}
             className="block py-2 text-[#ffffff] hover:text-[#ff2a3b]"
           >
-            Projects &amp; Dossier
+            Projects &amp; Work
           </Link>
           <Link
             to="/resume-and-credentials"
@@ -143,16 +143,16 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({ onToggleAiAs
           >
             Contact
           </Link>
-          {onToggleAiAssistant && (
+          {onToggleQnA && (
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
-                onToggleAiAssistant();
+                onToggleQnA();
               }}
-              className="w-full text-left py-2 text-[#ff2a3b] flex items-center gap-2"
+              className="w-full text-left py-2 text-[#ff2a3b] flex items-center gap-2 cursor-pointer"
             >
-              <span className="material-symbols-outlined text-sm">smart_toy</span>
-              <span>Ask AI Assistant</span>
+              <span className="material-symbols-outlined text-sm">quiz</span>
+              <span>Quick Q&amp;A / FAQ</span>
             </button>
           )}
         </div>

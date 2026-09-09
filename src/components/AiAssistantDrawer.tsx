@@ -17,7 +17,7 @@ export const AiAssistantDrawer: React.FC<AiAssistantDrawerProps> = ({ isOpen, on
   const [messages, setMessages] = useState<Message[]>([
     {
       sender: 'assistant',
-      text: "Hello. I am the verified AI Assistant for Nakshatra Gupta's technical portfolio. Ask me anything about his academic journey as a 2+2 transfer student from Nirma University (B.S. CSE) to Iowa State University (B.S. Computer Engineering), his software development projects (Calmify, Rangam Graphics, NASA SpaceApps), his CyBot embedded work, or his availability for Computer Science / Computer Engineering internships and co-ops.",
+      text: "Hello! Welcome to the Quick Q&A for Nakshatra Gupta's portfolio. You can select any of the suggested questions below or type your own question to get instant answers about his 2+2 academic pathway (Nirma BS CSE to Iowa State BS CE), software development projects (Calmify, Rangam Graphics, NASA SpaceApps, CyBot), technical skills, or internship availability.",
       time: 'SYSTEM READY'
     }
   ]);
@@ -120,12 +120,12 @@ export const AiAssistantDrawer: React.FC<AiAssistantDrawerProps> = ({ isOpen, on
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-[#ff2a3b] animate-pulse"></span>
             <span className="font-mono text-xs text-[#ffffff] font-bold uppercase tracking-wider">
-              DOSSIER AI ASSISTANT // CPR E '27
+              QUICK Q&amp;A // PORTFOLIO FAQ
             </span>
           </div>
           <button
             onClick={onClose}
-            className="p-1 text-[#8d9099] hover:text-[#ffffff] focus:outline-none"
+            className="p-1 text-[#8d9099] hover:text-[#ffffff] focus:outline-none cursor-pointer"
           >
             <span className="material-symbols-outlined text-xl">close</span>
           </button>
@@ -137,7 +137,7 @@ export const AiAssistantDrawer: React.FC<AiAssistantDrawerProps> = ({ isOpen, on
             <button
               key={idx}
               onClick={() => handleSend(prompt)}
-              className="px-2.5 py-1 bg-[#090a0c] border border-[rgba(255,255,255,0.1)] text-[#8d9099] hover:text-[#ffffff] hover:border-[#ff2a3b] whitespace-nowrap transition-colors"
+              className="px-2.5 py-1 bg-[#090a0c] border border-[rgba(255,255,255,0.1)] text-[#8d9099] hover:text-[#ffffff] hover:border-[#ff2a3b] whitespace-nowrap transition-colors cursor-pointer"
             >
               {prompt}
             </button>
@@ -154,7 +154,7 @@ export const AiAssistantDrawer: React.FC<AiAssistantDrawerProps> = ({ isOpen, on
               }`}
             >
               <div className="flex items-center gap-2 text-[10px] font-mono text-[#52545d] mb-1">
-                <span>{m.sender === 'user' ? 'RECRUITER / VISITOR' : 'SYSTEM AI NODE'}</span>
+                <span>{m.sender === 'user' ? 'YOU' : 'PORTFOLIO FAQ'}</span>
                 <span>•</span>
                 <span>{m.time}</span>
               </div>
@@ -173,7 +173,7 @@ export const AiAssistantDrawer: React.FC<AiAssistantDrawerProps> = ({ isOpen, on
           {loading && (
             <div className="flex items-center gap-2 text-xs font-mono text-[#ff2a3b]">
               <span className="material-symbols-outlined text-sm animate-spin">sync</span>
-              <span>Querying verified systems dossier...</span>
+              <span>Retrieving answer...</span>
             </div>
           )}
         </div>
@@ -190,13 +190,13 @@ export const AiAssistantDrawer: React.FC<AiAssistantDrawerProps> = ({ isOpen, on
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="Ask about skills, coursework, projects, or availability..."
+            placeholder="Ask a question (skills, coursework, projects, or availability)..."
             className="flex-1 bg-[#121316] border border-[rgba(255,255,255,0.15)] px-3 py-2 text-xs text-[#ffffff] font-mono placeholder-[#52545d] focus:outline-none focus:border-[#ff2a3b]"
           />
           <button
             type="submit"
             disabled={loading}
-            className="px-4 py-2 bg-[#ff2a3b] text-[#ffffff] font-mono text-xs uppercase font-bold hover:bg-[#ff4d5d] transition-colors disabled:opacity-50 flex items-center gap-1"
+            className="px-4 py-2 bg-[#ff2a3b] text-[#ffffff] font-mono text-xs uppercase font-bold hover:bg-[#ff4d5d] transition-colors disabled:opacity-50 flex items-center gap-1 cursor-pointer"
           >
             <span>SEND</span>
             <span className="material-symbols-outlined text-sm">send</span>

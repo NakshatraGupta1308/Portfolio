@@ -13,7 +13,7 @@ export const ProjectsPage: React.FC = () => {
 
   return (
     <div className="flex flex-col w-full text-[#e3e2e5]">
-      {/* Top Dossier Ledger Header */}
+      {/* Top Projects Ledger Header */}
       <section className="w-full bg-[#090a0c] px-4 sm:px-8 py-10 border-b border-[rgba(255,255,255,0.08)]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-2">
@@ -23,7 +23,7 @@ export const ProjectsPage: React.FC = () => {
               <span className="text-[#8d9099]">4 VERIFIED ENTRIES</span>
             </div>
             <h1 className="font-display text-4xl sm:text-6xl text-[#ffffff] tracking-tight">
-              PROJECTS &amp; DOSSIER
+              PROJECTS &amp; WORK
             </h1>
             <p className="font-body text-base text-[#8d9099] max-w-2xl">
               Full-stack native Android architectures, production commercial web platforms, GPU-accelerated 3D simulations, and autonomous embedded robotics.
@@ -73,7 +73,7 @@ export const ProjectsPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Dossier Main Grid */}
+      {/* Projects Main Grid */}
       <main className="w-full bg-[#090a0c] px-4 sm:px-8 py-12">
         <div className="max-w-7xl mx-auto flex flex-col gap-10">
           {/* PROJECT 01: Calmify (Native Android Mental Health Platform) */}

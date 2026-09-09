@@ -351,7 +351,7 @@ export const OverviewScreen: React.FC<OverviewScreenProps> = ({
               onClick={() => onSelectScreen('case-studies')}
               className="px-6 py-3 bg-[#18191d] text-[#ffffff] border border-[rgba(255,255,255,0.2)] font-mono-tech text-xs uppercase tracking-wider hover:border-[#ff2a3b] transition-all"
             >
-              BROWSE DEEP DOSSIERS
+              BROWSE CASE STUDIES
             </button>
           </div>
         </div>

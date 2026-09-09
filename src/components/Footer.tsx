@@ -123,7 +123,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectScreen, onToggleTerminal
                 onClick={() => onSelectScreen('case-studies')}
                 className="text-left text-[#8d9099] hover:text-[#ff2a3b] py-1 transition-colors"
               >
-                03 // CASE DOSSIER
+                03 // CASE STUDIES
               </button>
               <button
                 onClick={() => onSelectScreen('dispatches')}

@@ -53,7 +53,7 @@ export const CaseStudiesScreen: React.FC<CaseStudiesScreenProps> = ({
           <span>HIGH-ASSURANCE ARCHITECTURAL SCHEMATICS</span>
         </div>
         <h1 className="font-display font-bold text-4xl sm:text-6xl text-[#ffffff] tracking-tight">
-          CASE STUDY DOSSIER
+          CASE STUDY ARCHIVE
         </h1>
         <p className="max-w-3xl text-sm sm:text-base font-body text-[#8d9099] leading-relaxed">
           In-depth technical verification reports, benchmark telemetry, and formally proven microcode implementations for mission-critical deployments.
@@ -84,7 +84,7 @@ export const CaseStudiesScreen: React.FC<CaseStudiesScreenProps> = ({
         })}
       </div>
 
-      {/* Project Overview Banner / Dossier Sheet */}
+      {/* Project Overview Banner / Project Sheet */}
       <div className="bg-[#121316] border border-[rgba(255,255,255,0.12)] p-6 sm:p-10 space-y-8">
         {/* Title Meta Row */}
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-[rgba(255,255,255,0.08)]">

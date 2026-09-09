@@ -59,9 +59,9 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
     | { type: 'skill'; id: string; label: string; desc: string; icon: React.ReactNode };
 
   const allItems: SearchItem[] = [
-    { type: 'screen', id: 'overview', label: '01 // OVERVIEW', desc: 'Systems dossier, manifesto, telemetry, & featured operations', icon: <Layers size={14} className="text-[#ff2a3b]" /> },
+    { type: 'screen', id: 'overview', label: '01 // OVERVIEW', desc: 'Engineering portfolio, background, telemetry, & featured work', icon: <Layers size={14} className="text-[#ff2a3b]" /> },
     { type: 'screen', id: 'operations', label: '02 // OPERATIONS', desc: 'Complete evidence atlas & technical project records ledger', icon: <FileCode size={14} className="text-[#00ff66]" /> },
-    { type: 'screen', id: 'case-studies', label: '03 // CASE DOSSIER', desc: 'Deep architectural schematics, benchmarks & verified code', icon: <Cpu size={14} className="text-[#ff2a3b]" /> },
+    { type: 'screen', id: 'case-studies', label: '03 // CASE STUDIES', desc: 'Deep architectural schematics, benchmarks & verified code', icon: <Cpu size={14} className="text-[#ff2a3b]" /> },
     { type: 'screen', id: 'dispatches', label: '04 // FIELD LOGS', desc: 'Published research monographs, formal proofs & papers', icon: <BookOpen size={14} className="text-[#8d9099]" /> },
     { type: 'screen', id: 'arsenal', label: '05 // ARSENAL', desc: 'Technical weaponry matrix, latency simulator & capabilities', icon: <Terminal size={14} className="text-[#00ff66]" /> },
     { type: 'screen', id: 'transmission', label: '06 // TRANSMISSION', desc: 'Encrypted direct inquiries, PGP verification & consultation', icon: <Send size={14} className="text-[#ff2a3b]" /> },

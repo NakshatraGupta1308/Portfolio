@@ -242,7 +242,7 @@ app.get("/api/projects", (req, res) => {
 app.get("/api/projects/:id", (req, res) => {
   const project = RESUME_DATA.projects.find((p) => p.id === req.params.id);
   if (!project) {
-    return res.status(404).json({ error: "Project not found in systems dossier" });
+    return res.status(404).json({ error: "Project not found in portfolio" });
   }
   res.json({ project });
 });
@@ -301,7 +301,7 @@ app.get("/api/contact/messages", (req, res) => {
   });
 });
 
-// 9. Intelligent AI Assistant endpoint for Nakshatra's Portfolio
+// 9. Quick Q&A / FAQ endpoint for Nakshatra's Portfolio
 let geminiClient: GoogleGenAI | null = null;
 function getGeminiClient(): GoogleGenAI | null {
   if (!geminiClient && process.env.GEMINI_API_KEY) {
@@ -317,8 +317,8 @@ app.post("/api/assistant/chat", async (req, res) => {
     return res.status(400).json({ error: "Missing or invalid 'question' parameter in request body." });
   }
 
-  const prompt = `You are the technical AI Assistant representing Nakshatra Gupta's professional portfolio.
-Here is the factual dossier on Nakshatra Gupta:
+  const prompt = `You are providing answers for the Quick Q&A / FAQ section on Nakshatra Gupta's professional portfolio.
+Here is the factual profile and background on Nakshatra Gupta:
 - Academic Journey: 2+2 Transfer Student who completed two years of Bachelor of Science in Computer Science Engineering (BS CSE) at Nirma University (Ahmedabad, India, 2023-2025) before transferring to Iowa State University to complete his B.S. in Computer Engineering (CPR E '27). He will hold degrees in BS CSE and CE.
 - Qualifications & Strengths: Nakshatra knows principles of software engineering and has a strong hold over software development (full-stack web development, Android applications, backend systems, and interactive graphics). His projects are primarily software-focused (Calmify, Rangam Graphics, NASA SpaceApps), with CyBot serving as his foundational embedded hardware lab. He is interested in jobs related to software rather than hardware.
 - Availability: Actively interviewing for Computer Science / Computer Engineering Internships and Co-ops for Fall 2026, and full-time opportunities post-graduation (May 2027). Open to relocation across the US.

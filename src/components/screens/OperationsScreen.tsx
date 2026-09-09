@@ -247,7 +247,7 @@ export const OperationsScreen: React.FC<OperationsScreenProps> = ({ onSelectProj
                           onClick={() => onSelectProject(project.id)}
                           className="w-full py-1.5 bg-[#ffffff] text-[#090a0c] font-bold uppercase tracking-wider hover:bg-[#ff2a3b] hover:text-[#ffffff] transition-colors"
                         >
-                          OPEN COMPLETE DOSSIER →
+                          VIEW COMPLETE CASE STUDY →
                         </button>
                       </div>
                     </div>

@@ -73,7 +73,7 @@ TECHNICAL SKILLS:
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-1.5 text-[#ffffff]">
               <span className="w-2 h-2 rounded-full bg-[#00ff66]"></span>
-              DOSSIER: CERTIFIED
+              PROFILE: VERIFIED
             </span>
             <span className="hidden sm:inline text-[rgba(255,255,255,0.12)]">/</span>
             <span className="hidden sm:inline">TRAJECTORY: 2+2 NIRMA (BS CSE) → ISU (BS CE)</span>
@@ -100,7 +100,7 @@ TECHNICAL SKILLS:
                 <span>VERIFIED CREDENTIALS</span>
               </div>
               <h1 className="font-display text-4xl sm:text-6xl text-[#ffffff] tracking-tight uppercase">
-                RESUME &amp; DOSSIER
+                RESUME &amp; PROFILE
               </h1>
               <p className="font-body text-sm sm:text-base text-[#8d9099]">
                 2+2 Computer Science &amp; Engineering transfer student from Nirma University (BS CSE) to Iowa State University (BS Computer Engineering). Holds a strong foundation in principles of software engineering, full-stack software development, native Android applications, responsive web platforms, and embedded computing.

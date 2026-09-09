@@ -53,7 +53,7 @@ export const OverviewPage: React.FC = () => {
               {/* Interactive Action Cluster */}
               <div className="flex flex-wrap items-center gap-3 pt-2 font-mono text-[13px]">
                 <Link
-                  to="/projects-and-dossier"
+                  to="/projects"
                   className="bg-[#ffffff] text-[#090a0c] px-6 py-2.5 font-semibold uppercase tracking-wider hover:bg-[#ff2a3b] hover:text-[#ffffff] transition-colors"
                 >
                   Explore Projects [04]
@@ -219,8 +219,8 @@ export const OverviewPage: React.FC = () => {
         </div>
       </section>
 
-      {/* FEATURED DOSSIER: FOUR MAJOR PROJECTS */}
-      <section className="w-full bg-[#121316] px-4 sm:px-8 py-16" id="featured-dossier">
+      {/* FEATURED WORK: FOUR MAJOR PROJECTS */}
+      <section className="w-full bg-[#121316] px-4 sm:px-8 py-16" id="featured-projects">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
@@ -481,15 +481,15 @@ export const OverviewPage: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-7 space-y-4">
                 <div className="flex items-center gap-2 font-mono text-[13px] text-[#ff2a3b] uppercase">
-                  <span>// 02. CREDENTIALS &amp; DOSSIER</span>
+                  <span>// 02. CREDENTIALS &amp; PROFILE</span>
                   <span className="text-[#52545d]">/</span>
                   <span className="text-[#8d9099]">VERIFIED RECORDS</span>
                 </div>
                 <h2 className="font-display text-2xl sm:text-4xl text-[#ffffff] uppercase tracking-tight">
-                  Verified Technical Dossier
+                  Verified Technical Profile
                 </h2>
                 <p className="font-body text-sm text-[#8d9099] leading-relaxed">
-                  Review my verified history covering 2+2 articulation from Nirma University (BS CSE) to Iowa State University, full-stack software applications, native Android platform engineering, and verified coursework. Available for offline review via downloadable standard PDF/JPG or web dossier index.
+                  Review my verified history covering 2+2 articulation from Nirma University (BS CSE) to Iowa State University, full-stack software applications, native Android platform engineering, and verified coursework. Available for offline review via downloadable standard PDF/JPG or interactive web profile.
                 </p>
 
                 {/* Key Resume Highlights */}
@@ -518,7 +518,7 @@ export const OverviewPage: React.FC = () => {
                     className="bg-[#ffffff] text-[#090a0c] px-6 py-2.5 uppercase font-semibold hover:bg-[#ff2a3b] hover:text-[#ffffff] transition-colors flex items-center gap-2"
                   >
                     <span className="material-symbols-outlined text-base">description</span>
-                    <span>Open Full Resume Dossier</span>
+                    <span>Open Full Resume &amp; Profile</span>
                   </Link>
                   <a
                     className="bg-[#1f2022] text-[#ffffff] px-6 py-2.5 uppercase font-semibold hover:bg-[#292a2c] transition-colors flex items-center gap-2 border border-[rgba(255,255,255,0.1)]"
