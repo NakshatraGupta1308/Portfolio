@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { NavigationHeader } from './components/NavigationHeader';
 import { NavigationFooter } from './components/NavigationFooter';
 import { AiAssistantDrawer } from './components/AiAssistantDrawer';
@@ -20,7 +20,7 @@ export default function App() {
   const [isAiAssistantOpen, setIsAiAssistantOpen] = useState(false);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ScrollToTop />
       <div className="min-h-screen bg-[#090a0c] text-[#e3e2e5] font-body selection:bg-[#ff2a3b] selection:text-white flex flex-col justify-between">
         <NavigationHeader onToggleAiAssistant={() => setIsAiAssistantOpen(!isAiAssistantOpen)} />
@@ -36,12 +36,12 @@ export default function App() {
 
         <NavigationFooter />
 
-        {/* AI Assistant Drawer connecting to backend /api/assistant/chat */}
+        {/* AI Assistant Drawer connecting to backend /api/assistant/chat with client fallback */}
         <AiAssistantDrawer
           isOpen={isAiAssistantOpen}
           onClose={() => setIsAiAssistantOpen(false)}
         />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }

@@ -1,31 +1,55 @@
 import React, { useEffect, useState } from 'react';
 
 export const NavigationFooter: React.FC = () => {
+  const getClientAmesTime = () => {
+    try {
+      return new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/Chicago',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false
+      }).format(new Date()) + ' CT';
+    } catch {
+      return new Date().toLocaleTimeString() + ' CT';
+    }
+  };
+
   const [telemetry, setTelemetry] = useState<{
     localTimeCT: string;
     uptimeSeconds: number;
     dispatchesCount: number;
   }>({
-    localTimeCT: "Ames, IA",
+    localTimeCT: getClientAmesTime(),
     uptimeSeconds: 0,
     dispatchesCount: 1
   });
 
   useEffect(() => {
+    // Attempt backend telemetry, fallback to client clock
     fetch('/api/telemetry')
       .then(res => res.json())
       .then(data => {
         if (data && data.location) {
           setTelemetry({
-            localTimeCT: data.location.localTimeCT || "Ames, IA",
+            localTimeCT: data.location.localTimeCT || getClientAmesTime(),
             uptimeSeconds: data.serverMetrics?.uptimeSeconds || 0,
             dispatchesCount: data.serverMetrics?.totalDispatchesReceived || 1
           });
         }
       })
       .catch(() => {
-        // quiet fallback
+        // quiet fallback to client timer
       });
+
+    const interval = setInterval(() => {
+      setTelemetry(prev => ({
+        ...prev,
+        localTimeCT: getClientAmesTime()
+      }));
+    }, 1000);
+
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -71,7 +95,7 @@ export const NavigationFooter: React.FC = () => {
           <span className="text-[#52545d]">/</span>
           <a
             className="text-[#8d9099] hover:text-[#00ff66] transition-colors"
-            href="/api/resume/data"
+            href="./resume-data.json"
             target="_blank"
             rel="noreferrer"
             title="Machine-readable JSON resume API"

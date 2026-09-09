@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nakshatra Gupta // Redirecting...</title>
+    <script>
+      // Single Page App router redirect for GitHub Pages
+      // Redirects non-root path requests to the hash router root
+      (function () {
+        var path = window.location.pathname;
+        var hash = window.location.hash;
+        var search = window.location.search;
+        
+        // Extract project base segment if hosted on subpath
+        var segments = path.split('/').filter(Boolean);
+        var repoName = segments.length > 0 ? '/' + segments[0] + '/' : '/';
+        
+        // Form route
+        var route = segments.length > 1 ? segments.slice(1).join('/') : '';
+        if (route) {
+          window.location.replace(repoName + '#/' + route + search + hash);
+        } else {
+          window.location.replace(repoName + '#' + hash);
+        }
+      })();
+    </script>
+  </head>
+  <body style="background-color: #090a0c; color: #8d9099; font-family: monospace; padding: 2rem;">
+    <p>Navigating to verified systems interface...</p>
+  </body>
+</html>

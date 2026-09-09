@@ -65,12 +65,16 @@ export const OverviewPage: React.FC = () => {
                 >
                   View Resume
                 </Link>
-                <a
-                  className="bg-[#1b1c1e] text-[#8d9099] px-6 py-2.5 uppercase tracking-wider hover:text-[#ff2a3b] transition-colors border border-[rgba(255,255,255,0.06)]"
-                  href="#dispatch-inquiry"
+                <button
+                  type="button"
+                  onClick={() => {
+                    const el = document.getElementById('dispatch-inquiry');
+                    el?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="bg-[#1b1c1e] text-[#8d9099] px-6 py-2.5 uppercase tracking-wider hover:text-[#ff2a3b] transition-colors border border-[rgba(255,255,255,0.06)] text-left cursor-pointer"
                 >
                   Direct Dispatch →
-                </a>
+                </button>
               </div>
 
               {/* Academic & Trajectory Metrics Strip */}
@@ -519,12 +523,13 @@ export const OverviewPage: React.FC = () => {
                   </Link>
                   <a
                     className="bg-[#1f2022] text-[#ffffff] px-6 py-2.5 uppercase font-semibold hover:bg-[#292a2c] transition-colors flex items-center gap-2 border border-[rgba(255,255,255,0.1)]"
-                    href="/api/resume/download"
+                    href="./assets/Nakshatra_Gupta_Resume_2026.jpg"
+                    download="Nakshatra_Gupta_Resume_2026.jpg"
                     target="_blank"
                     rel="noreferrer"
                   >
                     <span className="material-symbols-outlined text-base">download</span>
-                    <span>Download Resume (PDF)</span>
+                    <span>Download Resume (JPG/PDF)</span>
                   </a>
                 </div>
               </div>

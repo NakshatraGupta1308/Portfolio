@@ -104,11 +104,11 @@ TECHNICAL SKILLS:
             <div className="flex flex-wrap items-center gap-2 shrink-0">
               <a
                 className="flex items-center gap-2 px-5 py-3 bg-[#ffffff] text-[#090a0c] font-mono text-[13px] uppercase font-semibold hover:bg-[#ff2a3b] hover:text-[#ffffff] transition-colors"
-                href="/api/resume/download"
+                href="./assets/Nakshatra_Gupta_Resume_2026.jpg"
                 download="Nakshatra_Gupta_Resume_2026.jpg"
               >
                 <span className="material-symbols-outlined text-lg leading-none">download</span>
-                <span>Download Resume PDF</span>
+                <span>Download Resume (JPG/PDF)</span>
               </a>
               <button
                 className="flex items-center gap-2 px-5 py-3 bg-[#18191d] border border-[rgba(255,255,255,0.12)] text-[#ffffff] font-mono text-[13px] uppercase hover:bg-[#1f2022] transition-colors"
