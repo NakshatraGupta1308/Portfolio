@@ -58,12 +58,16 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({ onToggleAiAs
           >
             Resume &amp; Credentials
           </Link>
-          <a
-            href="#dispatch-inquiry"
-            className="text-[#8d9099] hover:text-[#ffffff] font-mono text-[13px] uppercase tracking-wider h-full flex items-center transition-colors"
+          <Link
+            to="/contact"
+            className={`font-mono text-[13px] uppercase tracking-wider h-full flex items-center transition-colors border-b-2 ${
+              currentPath === "/contact"
+                ? "text-[#ffffff] border-[#ff2a3b] font-semibold"
+                : "text-[#8d9099] border-transparent hover:text-[#ffffff]"
+            }`}
           >
             Contact
-          </a>
+          </Link>
         </nav>
 
         {/* Right Status Indicator & AI Assistant & Profile Avatar */}
@@ -132,13 +136,13 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({ onToggleAiAs
           >
             Resume &amp; Credentials
           </Link>
-          <a
-            href="#dispatch-inquiry"
+          <Link
+            to="/contact"
             onClick={() => setMobileMenuOpen(false)}
-            className="block py-2 text-[#8d9099] hover:text-[#ffffff]"
+            className="block py-2 text-[#ffffff] hover:text-[#ff2a3b]"
           >
             Contact
-          </a>
+          </Link>
           {onToggleAiAssistant && (
             <button
               onClick={() => {

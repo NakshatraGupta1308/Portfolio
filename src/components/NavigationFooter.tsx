@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export const NavigationFooter: React.FC = () => {
   const getClientAmesTime = () => {
@@ -92,6 +93,13 @@ export const NavigationFooter: React.FC = () => {
           >
             Email
           </a>
+          <span className="text-[#52545d]">/</span>
+          <Link
+            to="/contact"
+            className="text-[#8d9099] hover:text-[#ff2a3b] transition-colors"
+          >
+            Contact
+          </Link>
           <span className="text-[#52545d]">/</span>
           <a
             className="text-[#8d9099] hover:text-[#00ff66] transition-colors"

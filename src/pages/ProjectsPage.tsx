@@ -5,10 +5,10 @@ export const ProjectsPage: React.FC = () => {
   const [filter, setFilter] = useState('all');
 
   const filterButtons = [
-    { id: 'all', label: 'All Systems (4)' },
-    { id: 'web3d', label: 'Web Platforms & 3D (2)' },
-    { id: 'embedded', label: 'Embedded & Robotics (1)' },
-    { id: 'mobile', label: 'Android & Distributed (1)' },
+    { id: 'all', label: 'All Projects (4)' },
+    { id: 'software', label: 'Web & Full-Stack (2)' },
+    { id: 'mobile', label: 'Android & Mobile (1)' },
+    { id: 'embedded', label: 'Embedded Systems (1)' },
   ];
 
   return (
@@ -26,19 +26,19 @@ export const ProjectsPage: React.FC = () => {
               PROJECTS &amp; DOSSIER
             </h1>
             <p className="font-body text-base text-[#8d9099] max-w-2xl">
-              Deterministic embedded systems, full-stack Android communications, and GPU-accelerated spatial simulations.
+              Full-stack native Android architectures, production commercial web platforms, GPU-accelerated 3D simulations, and autonomous embedded robotics.
             </p>
           </div>
 
           {/* Quick Metrics Ribbon */}
           <div className="grid grid-cols-3 gap-3 bg-[#18191d] border border-[rgba(255,255,255,0.12)] p-4 min-w-[280px]">
             <div className="flex flex-col">
-              <span className="font-mono text-[11px] text-[#52545d] uppercase">COMMITS/HRS</span>
-              <span className="font-mono text-[13px] text-[#ffffff] font-semibold">1,420+ HRS</span>
+              <span className="font-mono text-[11px] text-[#52545d] uppercase">FOCUS DOMAIN</span>
+              <span className="font-mono text-[13px] text-[#ffffff] font-semibold">SOFTWARE DEV</span>
             </div>
             <div className="flex flex-col">
               <span className="font-mono text-[11px] text-[#52545d] uppercase">SYS TARGETS</span>
-              <span className="font-mono text-[13px] text-[#ff2a3b] font-semibold">ARM / WEBGL</span>
+              <span className="font-mono text-[13px] text-[#ff2a3b] font-semibold">WEB / ANDROID</span>
             </div>
             <div className="flex flex-col">
               <span className="font-mono text-[11px] text-[#52545d] uppercase">STATUS</span>
@@ -155,13 +155,139 @@ export const ProjectsPage: React.FC = () => {
             </article>
           )}
 
-          {/* PROJECT 02: CyBot Shopping Robot (Embedded ARM) */}
+          {/* PROJECT 02: Rangam Graphics (Commercial Production) */}
+          {(filter === 'all' || filter === 'software') && (
+            <article className="grid grid-cols-1 lg:grid-cols-12 gap-8 bg-[#121315] border border-[rgba(255,255,255,0.1)] p-6 sm:p-8 hover:border-[#ff2a3b] transition-colors">
+              <div className="col-span-12 flex flex-col justify-between gap-6">
+                <div className="space-y-3">
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <div className="flex flex-wrap items-center gap-2 font-mono text-[11px]">
+                      <span className="px-2 py-0.5 bg-[#1f2022] text-[#ffffff] uppercase border border-[rgba(255,255,255,0.06)]">Commercial Production</span>
+                      <span className="px-2 py-0.5 bg-[#1f2022] text-[#8d9099] uppercase border border-[rgba(255,255,255,0.06)]">Digital Architecture</span>
+                      <span className="px-2 py-0.5 bg-[#1f2022] text-[#ff2a3b] uppercase border border-[rgba(255,255,255,0.06)]">Ahmedabad, India</span>
+                    </div>
+                    <div className="flex items-center gap-2 font-mono text-[11px] text-[#52545d] uppercase">
+                      <span>INDEX: 02 // COMMERCIAL PRODUCTION</span>
+                      <span className="text-[#00ff66]">LIVE DEPLOYMENT</span>
+                    </div>
+                  </div>
+                  <h2 className="font-display text-2xl sm:text-3xl text-[#ffffff] tracking-tight">
+                    Rangam Graphics: Commercial Digital Printing &amp; Creative Studio
+                  </h2>
+                  <p className="font-body text-sm text-[#8d9099] leading-relaxed">
+                    Production web presence designed and engineered for a 33+ year commercial printing and creative manufacturing house. Architected to resolve high-friction B2B lead generation through responsive catalog workflows, zero-layout-shift asset delivery, and instant communication handoffs.
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 bg-[#1b1c1e] p-4 font-mono text-[13px] border border-[rgba(255,255,255,0.06)]">
+                    <div className="flex flex-col">
+                      <span className="text-[#52545d] text-[11px] uppercase">Platform / Core:</span>
+                      <span className="text-[#ffffff]">Responsive Architectural Web System / Static Edge Node</span>
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-[#52545d] text-[11px] uppercase">Execution Model:</span>
+                      <span className="text-[#ffffff]">Direct WhatsApp Pipeline / Dynamic Inquiry Routing</span>
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-[#52545d] text-[11px] uppercase">Printing Verticals:</span>
+                      <span className="text-[#ffffff]">Digital, Packaging, Pharma, Die Cutting, Shagun Lifafa, Graphic</span>
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-[#52545d] text-[11px] uppercase">Engineering Rigor:</span>
+                      <span className="text-[#ff2a3b]">Sub-1.2s FCP / Mobile First Lead Funnels</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-[rgba(255,255,255,0.08)]">
+                  <div className="flex flex-wrap items-center gap-2 font-mono text-[11px] text-[#52545d] uppercase">
+                    <span>DEPLOYMENT VERIFIED: 2024</span>
+                    <span>•</span>
+                    <span className="text-[#00ff66]">PRODUCTION LIVE</span>
+                    <span>/</span>
+                    <span className="text-[#8d9099]">wondrous-druid-2535ff.netlify.app</span>
+                  </div>
+                  <a
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-[#ffffff] text-[#090a0c] font-mono text-[11px] uppercase tracking-wider font-semibold hover:bg-[#ff2a3b] hover:text-[#ffffff] transition-colors"
+                    href="https://wondrous-druid-2535ff.netlify.app/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <span>View Live Site</span>
+                    <span className="material-symbols-outlined text-[14px]">arrow_outward</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          )}
+
+          {/* PROJECT 03: NASA SpaceApps 3D Orbit Visualization */}
+          {(filter === 'all' || filter === 'software') && (
+            <article className="grid grid-cols-1 lg:grid-cols-12 gap-8 bg-[#121315] border border-[rgba(255,255,255,0.1)] p-6 sm:p-8 hover:border-[#ff2a3b] transition-colors">
+              <div className="col-span-12 flex flex-col justify-between gap-6">
+                <div className="space-y-3">
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <div className="flex flex-wrap items-center gap-2 font-mono text-[11px]">
+                      <span className="px-2 py-0.5 bg-[#1f2022] text-[#ffffff] uppercase border border-[rgba(255,255,255,0.06)]">Astrodynamics</span>
+                      <span className="px-2 py-0.5 bg-[#1f2022] text-[#8d9099] uppercase border border-[rgba(255,255,255,0.06)]">WebGL Compute</span>
+                      <span className="px-2 py-0.5 bg-[#1f2022] text-[#ff2a3b] uppercase border border-[rgba(255,255,255,0.06)]">Global Hackathon</span>
+                    </div>
+                    <div className="flex items-center gap-2 font-mono text-[11px] text-[#52545d] uppercase">
+                      <span>INDEX: 03 // 3D GRAPHICS &amp; SIMULATION</span>
+                      <span className="text-[#00ff66]">SPACEAPPS WINNER</span>
+                    </div>
+                  </div>
+                  <h2 className="font-display text-2xl sm:text-3xl text-[#ffffff] tracking-tight">
+                    3D Celestial Orbit Visualization Engine: NASA SpaceApps
+                  </h2>
+                  <p className="font-body text-sm text-[#8d9099] leading-relaxed">
+                    Interactive high-precision astrophysics visualization engine that plots near-Earth objects (NEOs) and planetary trajectories in three dimensions. Transforms raw astronomical tables into real-time render loops using Keplerian element math and GPU lighting pipelines.
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 bg-[#1b1c1e] p-4 font-mono text-[13px] border border-[rgba(255,255,255,0.06)]">
+                    <div className="flex flex-col">
+                      <span className="text-[#52545d] text-[11px] uppercase">Platform / Core:</span>
+                      <span className="text-[#ffffff]">Three.js / WebGL / Custom Fragment Shaders</span>
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-[#52545d] text-[11px] uppercase">Execution Model:</span>
+                      <span className="text-[#ffffff]">Keplerian Orbital Mechanics Solver / True Anomaly Loop</span>
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-[#52545d] text-[11px] uppercase">Stack &amp; Sensors:</span>
+                      <span className="text-[#ffffff]">JavaScript ES6+, NASA JPL Ephemeris API, Three.js Camera Matrix</span>
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-[#52545d] text-[11px] uppercase">Engineering Rigor:</span>
+                      <span className="text-[#ff2a3b]">Calculates Semi-Major Axis, Eccentricity, and Inclination at 60 FPS</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-[rgba(255,255,255,0.08)]">
+                  <div className="flex items-center gap-2 font-mono text-[11px] text-[#52545d] uppercase">
+                    <span>AWARD: NASA SPACEAPPS AMES REGIONAL</span>
+                    <span>•</span>
+                    <span>[EPHEMERIS] NASA JPL Horizons Trajectory Engine</span>
+                  </div>
+                  <a
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-[#1f2022] text-[#ffffff] font-mono text-[11px] uppercase tracking-wider font-semibold hover:bg-[#ff2a3b] transition-colors border border-[rgba(255,255,255,0.1)]"
+                    href="https://github.com"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span>Launch 3D Simulator</span>
+                    <span className="material-symbols-outlined text-[14px]">view_in_ar</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          )}
+
+          {/* PROJECT 04: CyBot Shopping Robot (Embedded ARM) */}
           {(filter === 'all' || filter === 'embedded') && (
             <article className="grid grid-cols-1 lg:grid-cols-12 gap-8 bg-[#121315] border border-[rgba(255,255,255,0.1)] p-6 sm:p-8 hover:border-[#ff2a3b] transition-colors">
               <div className="lg:col-span-4 flex flex-col gap-2">
                 <div className="flex items-center justify-between font-mono text-[11px] text-[#52545d] uppercase">
-                  <span>INDEX: 02 // EMBEDDED ARM</span>
-                  <span className="text-[#00ff66]">HARDWARE ACTIVE</span>
+                  <span>INDEX: 04 // EMBEDDED ROBOTICS</span>
+                  <span className="text-[#00ff66]">HARDWARE LAB</span>
                 </div>
                 <div className="relative w-full h-80 bg-[#0d0e10] overflow-hidden flex items-center justify-center group border border-[rgba(255,255,255,0.1)]">
                   <img
@@ -229,132 +355,6 @@ export const ProjectsPage: React.FC = () => {
                     <span>Inspect Schematics &amp; Code</span>
                     <span className="material-symbols-outlined text-[14px]">terminal</span>
                   </Link>
-                </div>
-              </div>
-            </article>
-          )}
-
-          {/* PROJECT 03: Rangam Graphics (Commercial Production) */}
-          {(filter === 'all' || filter === 'web3d') && (
-            <article className="grid grid-cols-1 lg:grid-cols-12 gap-8 bg-[#121315] border border-[rgba(255,255,255,0.1)] p-6 sm:p-8 hover:border-[#ff2a3b] transition-colors">
-              <div className="col-span-12 flex flex-col justify-between gap-6">
-                <div className="space-y-3">
-                  <div className="flex flex-wrap items-center justify-between gap-2">
-                    <div className="flex flex-wrap items-center gap-2 font-mono text-[11px]">
-                      <span className="px-2 py-0.5 bg-[#1f2022] text-[#ffffff] uppercase border border-[rgba(255,255,255,0.06)]">Commercial Production</span>
-                      <span className="px-2 py-0.5 bg-[#1f2022] text-[#8d9099] uppercase border border-[rgba(255,255,255,0.06)]">Digital Architecture</span>
-                      <span className="px-2 py-0.5 bg-[#1f2022] text-[#ff2a3b] uppercase border border-[rgba(255,255,255,0.06)]">Ahmedabad, India</span>
-                    </div>
-                    <div className="flex items-center gap-2 font-mono text-[11px] text-[#52545d] uppercase">
-                      <span>INDEX: 03 // COMMERCIAL PRODUCTION</span>
-                      <span className="text-[#00ff66]">LIVE DEPLOYMENT</span>
-                    </div>
-                  </div>
-                  <h2 className="font-display text-2xl sm:text-3xl text-[#ffffff] tracking-tight">
-                    Rangam Graphics: Commercial Digital Printing &amp; Creative Studio
-                  </h2>
-                  <p className="font-body text-sm text-[#8d9099] leading-relaxed">
-                    Production web presence designed and engineered for a 33+ year commercial printing and creative manufacturing house. Architected to resolve high-friction B2B lead generation through responsive catalog workflows, zero-layout-shift asset delivery, and instant communication handoffs.
-                  </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 bg-[#1b1c1e] p-4 font-mono text-[13px] border border-[rgba(255,255,255,0.06)]">
-                    <div className="flex flex-col">
-                      <span className="text-[#52545d] text-[11px] uppercase">Platform / Core:</span>
-                      <span className="text-[#ffffff]">Responsive Architectural Web System / Static Edge Node</span>
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="text-[#52545d] text-[11px] uppercase">Execution Model:</span>
-                      <span className="text-[#ffffff]">Direct WhatsApp Pipeline / Dynamic Inquiry Routing</span>
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="text-[#52545d] text-[11px] uppercase">Printing Verticals:</span>
-                      <span className="text-[#ffffff]">Digital, Packaging, Pharma, Die Cutting, Shagun Lifafa, Graphic</span>
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="text-[#52545d] text-[11px] uppercase">Engineering Rigor:</span>
-                      <span className="text-[#ff2a3b]">Sub-1.2s FCP / Mobile First Lead Funnels</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-[rgba(255,255,255,0.08)]">
-                  <div className="flex flex-wrap items-center gap-2 font-mono text-[11px] text-[#52545d] uppercase">
-                    <span>DEPLOYMENT VERIFIED: 2024</span>
-                    <span>•</span>
-                    <span className="text-[#00ff66]">PRODUCTION LIVE</span>
-                    <span>/</span>
-                    <span className="text-[#8d9099]">wondrous-druid-2535ff.netlify.app</span>
-                  </div>
-                  <a
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-[#ffffff] text-[#090a0c] font-mono text-[11px] uppercase tracking-wider font-semibold hover:bg-[#ff2a3b] hover:text-[#ffffff] transition-colors"
-                    href="https://wondrous-druid-2535ff.netlify.app/"
-                    rel="noreferrer"
-                    target="_blank"
-                  >
-                    <span>View Live Site</span>
-                    <span className="material-symbols-outlined text-[14px]">arrow_outward</span>
-                  </a>
-                </div>
-              </div>
-            </article>
-          )}
-
-          {/* PROJECT 04: NASA SpaceApps 3D Orbit Visualization */}
-          {(filter === 'all' || filter === 'web3d') && (
-            <article className="grid grid-cols-1 lg:grid-cols-12 gap-8 bg-[#121315] border border-[rgba(255,255,255,0.1)] p-6 sm:p-8 hover:border-[#ff2a3b] transition-colors">
-              <div className="col-span-12 flex flex-col justify-between gap-6">
-                <div className="space-y-3">
-                  <div className="flex flex-wrap items-center justify-between gap-2">
-                    <div className="flex flex-wrap items-center gap-2 font-mono text-[11px]">
-                      <span className="px-2 py-0.5 bg-[#1f2022] text-[#ffffff] uppercase border border-[rgba(255,255,255,0.06)]">Astrodynamics</span>
-                      <span className="px-2 py-0.5 bg-[#1f2022] text-[#8d9099] uppercase border border-[rgba(255,255,255,0.06)]">WebGL Compute</span>
-                      <span className="px-2 py-0.5 bg-[#1f2022] text-[#ff2a3b] uppercase border border-[rgba(255,255,255,0.06)]">Global Hackathon</span>
-                    </div>
-                    <div className="flex items-center gap-2 font-mono text-[11px] text-[#52545d] uppercase">
-                      <span>INDEX: 04 // 3D GRAPHICS &amp; SIMULATION</span>
-                      <span className="text-[#00ff66]">SPACEAPPS WINNER</span>
-                    </div>
-                  </div>
-                  <h2 className="font-display text-2xl sm:text-3xl text-[#ffffff] tracking-tight">
-                    3D Celestial Orbit Visualization Engine: NASA SpaceApps
-                  </h2>
-                  <p className="font-body text-sm text-[#8d9099] leading-relaxed">
-                    Interactive high-precision astrophysics visualization engine that plots near-Earth objects (NEOs) and planetary trajectories in three dimensions. Transforms raw astronomical tables into real-time render loops using Keplerian element math and GPU lighting pipelines.
-                  </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 bg-[#1b1c1e] p-4 font-mono text-[13px] border border-[rgba(255,255,255,0.06)]">
-                    <div className="flex flex-col">
-                      <span className="text-[#52545d] text-[11px] uppercase">Platform / Core:</span>
-                      <span className="text-[#ffffff]">Three.js / WebGL / Custom Fragment Shaders</span>
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="text-[#52545d] text-[11px] uppercase">Execution Model:</span>
-                      <span className="text-[#ffffff]">Keplerian Orbital Mechanics Solver / True Anomaly Loop</span>
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="text-[#52545d] text-[11px] uppercase">Stack &amp; Sensors:</span>
-                      <span className="text-[#ffffff]">JavaScript ES6+, NASA JPL Ephemeris API, Three.js Camera Matrix</span>
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="text-[#52545d] text-[11px] uppercase">Engineering Rigor:</span>
-                      <span className="text-[#ff2a3b]">Calculates Semi-Major Axis, Eccentricity, and Inclination at 60 FPS</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-[rgba(255,255,255,0.08)]">
-                  <div className="flex items-center gap-2 font-mono text-[11px] text-[#52545d] uppercase">
-                    <span>AWARD: NASA SPACEAPPS AMES REGIONAL</span>
-                    <span>•</span>
-                    <span>[EPHEMERIS] NASA JPL Horizons Trajectory Engine</span>
-                  </div>
-                  <a
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-[#1f2022] text-[#ffffff] font-mono text-[11px] uppercase tracking-wider font-semibold hover:bg-[#ff2a3b] transition-colors border border-[rgba(255,255,255,0.1)]"
-                    href="https://github.com"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <span>Launch 3D Simulator</span>
-                    <span className="material-symbols-outlined text-[14px]">view_in_ar</span>
-                  </a>
                 </div>
               </div>
             </article>

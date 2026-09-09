@@ -6,6 +6,7 @@ import { AiAssistantDrawer } from './components/AiAssistantDrawer';
 import { OverviewPage } from './pages/OverviewPage';
 import { ProjectsPage } from './pages/ProjectsPage';
 import { ResumePage } from './pages/ResumePage';
+import { ContactPage } from './pages/ContactPage';
 
 // Scroll to top helper on route change
 function ScrollToTop() {
@@ -31,6 +32,7 @@ export default function App() {
             <Route path="/overview" element={<OverviewPage />} />
             <Route path="/projects-and-dossier" element={<ProjectsPage />} />
             <Route path="/resume-and-credentials" element={<ResumePage />} />
+            <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </main>
 

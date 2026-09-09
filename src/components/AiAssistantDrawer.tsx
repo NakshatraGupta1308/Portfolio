@@ -17,16 +17,16 @@ export const AiAssistantDrawer: React.FC<AiAssistantDrawerProps> = ({ isOpen, on
   const [messages, setMessages] = useState<Message[]>([
     {
       sender: 'assistant',
-      text: "Hello. I am the verified AI Assistant for Nakshatra Gupta's systems portfolio. Ask me anything about his B.S. Computer Engineering coursework at Iowa State, embedded C experience on the Tiva TM4C123, project implementations (Calmify, CyBot, Rangam Graphics, NASA SpaceApps), or his availability for Fall 2026 internships and co-ops.",
+      text: "Hello. I am the verified AI Assistant for Nakshatra Gupta's technical portfolio. Ask me anything about his academic journey as a 2+2 transfer student from Nirma University (B.S. CSE) to Iowa State University (B.S. Computer Engineering), his software development projects (Calmify, Rangam Graphics, NASA SpaceApps), his CyBot embedded work, or his availability for Computer Science / Computer Engineering internships and co-ops.",
       time: 'SYSTEM READY'
     }
   ]);
 
   const quickPrompts = [
-    "What is Nakshatra's availability for Fall 2026?",
+    "Tell me about Nakshatra's 2+2 Transfer background",
+    "What software development roles is he seeking?",
     "Tell me about the Calmify Android project",
-    "What microcontrollers has Nakshatra programmed?",
-    "What is his academic background at Iowa State?"
+    "What are his core technical skills & languages?"
   ];
 
   const handleSend = async (queryText?: string) => {
@@ -80,31 +80,34 @@ export const AiAssistantDrawer: React.FC<AiAssistantDrawerProps> = ({ isOpen, on
 
   const getClientFallbackResponse = (q: string): string => {
     const lower = q.toLowerCase();
-    if (lower.includes('availab') || lower.includes('fall 2026') || lower.includes('intern') || lower.includes('co-op') || lower.includes('hire') || lower.includes('full-time') || lower.includes('start') || lower.includes('graduat')) {
-      return "Nakshatra Gupta is actively seeking Fall 2026 Internship & Co-op opportunities, as well as Full-Time engineering roles starting post-graduation in May 2027. He is open to relocation across the United States. Contact: ng1308@iastate.edu | +1 515-916-2251.";
+    if (lower.includes('availab') || lower.includes('fall 2026') || lower.includes('intern') || lower.includes('co-op') || lower.includes('hire') || lower.includes('full-time') || lower.includes('start') || lower.includes('graduat') || lower.includes('role') || lower.includes('job')) {
+      return "Nakshatra Gupta is actively seeking Computer Science / Computer Engineering Internships and Co-ops for Fall 2026, and full-time opportunities post-graduation (May 2027), with an emphasis on software development. Contact: ng1308@iastate.edu | +1 515-916-2251.";
+    }
+    if (lower.includes('transfer') || lower.includes('nirma') || lower.includes('2+2') || lower.includes('background') || lower.includes('education') || lower.includes('degree') || lower.includes('school') || lower.includes('iowa state')) {
+      return "Nakshatra is a 2+2 Transfer student from Nirma University (Ahmedabad, India), where he pursued a B.S. in Computer Science and Engineering (BS CSE). He transferred to Iowa State University to complete his B.S. in Computer Engineering (CPR E '27). He knows principles of software engineering and has a strong hold over software development, full-stack systems, and real-time computing.";
     }
     if (lower.includes('calmify') || lower.includes('android') || lower.includes('coms 3090') || lower.includes('mental health') || lower.includes('app')) {
-      return "Calmify is a native Android mental health app developed in a 4-person Agile sprint for ISU COMS 3090 (Jan–May 2026). It incorporates WebSocket-based real-time counsellor chat with typing indicators and read receipts, role-based access for counselors/users/admins, appointment scheduling, and an AI support drawer across 30+ activities. Video demo: https://www.youtube.com/watch?v=qTwxhTLsqMM";
+      return "Calmify is a native Android mental health app developed in a 4-person Agile sprint for ISU COMS 3090 (Jan - May 2026). It incorporates WebSocket-based real-time counsellor chat with typing indicators and read receipts, role-based access for counselors/users/admins, appointment scheduling, and an AI support drawer across 30+ activities. Video demo: https://www.youtube.com/watch?v=qTwxhTLsqMM";
     }
-    if (lower.includes('cybot') || lower.includes('cpre 288') || lower.includes('robot') || lower.includes('embedded') || lower.includes('microcontroller') || lower.includes('tiva') || lower.includes('tm4c')) {
-      return "CyBot was built for CPR E 288 at Iowa State. Running on a Texas Instruments Tiva TM4C123GXL ARM Cortex-M4 microcontroller, Nakshatra wrote bare-metal C drivers utilizing hardware timers, interrupts (ISRs), PWM for servo steering, ultrasonic Ping sensors, Sharp IR distance sensors with ADC0, and UART telemetry for autonomous aisle navigation.";
+    if (lower.includes('cybot') || lower.includes('cpre 288') || lower.includes('robot') || lower.includes('embedded') || lower.includes('microcontroller') || lower.includes('tiva') || lower.includes('tm4c') || lower.includes('hardware')) {
+      return "While Nakshatra's primary focus and projects are software-based, his hardware foundation includes the CyBot autonomous navigation platform (CPR E 288 at Iowa State), where he programmed a TI Tiva TM4C123 ARM Cortex-M4 microcontroller in bare-metal C using ISRs, PWM servo control, ADC distance sweeps, and UART telemetry.";
     }
     if (lower.includes('rangam') || lower.includes('print') || lower.includes('graphic') || lower.includes('firm') || lower.includes('netlify')) {
-      return "Rangam Graphics is a commercial website engineered for an established 33-year printing & packaging firm. It features digital & offset printing portfolios, packaging solutions, and custom WhatsApp inquiry routing. Live deployment: https://wondrous-druid-2535ff.netlify.app/";
+      return "Rangam Graphics is a commercial production website engineered for an established 33-year printing & packaging firm. It features digital & offset printing portfolios, packaging solutions, and custom WhatsApp inquiry routing. Live deployment: https://wondrous-druid-2535ff.netlify.app/";
     }
     if (lower.includes('nasa') || lower.includes('space') || lower.includes('orbit') || lower.includes('three.js') || lower.includes('webgl') || lower.includes('hackathon')) {
       return "For NASA SpaceApps, Nakshatra engineered an interactive 3D orbital simulation engine using Three.js and WebGL. It calculates real-time Keplerian orbital mechanics to render near-Earth asteroids and planetary bodies at a smooth 60 FPS in browser canvas.";
     }
-    if (lower.includes('course') || lower.includes('class') || lower.includes('gpa') || lower.includes('degree') || lower.includes('education') || lower.includes('school') || lower.includes('iowa state') || lower.includes('nirma')) {
-      return "Nakshatra is pursuing a B.S. in Computer Engineering at Iowa State University (Dean's List, CPR E '27). Core coursework: CPR E 288 (Embedded Systems), Computer Architecture, COMS 3090 (Software Dev), Algorithms, and Differential Equations.";
+    if (lower.includes('course') || lower.includes('class') || lower.includes('gpa')) {
+      return "Core coursework includes: Advanced Software Development Practice (COMS 3090), Data Structures & Algorithms, Object-Oriented Programming, Operating Systems, Database Management Systems, Computer Architecture, and Embedded Systems (CPR E 288).";
     }
     if (lower.includes('skill') || lower.includes('language') || lower.includes('stack') || lower.includes('c ') || lower.includes('c,') || lower.includes('python') || lower.includes('java')) {
-      return "Languages: C (Bare-Metal Embedded), Java, Python, TypeScript/JavaScript. Hardware & Tools: TI TM4C123 ARM Cortex-M4, UART, SPI, I2C, PWM, Logic Analyzers, Oscilloscopes, Git, Android Studio, Spring Boot, WebSockets, and Three.js.";
+      return "Technical Languages & Frameworks: Java, Python, TypeScript/JavaScript, HTML/CSS, C, Android SDK, Spring Boot, MySQL, WebSockets, Three.js, React, Node.js, and Git/GitHub. Embedded tools: TI TM4C123 ARM Cortex-M4, UART, SPI, I2C, and Oscilloscopes.";
     }
     if (lower.includes('contact') || lower.includes('email') || lower.includes('phone') || lower.includes('reach')) {
-      return "You can reach Nakshatra Gupta directly at ng1308@iastate.edu, via phone at +1 515-916-2251, or submit an inquiry using the Direct Dispatch form on the Overview page.";
+      return "You can reach Nakshatra Gupta directly at ng1308@iastate.edu, via phone at +1 515-916-2251, or submit an inquiry using the Direct Dispatch form on the Contact page.";
     }
-    return "Nakshatra Gupta is a Computer Engineering student at Iowa State University specializing in bare-metal embedded C, Android SDK development, and 3D graphics. You can inquire about his projects (Calmify, CyBot, Rangam Graphics, NASA SpaceApps) or contact him at ng1308@iastate.edu.";
+    return "Nakshatra Gupta is a 2+2 Transfer student from Nirma University (BS CSE) to Iowa State University (BS Computer Engineering) who knows principles of software engineering and has a strong hold over software development, full-stack Android & web development, and real-time systems. You can ask about his projects (Calmify, Rangam Graphics, NASA SpaceApps, CyBot) or contact him at ng1308@iastate.edu.";
   };
 
   if (!isOpen) return null;

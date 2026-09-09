@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { DirectDispatchForm } from '../components/DirectDispatchForm';
 
 export const OverviewPage: React.FC = () => {
   return (
@@ -10,13 +9,13 @@ export const OverviewPage: React.FC = () => {
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-y-2 font-mono text-[11px] uppercase tracking-widest text-[#8d9099]">
           <div className="flex items-center gap-3">
             <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#00ff66]"></span>
-            <span className="text-[#ffffff]">PORTFOLIO // COMPUTER ENGINEERING</span>
+            <span className="text-[#ffffff]">PORTFOLIO // COMPUTER ENGINEERING &amp; COMPUTER SCIENCE</span>
             <span className="text-[#52545d]">/</span>
-            <span>IOWA STATE UNIVERSITY</span>
+            <span>IOWA STATE (BS CE) &amp; NIRMA UNIVERSITY (BS CSE, 2+2)</span>
           </div>
           <div className="flex items-center gap-4 text-[#52545d]">
             <span className="text-[#8d9099]">AMES, IOWA</span>
-            <span className="text-[#ff2a3b] font-semibold">TARGET_CYCLE: FALL 2026+ // SEEKING OPPORTUNITIES</span>
+            <span className="text-[#ff2a3b] font-semibold">TARGET_CYCLE: FALL 2026+ // SEEKING CS &amp; CE INTERNSHIPS</span>
           </div>
         </div>
       </section>
@@ -28,7 +27,7 @@ export const OverviewPage: React.FC = () => {
             <span className="text-[#ff2a3b] font-bold">//</span>
             <span>NAKSHATRA GUPTA</span>
             <span className="text-[#52545d]">•</span>
-            <span>COMPUTER ENGINEERING STUDENT @ ISU</span>
+            <span className="text-[#ffb3af]">2+2 TRANSFER SCHOLAR (NIRMA BS CSE → IOWA STATE BS CE)</span>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             {/* Left: Editorial Typography & Actions */}
@@ -39,16 +38,16 @@ export const OverviewPage: React.FC = () => {
                   <span className="text-[#ffb3af] italic font-editorial font-normal lowercase tracking-normal">Gupta.</span>
                 </h1>
                 <p className="font-display text-lg sm:text-2xl text-[#8d9099] pt-1 uppercase tracking-wide">
-                  Computer Engineering <span className="text-[#ff2a3b]">@</span> Iowa State University
+                  Computer Engineering Student <span className="text-[#ff2a3b]">//</span> 2+2 Transfer @ Iowa State University (via Nirma University BS CSE)
                 </p>
               </div>
               <div className="bg-[#18191d] border-l-2 border-[#ff2a3b] p-4">
                 <p className="font-editorial text-lg sm:text-xl text-[#e3e2e5] italic leading-relaxed">
-                  “Engineering at the intersection of bare-metal silicon registers and dynamic interactive systems.”
+                  “Applying principles of software engineering, full-stack web platforms, reactive Android applications, and embedded computing systems.”
                 </p>
               </div>
               <p className="font-body text-sm sm:text-base text-[#8d9099] leading-relaxed max-w-2xl">
-                Currently pursuing a Bachelor of Science in Computer Engineering at Iowa State University (Expected May 2027), following foundational coursework at Nirma University. Actively seeking Fall 2026 internships, co-ops, and full-time opportunities (following graduation) across embedded firmware, silicon architecture, robotics navigation, and high-performance computing systems.
+                2+2 Transfer student from Nirma University, India (BS in Computer Science and Engineering) to Iowa State University pursuing a B.S. in Computer Engineering (Expected May 2027). Well-versed in principles of software engineering with hands-on command over full-stack web systems, native Android development, real-time WebSocket communication flows, 3D graphics, and embedded computing on ARM architectures. Actively seeking Fall 2026 Computer Science / Computer Engineering internships, co-ops, and full-time opportunities post-graduation.
               </p>
 
               {/* Interactive Action Cluster */}
@@ -63,36 +62,32 @@ export const OverviewPage: React.FC = () => {
                   to="/resume-and-credentials"
                   className="bg-[#1f2022] text-[#ffffff] px-6 py-2.5 font-semibold uppercase tracking-wider hover:bg-[#292a2c] transition-colors border border-[rgba(255,255,255,0.1)]"
                 >
-                  View Resume
+                  View Resume &amp; Credentials
                 </Link>
-                <button
-                  type="button"
-                  onClick={() => {
-                    const el = document.getElementById('dispatch-inquiry');
-                    el?.scrollIntoView({ behavior: 'smooth' });
-                  }}
+                <Link
+                  to="/contact"
                   className="bg-[#1b1c1e] text-[#8d9099] px-6 py-2.5 uppercase tracking-wider hover:text-[#ff2a3b] transition-colors border border-[rgba(255,255,255,0.06)] text-left cursor-pointer"
                 >
-                  Direct Dispatch →
-                </button>
+                  Communications Dispatch →
+                </Link>
               </div>
 
               {/* Academic & Trajectory Metrics Strip */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4">
                 <div className="bg-[#121315] border border-[rgba(255,255,255,0.08)] p-3">
-                  <span className="block font-mono text-[11px] text-[#52545d] uppercase">Degree Program</span>
-                  <span className="font-mono text-[13px] text-[#ffffff] font-semibold">B.S. CprE</span>
-                  <span className="block font-mono text-[11px] text-[#8d9099]">Iowa State University</span>
+                  <span className="block font-mono text-[11px] text-[#52545d] uppercase">Academic Pathway</span>
+                  <span className="font-mono text-[13px] text-[#ffffff] font-semibold">2+2 Transfer Student</span>
+                  <span className="block font-mono text-[11px] text-[#8d9099]">Nirma (BS CSE) → ISU (BS CE)</span>
                 </div>
                 <div className="bg-[#121315] border border-[rgba(255,255,255,0.08)] p-3">
-                  <span className="block font-mono text-[11px] text-[#52545d] uppercase">Expected Graduation</span>
-                  <span className="font-mono text-[13px] text-[#ff2a3b] font-semibold">May 2027</span>
-                  <span className="block font-mono text-[11px] text-[#8d9099]">Undergraduate</span>
+                  <span className="block font-mono text-[11px] text-[#52545d] uppercase">Curriculum Focus</span>
+                  <span className="font-mono text-[13px] text-[#ff2a3b] font-semibold">Computer Engineering</span>
+                  <span className="block font-mono text-[11px] text-[#8d9099]">Systems &amp; Software Principles</span>
                 </div>
                 <div className="bg-[#121315] border border-[rgba(255,255,255,0.08)] p-3">
-                  <span className="block font-mono text-[11px] text-[#52545d] uppercase">Target Term</span>
+                  <span className="block font-mono text-[11px] text-[#52545d] uppercase">Target Roles</span>
                   <span className="font-mono text-[13px] text-[#ffffff] font-semibold">Fall 2026 &amp; Beyond</span>
-                  <span className="block font-mono text-[11px] text-[#8d9099]">Internship / Co-op</span>
+                  <span className="block font-mono text-[11px] text-[#8d9099]">CS / CE Intern &amp; Co-op</span>
                 </div>
               </div>
             </div>
@@ -102,7 +97,7 @@ export const OverviewPage: React.FC = () => {
               <div className="relative w-full max-w-sm bg-[#18191d] p-2 border border-[rgba(255,255,255,0.12)]">
                 <div className="overflow-hidden aspect-[3/4] relative bg-[#090a0c]">
                   <img
-                    alt="Nakshatra Gupta - Systems and Computer Engineer"
+                    alt="Nakshatra Gupta - Computer Engineering Student"
                     className="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-700"
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuDquJYZWW-6ZJ3Ornmez0wcrsGFhynbkXtoP4E3QNyn9OUhgEgwps-YTKbrhYZcOSnW-X3wlP4rxuzux-sKMRdmUKxYnFXKxHU3qxDM4AzZBVZB48K__B-OcdNntsjB6ALxrCbMUaVcyz0OLe0Hs24EMqRpe0z5tKv7GHa9dxkC5sB4O43MAytkV2k0J3G8KqQZcVNXX8yZwWJ_0vPeRWydiuSvYYJVA8sOTW5hsgFKSchgCIWJtiwnZzDliLZ4gKrDjjQ"
                   />
@@ -112,14 +107,14 @@ export const OverviewPage: React.FC = () => {
                       <span className="text-[#ff2a3b]">CPR E '27</span>
                     </div>
                     <div className="flex items-center justify-between text-[#52545d] font-mono text-[11px] mt-0.5">
-                      <span>IOWA STATE UNIVERSITY</span>
+                      <span>IOWA STATE &amp; NIRMA UNIV</span>
                       <span className="text-[#00ff66]">AMES, IA</span>
                     </div>
                   </div>
                 </div>
                 <div className="flex items-center justify-between p-1.5 text-[#52545d] font-mono text-[11px]">
                   <span>COMPUTER ENGINEERING</span>
-                  <span>ISU CPRE</span>
+                  <span>2+2 SCHOLAR</span>
                 </div>
               </div>
             </div>
@@ -133,14 +128,14 @@ export const OverviewPage: React.FC = () => {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
             <div>
               <span className="font-mono text-[11px] uppercase tracking-widest text-[#ff2a3b] block mb-1">
-                CORE COMPETENCY MATRIX
+                CORE TECHNICAL MATRIX
               </span>
               <h2 className="font-display text-2xl sm:text-3xl text-[#ffffff] uppercase tracking-tight">
-                Three Technical Disciplines
+                Software Development Disciplines
               </h2>
             </div>
             <p className="font-mono text-[13px] text-[#8d9099] max-w-md">
-              Synthesizing low-level deterministic silicon control with mathematically grounded spatial rendering and resilient cloud infrastructure.
+              Focusing on modern full-stack web platforms, reactive mobile architectures, and interactive spatial computation, grounded by low-level systems comprehension.
             </p>
           </div>
 
@@ -150,22 +145,23 @@ export const OverviewPage: React.FC = () => {
               <div>
                 <div className="flex items-center justify-between font-mono text-[13px] mb-4">
                   <span className="text-[#ff2a3b] font-bold">01 /</span>
-                  <span className="text-[#52545d] uppercase font-mono text-[11px]">FIRMWARE / SILICON</span>
+                  <span className="text-[#52545d] uppercase font-mono text-[11px]">WEB &amp; FULL-STACK</span>
                 </div>
                 <h3 className="font-display text-xl text-[#ffffff] uppercase mb-2 group-hover:text-[#ffb3af] transition-colors">
-                  Embedded Systems &amp; Microcontrollers
+                  Full-Stack Web Architecture
                 </h3>
                 <p className="font-body text-sm text-[#8d9099] leading-relaxed mb-6">
-                  Low-overhead bare-metal development on ARM Cortex-M architecture. Deep experience configuring PWM timers, register-level interrupts, UART/SPI serial links, and ADC sensor sampling without heavy RTOS abstraction layers.
+                  Building responsive, high-performance web applications and production backends. Experienced with modern component architectures, REST APIs, relational database schemas (MySQL), automated CI/CD pipelines, and client-facing production systems.
                 </p>
               </div>
               <div className="pt-4 border-t border-[rgba(255,255,255,0.06)]">
                 <div className="flex flex-wrap gap-1 font-mono text-[11px] uppercase text-[#52545d]">
-                  <span className="bg-[#121315] px-2 py-0.5 text-[#8d9099]">Tiva TM4C123</span>
-                  <span className="bg-[#121315] px-2 py-0.5 text-[#8d9099]">Bare-Metal C</span>
-                  <span className="bg-[#121315] px-2 py-0.5 text-[#8d9099]">PWM Servo</span>
-                  <span className="bg-[#121315] px-2 py-0.5 text-[#8d9099]">UART / I2C</span>
-                  <span className="bg-[#121315] px-2 py-0.5 text-[#8d9099]">ADC Sampling</span>
+                  <span className="bg-[#121315] px-2 py-0.5 text-[#8d9099]">TypeScript</span>
+                  <span className="bg-[#121315] px-2 py-0.5 text-[#8d9099]">React</span>
+                  <span className="bg-[#121315] px-2 py-0.5 text-[#8d9099]">Spring Boot</span>
+                  <span className="bg-[#121315] px-2 py-0.5 text-[#8d9099]">MySQL</span>
+                  <span className="bg-[#121315] px-2 py-0.5 text-[#8d9099]">Netlify</span>
+                  <span className="bg-[#121315] px-2 py-0.5 text-[#8d9099]">GitLab CI/CD</span>
                 </div>
               </div>
             </div>
@@ -175,22 +171,22 @@ export const OverviewPage: React.FC = () => {
               <div>
                 <div className="flex items-center justify-between font-mono text-[13px] mb-4">
                   <span className="text-[#ff2a3b] font-bold">02 /</span>
-                  <span className="text-[#52545d] uppercase font-mono text-[11px]">MATH / VISUALIZATION</span>
+                  <span className="text-[#52545d] uppercase font-mono text-[11px]">MOBILE &amp; REAL-TIME</span>
                 </div>
                 <h3 className="font-display text-xl text-[#ffffff] uppercase mb-2 group-hover:text-[#ffb3af] transition-colors">
-                  Creative Code &amp; Spatial 3D
+                  Native Android &amp; Real-Time Systems
                 </h3>
                 <p className="font-body text-sm text-[#8d9099] leading-relaxed mb-6">
-                  Architecting GPU-accelerated spatial environments in the browser. Translating orbital Keplerian celestial vectors, particle physics, and geometric shaders into zero-lag 60fps WebGL rendering canvases.
+                  Architecting multi-activity mobile applications in native Java and Android SDK. Implemented duplex WebSocket messaging with typing indicators and read receipts, role-based authorization, Volley/Glide pipelines, and multi-user interaction flows.
                 </p>
               </div>
               <div className="pt-4 border-t border-[rgba(255,255,255,0.06)]">
                 <div className="flex flex-wrap gap-1 font-mono text-[11px] uppercase text-[#52545d]">
-                  <span className="bg-[#121315] px-2 py-0.5 text-[#8d9099]">Three.js</span>
-                  <span className="bg-[#121315] px-2 py-0.5 text-[#8d9099]">WebGL</span>
-                  <span className="bg-[#121315] px-2 py-0.5 text-[#8d9099]">GLSL Shaders</span>
-                  <span className="bg-[#121315] px-2 py-0.5 text-[#8d9099]">60fps Math</span>
-                  <span className="bg-[#121315] px-2 py-0.5 text-[#8d9099]">Canvas API</span>
+                  <span className="bg-[#121315] px-2 py-0.5 text-[#8d9099]">Android SDK</span>
+                  <span className="bg-[#121315] px-2 py-0.5 text-[#8d9099]">Java</span>
+                  <span className="bg-[#121315] px-2 py-0.5 text-[#8d9099]">WebSockets</span>
+                  <span className="bg-[#121315] px-2 py-0.5 text-[#8d9099]">Volley / Glide</span>
+                  <span className="bg-[#121315] px-2 py-0.5 text-[#8d9099]">Role-Based Auth</span>
                 </div>
               </div>
             </div>
@@ -200,22 +196,22 @@ export const OverviewPage: React.FC = () => {
               <div>
                 <div className="flex items-center justify-between font-mono text-[13px] mb-4">
                   <span className="text-[#ff2a3b] font-bold">03 /</span>
-                  <span className="text-[#52545d] uppercase font-mono text-[11px]">DISTRIBUTED / WEB</span>
+                  <span className="text-[#52545d] uppercase font-mono text-[11px]">GRAPHICS &amp; HARDWARE BRIDGE</span>
                 </div>
                 <h3 className="font-display text-xl text-[#ffffff] uppercase mb-2 group-hover:text-[#ffb3af] transition-colors">
-                  Full-Stack &amp; Systems Architecture
+                  Interactive 3D &amp; Hardware Bridge
                 </h3>
                 <p className="font-body text-sm text-[#8d9099] leading-relaxed mb-6">
-                  Building resilient client facing digital software with modern decoupled frontends, fast transactional routing, asynchronous data telemetry, and production deployment automation for enterprises and research platforms.
+                  Rendering 60fps GPU-accelerated spatial environments in the browser with Three.js and WebGL. Complemented by hardware-software integration experience from CyBot, using bare-metal C, timers, and sensors to appreciate true execution efficiency.
                 </p>
               </div>
               <div className="pt-4 border-t border-[rgba(255,255,255,0.06)]">
                 <div className="flex flex-wrap gap-1 font-mono text-[11px] uppercase text-[#52545d]">
-                  <span className="bg-[#121315] px-2 py-0.5 text-[#8d9099]">TypeScript</span>
-                  <span className="bg-[#121315] px-2 py-0.5 text-[#8d9099]">Python Async</span>
-                  <span className="bg-[#121315] px-2 py-0.5 text-[#8d9099]">REST Pipelines</span>
-                  <span className="bg-[#121315] px-2 py-0.5 text-[#8d9099]">Linux OS</span>
-                  <span className="bg-[#121315] px-2 py-0.5 text-[#8d9099]">CI / CD</span>
+                  <span className="bg-[#121315] px-2 py-0.5 text-[#8d9099]">Three.js</span>
+                  <span className="bg-[#121315] px-2 py-0.5 text-[#8d9099]">WebGL</span>
+                  <span className="bg-[#121315] px-2 py-0.5 text-[#8d9099]">JavaScript</span>
+                  <span className="bg-[#121315] px-2 py-0.5 text-[#8d9099]">Keplerian Math</span>
+                  <span className="bg-[#121315] px-2 py-0.5 text-[#8d9099]">CyBot (C Lab)</span>
                 </div>
               </div>
             </div>
@@ -231,14 +227,14 @@ export const OverviewPage: React.FC = () => {
               <div className="flex items-center gap-2 font-mono text-[13px] text-[#ff2a3b] mb-1">
                 <span>// 01. EVIDENCE LEDGER</span>
                 <span className="text-[#52545d]">---</span>
-                <span className="text-[#8d9099]">SYSTEM AUDIT</span>
+                <span className="text-[#8d9099]">SOFTWARE &amp; SYSTEMS AUDIT</span>
               </div>
               <h2 className="font-display text-3xl sm:text-4xl text-[#ffffff] uppercase tracking-tight">
-                Featured Engineering Projects
+                Featured Software &amp; Systems Projects
               </h2>
             </div>
             <span className="font-mono text-[11px] uppercase text-[#8d9099] tracking-widest">
-              FIELD DEMOS • PRODUCTION CODEBASES • HARDWARE
+              WEB PLATFORMS • NATIVE ANDROID • WEBGL 3D • HARDWARE LAB
             </span>
           </div>
 
@@ -259,7 +255,7 @@ export const OverviewPage: React.FC = () => {
                   CALMIFY : NATIVE ANDROID MENTAL HEALTH PLATFORM
                 </h3>
                 <p className="font-body text-sm text-[#8d9099] leading-relaxed">
-                  Native Android mental health platform built in a 4-person team for Iowa State University COMS 3090. Features WebSocket-powered real-time counsellor chat with typing indicators and read receipts, appointment booking workflow, AI support assistant, daily mood tracking, and role-based access for Users, Counsellors, and Admins across 30+ activities.
+                  Flagship full-stack mobile platform engineered in a 4-person team for COMS 3090 at Iowa State University. Built native Android client in Java with Spring Boot REST microservices, MySQL relational persistence, and duplex WebSocket messaging supporting live typing indicators and read receipts. Features appointment booking, role-based authorization for Users, Counsellors, and Admins across 30+ activities, and continuous GitLab CI/CD pipelines.
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 py-1">
                   <div className="bg-[#121315] p-3 border border-[rgba(255,255,255,0.06)]">
@@ -317,70 +313,16 @@ export const OverviewPage: React.FC = () => {
             </div>
           </div>
 
-          {/* PROJECT 02: CYBOT */}
-          <div className="bg-[#18191d] border border-[rgba(255,255,255,0.12)] p-6 sm:p-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              <div className="lg:col-span-7 space-y-4">
-                <div className="flex items-center gap-2 font-mono text-[13px]">
-                  <span className="text-[#ff2a3b] font-bold">PROJECT // 02</span>
-                  <span className="text-[#52545d]">/</span>
-                  <span className="text-[#00ff66] uppercase font-mono text-[11px]">ACADEMIC PROJECT</span>
-                  <span className="text-[#52545d]">/</span>
-                  <span className="text-[#8d9099] font-mono text-[11px]">IOWA STATE UNIVERSITY (CPR E 288)</span>
-                </div>
-                <h3 className="font-display text-2xl sm:text-3xl text-[#ffffff] uppercase">
-                  CyBot Autonomous Navigation &amp; Sensing Platform
-                </h3>
-                <p className="font-body text-sm text-[#8d9099] leading-relaxed">
-                  Engineered autonomous navigation and obstacle avoidance for a mobile robot utilizing the Texas Instruments Tiva TM4C123 microcontroller. Interfaced IR and ultrasonic sensors for precise distance detection and object scanning, calibrated servo motor angles, and implemented UART communication to send telemetry and receive movement commands for structured aisle navigation.
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 py-1">
-                  <div className="bg-[#121315] p-3 border border-[rgba(255,255,255,0.06)]">
-                    <span className="block font-mono text-[11px] text-[#52545d] uppercase">Microcontroller</span>
-                    <span className="font-mono text-[13px] text-[#ffffff] font-semibold">Tiva TM4C123</span>
-                  </div>
-                  <div className="bg-[#121315] p-3 border border-[rgba(255,255,255,0.06)]">
-                    <span className="block font-mono text-[11px] text-[#52545d] uppercase">Sensors</span>
-                    <span className="font-mono text-[13px] text-[#ffffff] font-semibold">IR + Ultrasonic</span>
-                  </div>
-                  <div className="bg-[#121315] p-3 border border-[rgba(255,255,255,0.06)]">
-                    <span className="block font-mono text-[11px] text-[#52545d] uppercase">Software</span>
-                    <span className="font-mono text-[13px] text-[#ff2a3b] font-semibold">Embedded C</span>
-                  </div>
-                </div>
-                <div className="flex flex-wrap items-center gap-1 font-mono text-[11px] uppercase text-[#52545d] pt-1">
-                  <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">Servo Control</span>
-                  <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">UART Communication</span>
-                  <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">Obstacle Avoidance</span>
-                  <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">Aisle Navigation</span>
-                </div>
-              </div>
-              <div className="lg:col-span-5">
-                <div className="relative bg-[#090a0c] p-1.5 overflow-hidden border border-[rgba(255,255,255,0.12)]">
-                  <img
-                    alt="CyBot Autonomous Navigation Robot"
-                    className="w-full aspect-[16/10] object-cover"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbmIxFGTBcT83FtICeDy4coyNfmq8zDzoBetDRfnWd3oOIV5lDBp7duHDWgNQ4S2lL2QVdDPK-6Es3crED_y4GSG26tezn_h6gix2vtP0h2MJsv2BMabIJe4j98MSr8WXnLN4GZKnmUBykwfuzbSjjvJ1QUx2apCznWbj22VZKIz50l9tgyHYJl8krXAqzHX34OeGCHwadPburfUUAebyORYme5GyElFwL9yMCSxWuWzM3KVEajnBXjQrFUQjP7L4htHo"
-                  />
-                  <div className="p-2 flex justify-between items-center text-[#52545d] font-mono text-[11px]">
-                    <span>CYBOT PLATFORM</span>
-                    <span>EMBEDDED SYSTEMS LAB</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* PROJECT 03: RANGAM GRAPHICS */}
+          {/* PROJECT 02: RANGAM GRAPHICS */}
           <div className="bg-[#18191d] border border-[rgba(255,255,255,0.12)] p-6 sm:p-8">
             <div className="space-y-4">
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <div className="flex items-center gap-2 font-mono text-[13px]">
-                  <span className="text-[#ff2a3b] font-bold">PROJECT // 03</span>
+                  <span className="text-[#ff2a3b] font-bold">PROJECT // 02</span>
                   <span className="text-[#52545d]">/</span>
                   <span className="text-[#00ff66] uppercase font-mono text-[11px]">CLIENT WORK</span>
                   <span className="text-[#52545d]">/</span>
-                  <span className="text-[#8d9099] font-mono text-[11px]">COMMERCIAL PRODUCTION</span>
+                  <span className="text-[#8d9099] font-mono text-[11px]">COMMERCIAL PRODUCTION WEB</span>
                 </div>
                 <div className="font-mono text-[11px] uppercase text-[#52545d] flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#00ff66] inline-block"></span>
@@ -391,7 +333,7 @@ export const OverviewPage: React.FC = () => {
                 Rangam Graphics : Commercial Printing &amp; Studio Website
               </h3>
               <p className="font-body text-sm text-[#8d9099] leading-relaxed max-w-4xl">
-                Developed and deployed a responsive commercial website for Rangam Graphics, an established commercial printing and packaging business. Structured comprehensive showcase pages for digital printing, industrial packaging, and finishing services, featuring quick quote inquiries and direct WhatsApp messaging integration for customer inquiries.
+                Architected and deployed a production-grade responsive commercial website for Rangam Graphics, an established commercial printing and packaging company. Structured client service showcases, interactive product galleries, rapid quote pipelines, and direct WhatsApp messaging automation for seamless lead generation.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 py-1 max-w-3xl">
                 <div className="bg-[#121315] p-3 border border-[rgba(255,255,255,0.06)]">
@@ -400,11 +342,11 @@ export const OverviewPage: React.FC = () => {
                 </div>
                 <div className="bg-[#121315] p-3 border border-[rgba(255,255,255,0.06)]">
                   <span className="block font-mono text-[11px] text-[#52545d] uppercase">Inquiry Channel</span>
-                  <span className="font-mono text-[13px] text-[#ffffff] font-semibold">WhatsApp &amp; Forms</span>
+                  <span className="font-mono text-[13px] text-[#ffffff] font-semibold">WhatsApp API &amp; Forms</span>
                 </div>
                 <div className="bg-[#121315] p-3 border border-[rgba(255,255,255,0.06)]">
                   <span className="block font-mono text-[11px] text-[#52545d] uppercase">Hosting</span>
-                  <span className="font-mono text-[13px] text-[#ff2a3b] font-semibold">Netlify</span>
+                  <span className="font-mono text-[13px] text-[#ff2a3b] font-semibold">Netlify Edge</span>
                 </div>
               </div>
               <div className="flex flex-wrap items-center justify-between gap-4 pt-2 border-t border-[rgba(255,255,255,0.08)]">
@@ -418,8 +360,8 @@ export const OverviewPage: React.FC = () => {
                   <span className="material-symbols-outlined text-sm">open_in_new</span>
                 </a>
                 <div className="flex flex-wrap gap-1 font-mono text-[11px] uppercase text-[#52545d]">
-                  <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">HTML</span>
-                  <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">CSS</span>
+                  <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">HTML5</span>
+                  <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">CSS3</span>
                   <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">JavaScript</span>
                   <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">Responsive UI</span>
                 </div>
@@ -427,38 +369,38 @@ export const OverviewPage: React.FC = () => {
             </div>
           </div>
 
-          {/* PROJECT 04: NASA SPACEAPPS */}
+          {/* PROJECT 03: NASA SPACEAPPS */}
           <div className="bg-[#18191d] border border-[rgba(255,255,255,0.12)] p-6 sm:p-8">
             <div className="space-y-4">
               <div className="flex items-center gap-2 font-mono text-[13px]">
-                <span className="text-[#ff2a3b] font-bold">PROJECT // 04</span>
+                <span className="text-[#ff2a3b] font-bold">PROJECT // 03</span>
                 <span className="text-[#52545d]">/</span>
                 <span className="font-mono text-[11px] text-[#8d9099] uppercase">NASA SPACE APPS HACKATHON</span>
                 <span className="text-[#52545d]">/</span>
-                <span className="text-[#00ff66] uppercase font-mono text-[11px]">WEBGL VISUALIZATION</span>
+                <span className="text-[#00ff66] uppercase font-mono text-[11px]">WEBGL 3D SOFTWARE</span>
               </div>
               <h3 className="font-display text-2xl sm:text-3xl text-[#ffffff] uppercase">
                 NASA SpaceApps : 3D Celestial Orbit Visualization
               </h3>
               <p className="font-body text-sm text-[#8d9099] leading-relaxed max-w-4xl">
-                Developed an interactive 3D celestial orbit visualization in the browser using Three.js and WebGL for near-Earth asteroids and comets. Rendered orbital trajectories, celestial coordinate references, and dynamic planetary bodies with interactive camera controls and lighting.
+                Engineered an interactive 3D celestial orbit simulation software running in the browser with Three.js and WebGL. Models orbital mechanics, celestial coordinate matrices, and trajectory paths for near-Earth asteroids and planetary bodies with zero lag and responsive 60fps rendering.
               </p>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 py-1">
                 <div className="bg-[#121315] p-3 border border-[rgba(255,255,255,0.06)]">
-                  <span className="block font-mono text-[11px] text-[#52545d] uppercase">Library</span>
+                  <span className="block font-mono text-[11px] text-[#52545d] uppercase">Graphics Library</span>
                   <span className="font-mono text-[13px] text-[#ffffff] font-semibold">Three.js</span>
                 </div>
                 <div className="bg-[#121315] p-3 border border-[rgba(255,255,255,0.06)]">
-                  <span className="block font-mono text-[11px] text-[#52545d] uppercase">Renderer</span>
-                  <span className="font-mono text-[13px] text-[#ffffff] font-semibold">WebGL</span>
+                  <span className="block font-mono text-[11px] text-[#52545d] uppercase">Engine</span>
+                  <span className="font-mono text-[13px] text-[#ffffff] font-semibold">WebGL Shaders</span>
                 </div>
                 <div className="bg-[#121315] p-3 border border-[rgba(255,255,255,0.06)]">
                   <span className="block font-mono text-[11px] text-[#52545d] uppercase">Focus</span>
                   <span className="font-mono text-[13px] text-[#ff2a3b] font-semibold">Orbit Simulation</span>
                 </div>
                 <div className="bg-[#121315] p-3 border border-[rgba(255,255,255,0.06)]">
-                  <span className="block font-mono text-[11px] text-[#52545d] uppercase">Event</span>
-                  <span className="font-mono text-[13px] text-[#ffffff] font-semibold">NASA Hackathon</span>
+                  <span className="block font-mono text-[11px] text-[#52545d] uppercase">Honor</span>
+                  <span className="font-mono text-[13px] text-[#ffffff] font-semibold">SpaceApps Winner</span>
                 </div>
               </div>
               <div className="flex flex-wrap items-center justify-between gap-4 pt-2 border-t border-[rgba(255,255,255,0.08)]">
@@ -466,9 +408,66 @@ export const OverviewPage: React.FC = () => {
                   <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">Three.js</span>
                   <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">JavaScript</span>
                   <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">WebGL</span>
-                  <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">3D Modeling</span>
+                  <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">Orbital Math</span>
                 </div>
-                <span className="font-mono text-[11px] uppercase text-[#52545d]">BROWSER-BASED 3D</span>
+                <span className="font-mono text-[11px] uppercase text-[#52545d]">60 FPS BROWSER COMPUTATION</span>
+              </div>
+            </div>
+          </div>
+
+          {/* PROJECT 04: CYBOT (HARDWARE LAB FOUNDATION) */}
+          <div className="bg-[#18191d] border border-[rgba(255,255,255,0.12)] p-6 sm:p-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div className="lg:col-span-7 space-y-4">
+                <div className="flex flex-wrap items-center gap-2 font-mono text-[13px]">
+                  <span className="text-[#ff2a3b] font-bold">PROJECT // 04</span>
+                  <span className="text-[#52545d]">/</span>
+                  <span className="text-[#ffb3af] uppercase font-mono text-[11px]">HARDWARE &amp; SYSTEMS LAB</span>
+                  <span className="text-[#52545d]">/</span>
+                  <span className="text-[#8d9099] font-mono text-[11px]">IOWA STATE UNIVERSITY (CPR E 288)</span>
+                </div>
+                <h3 className="font-display text-2xl sm:text-3xl text-[#ffffff] uppercase">
+                  CyBot Autonomous Navigation &amp; Sensing Platform
+                </h3>
+                <div className="inline-block bg-[#121315] px-2.5 py-1 text-[#ffb3af] font-mono text-[11px] border border-[rgba(255,255,255,0.06)]">
+                  ★ FOUNDATIONAL HARDWARE MILESTONE: Grounding software principles in physical execution and sensor interfacing
+                </div>
+                <p className="font-body text-sm text-[#8d9099] leading-relaxed">
+                  Engineered autonomous navigation and obstacle avoidance for a mobile robot utilizing the Texas Instruments Tiva TM4C123 microcontroller. Interfaced IR and ultrasonic sensors for distance detection and obstacle scanning, calibrated PWM servo angles, and implemented UART serial protocols to relay telemetry and execute movement commands for structured aisle navigation.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 py-1">
+                  <div className="bg-[#121315] p-3 border border-[rgba(255,255,255,0.06)]">
+                    <span className="block font-mono text-[11px] text-[#52545d] uppercase">Microcontroller</span>
+                    <span className="font-mono text-[13px] text-[#ffffff] font-semibold">Tiva TM4C123</span>
+                  </div>
+                  <div className="bg-[#121315] p-3 border border-[rgba(255,255,255,0.06)]">
+                    <span className="block font-mono text-[11px] text-[#52545d] uppercase">Sensors</span>
+                    <span className="font-mono text-[13px] text-[#ffffff] font-semibold">IR + Ultrasonic</span>
+                  </div>
+                  <div className="bg-[#121315] p-3 border border-[rgba(255,255,255,0.06)]">
+                    <span className="block font-mono text-[11px] text-[#52545d] uppercase">Firmware</span>
+                    <span className="font-mono text-[13px] text-[#ff2a3b] font-semibold">Embedded C</span>
+                  </div>
+                </div>
+                <div className="flex flex-wrap items-center gap-1 font-mono text-[11px] uppercase text-[#52545d] pt-1">
+                  <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">Servo PWM</span>
+                  <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">UART Communication</span>
+                  <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">Obstacle Avoidance</span>
+                  <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">Sensor Calibration</span>
+                </div>
+              </div>
+              <div className="lg:col-span-5">
+                <div className="relative bg-[#090a0c] p-1.5 overflow-hidden border border-[rgba(255,255,255,0.12)]">
+                  <img
+                    alt="CyBot Autonomous Navigation Robot"
+                    className="w-full aspect-[16/10] object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbmIxFGTBcT83FtICeDy4coyNfmq8zDzoBetDRfnWd3oOIV5lDBp7duHDWgNQ4S2lL2QVdDPK-6Es3crED_y4GSG26tezn_h6gix2vtP0h2MJsv2BMabIJe4j98MSr8WXnLN4GZKnmUBykwfuzbSjjvJ1QUx2apCznWbj22VZKIz50l9tgyHYJl8krXAqzHX34OeGCHwadPburfUUAebyORYme5GyElFwL9yMCSxWuWzM3KVEajnBXjQrFUQjP7L4htHo"
+                  />
+                  <div className="p-2 flex justify-between items-center text-[#52545d] font-mono text-[11px]">
+                    <span>CYBOT PLATFORM</span>
+                    <span>CPR E 288 HARDWARE LAB</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -490,25 +489,25 @@ export const OverviewPage: React.FC = () => {
                   Verified Technical Dossier
                 </h2>
                 <p className="font-body text-sm text-[#8d9099] leading-relaxed">
-                  Review my verified history covering embedded laboratory assignments at Iowa State, production engineering contracts, foundational coursework at Nirma University, and verified honors. Available for offline review via downloadable standard PDF or web dossier index.
+                  Review my verified history covering 2+2 articulation from Nirma University (BS CSE) to Iowa State University, full-stack software applications, native Android platform engineering, and verified coursework. Available for offline review via downloadable standard PDF/JPG or web dossier index.
                 </p>
 
                 {/* Key Resume Highlights */}
                 <div className="space-y-2 font-mono text-[13px]">
                   <div className="flex items-center gap-3 bg-[#121315] p-3 border border-[rgba(255,255,255,0.06)]">
                     <span className="text-[#ff2a3b]">•</span>
-                    <span className="text-[#ffffff] font-semibold">Degree:</span>
-                    <span className="text-[#8d9099]">B.S. in Computer Engineering, Iowa State University</span>
+                    <span className="text-[#ffffff] font-semibold">Degree Program:</span>
+                    <span className="text-[#8d9099]">2+2 B.S. Transfer: Nirma Univ (BS CSE) → Iowa State Univ (BS Computer Engineering, May '27)</span>
                   </div>
                   <div className="flex items-center gap-3 bg-[#121315] p-3 border border-[rgba(255,255,255,0.06)]">
                     <span className="text-[#ff2a3b]">•</span>
-                    <span className="text-[#ffffff] font-semibold">Core Stack:</span>
-                    <span className="text-[#8d9099]">C, C++, ARM Assembly, Python, JavaScript / Three.js, Git, Linux</span>
+                    <span className="text-[#ffffff] font-semibold">Core Technical Stack:</span>
+                    <span className="text-[#8d9099]">Java, Python, TypeScript / React, Android SDK, Spring Boot, MySQL, WebSockets, Three.js, C</span>
                   </div>
                   <div className="flex items-center gap-3 bg-[#121315] p-3 border border-[rgba(255,255,255,0.06)]">
                     <span className="text-[#ff2a3b]">•</span>
-                    <span className="text-[#ffffff] font-semibold">Target Availability:</span>
-                    <span className="text-[#00ff66]">Fall 2026 &amp; Beyond (Co-op / Full-Time / Internship)</span>
+                    <span className="text-[#ffffff] font-semibold">Target Opportunities:</span>
+                    <span className="text-[#00ff66]">Fall 2026 &amp; Beyond (Computer Science / Computer Engineering Internships &amp; Co-ops)</span>
                   </div>
                 </div>
 
@@ -539,20 +538,21 @@ export const OverviewPage: React.FC = () => {
                 <div className="bg-[#121315] border border-[rgba(255,255,255,0.08)] p-6 space-y-4">
                   <div className="flex items-center justify-between font-mono text-[11px] uppercase text-[#52545d]">
                     <span>FILE: NAKSHATRA_GUPTA_CV_2026.PDF</span>
-                    <span className="text-[#ff2a3b]">v2.4</span>
+                    <span className="text-[#ff2a3b]">v2.5</span>
                   </div>
                   <div className="space-y-1 font-mono text-[13px]">
                     <div className="text-[#ffffff] font-semibold">NAKSHATRA GUPTA</div>
-                    <div className="text-[#52545d] text-xs">CprE Undergraduate / Systems &amp; Low-Level Developer</div>
+                    <div className="text-[#52545d] text-xs">Computer Engineering Student (2+2 Transfer · Nirma BS CSE to ISU BS CE)</div>
                   </div>
                   <div className="bg-[#090a0c] p-3 font-mono text-[11px] text-[#8d9099] space-y-1 border border-[rgba(255,255,255,0.06)]">
-                    <div>[01] EMBEDDED C • TM4C123 • SENSOR FUSION</div>
-                    <div>[02] COMMERCIAL WEB • RANGAM GRAPHICS • NETLIFY</div>
-                    <div>[03] 3D GRAPHICS • THREE.JS • KEPLERIAN MATH</div>
+                    <div>[01] FULL-STACK ANDROID &amp; SPRING BOOT • CALMIFY</div>
+                    <div>[02] COMMERCIAL WEB ARCHITECTURE • RANGAM GRAPHICS</div>
+                    <div>[03] 3D GRAPHICS &amp; SPATIAL MATH • NASA SPACEAPPS</div>
+                    <div>[04] EMBEDDED C SENSOR SYSTEMS • CYBOT (CPR E 288)</div>
                   </div>
                   <div className="pt-2 flex justify-between items-center font-mono text-[11px] text-[#52545d] uppercase">
                     <span>LOCATION: AMES, IA</span>
-                    <span className="text-[#00ff66]">Fall 2026 &amp; Beyond</span>
+                    <span className="text-[#00ff66]">CS / CPR E • Fall 2026 &amp; Beyond</span>
                   </div>
                 </div>
               </div>
@@ -561,19 +561,19 @@ export const OverviewPage: React.FC = () => {
         </div>
       </section>
 
-      {/* DIRECT INQUIRY & CONTACT DISPATCH BANNER (WITH LIVE INTERACTIVE BACKEND FORM) */}
+      {/* DIRECT INQUIRY & CONTACT BANNER */}
       <section className="w-full bg-[#121316] px-4 sm:px-8 py-16" id="dispatch-inquiry">
         <div className="max-w-7xl mx-auto space-y-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div className="space-y-2 max-w-2xl">
               <span className="font-mono text-[11px] uppercase tracking-widest text-[#ff2a3b] block">
-                COMMUNICATIONS DISPATCH // FALL 2026 &amp; BEYOND
+                COMMUNICATIONS &amp; CONTACT // FALL 2026 &amp; BEYOND
               </span>
               <h2 className="font-display text-3xl sm:text-4xl text-[#ffffff] uppercase tracking-tight">
-                Have an engineering challenge or opportunity?
+                Get In Touch
               </h2>
               <p className="font-body text-sm text-[#8d9099]">
-                I am actively discussing Fall 2026 internships, co-ops, and full-time engineering roles in embedded firmware, robotics control, systems infrastructure, and high-performance computing. Let us build dependable systems together.
+                Actively discussing Fall 2026 Computer Science / Computer Engineering internships, co-ops, and post-graduation opportunities (May 2027). Transmit a dispatch or reach out directly.
               </p>
             </div>
             <div className="shrink-0 font-mono text-[11px] uppercase text-[#52545d]">
@@ -582,8 +582,27 @@ export const OverviewPage: React.FC = () => {
             </div>
           </div>
 
-          {/* Interactive Direct Dispatch Form Connected to /api/contact */}
-          <DirectDispatchForm />
+          <div className="bg-[#18191d] border border-[rgba(255,255,255,0.12)] p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="space-y-2">
+              <div className="flex items-center gap-2 text-[#00ff66] font-mono text-[11px] uppercase">
+                <span className="material-symbols-outlined text-sm">send</span>
+                <span>Direct Communications Dispatch Active</span>
+              </div>
+              <h3 className="font-display text-xl text-[#ffffff]">
+                Send a direct dispatch message via our dedicated contact station
+              </h3>
+              <p className="font-mono text-[13px] text-[#8d9099] max-w-xl">
+                Transmit detailed role specifications, timeline requirements, or schedule interview coordinates directly through the contact portal.
+              </p>
+            </div>
+            <Link
+              to="/contact"
+              className="px-6 py-3 bg-[#ffffff] text-[#090a0c] font-mono text-[13px] uppercase font-semibold hover:bg-[#ff2a3b] hover:text-[#ffffff] transition-colors shrink-0 text-center flex items-center gap-2"
+            >
+              <span>Open Contact Station</span>
+              <span className="material-symbols-outlined text-sm">arrow_forward</span>
+            </Link>
+          </div>
 
           {/* Contact Channels Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono text-[13px]">
@@ -599,9 +618,9 @@ export const OverviewPage: React.FC = () => {
               className="bg-[#18191d] border border-[rgba(255,255,255,0.08)] p-4 group hover:border-[#ff2a3b] transition-colors block"
               href="tel:+15159162251"
             >
-              <span className="block font-mono text-[11px] uppercase text-[#52545d] mb-1">Voice • SMS Telephony</span>
+              <span className="block font-mono text-[11px] uppercase text-[#52545d] mb-1">Voice / SMS Telephony</span>
               <span className="text-[#ffffff] font-semibold group-hover:text-[#ff2a3b] transition-colors">+1 515-916-2251</span>
-              <span className="block font-mono text-[11px] text-[#8d9099] mt-2">→ Central Standard Time (CT)</span>
+              <span className="block font-mono text-[11px] text-[#8d9099] mt-2">→ Central Time (CT)</span>
             </a>
             <div className="bg-[#18191d] border border-[rgba(255,255,255,0.08)] p-4 block">
               <span className="block font-mono text-[11px] uppercase text-[#52545d] mb-1">Physical Station</span>

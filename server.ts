@@ -43,12 +43,12 @@ const contactMessages: ContactMessage[] = [
 const RESUME_DATA = {
   candidate: {
     name: "Nakshatra Gupta",
-    role: "Computer Engineering Undergraduate (B.S. CprE '27)",
+    role: "Computer Engineering Student (2+2 Transfer · Nirma BS CSE to Iowa State BS CE)",
     institution: "Iowa State University",
     location: "Ames, Iowa, United States",
     email: "ng1308@iastate.edu",
     phone: "+1 515-916-2251",
-    targetTerm: "Fall 2026 & Beyond (Internship / Co-op / Full-Time)",
+    targetTerm: "Computer Science / Computer Engineering Internships · Fall 2026 & Beyond",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
     portfolioUrl: "https://wondrous-druid-2535ff.netlify.app/"
@@ -319,20 +319,20 @@ app.post("/api/assistant/chat", async (req, res) => {
 
   const prompt = `You are the technical AI Assistant representing Nakshatra Gupta's professional portfolio.
 Here is the factual dossier on Nakshatra Gupta:
-- Status: Bachelor of Science in Computer Engineering (B.S. CprE) at Iowa State University (Expected graduation: May 2027).
-- Prior Education: Nirma University (Ahmedabad, India) B.S. in Computer Science & Engineering (Transferred July 2023 - May 2025).
-- Availability: Actively interviewing for Fall 2026 and beyond (internships, co-ops, and full-time opportunities upon graduation).
+- Academic Journey: 2+2 Transfer Student who completed two years of Bachelor of Science in Computer Science Engineering (BS CSE) at Nirma University (Ahmedabad, India, 2023-2025) before transferring to Iowa State University to complete his B.S. in Computer Engineering (CPR E '27). He will hold degrees in BS CSE and CE.
+- Qualifications & Strengths: Nakshatra knows principles of software engineering and has a strong hold over software development (full-stack web development, Android applications, backend systems, and interactive graphics). His projects are primarily software-focused (Calmify, Rangam Graphics, NASA SpaceApps), with CyBot serving as his foundational embedded hardware lab. He is interested in jobs related to software rather than hardware.
+- Availability: Actively interviewing for Computer Science / Computer Engineering Internships and Co-ops for Fall 2026, and full-time opportunities post-graduation (May 2027). Open to relocation across the US.
 - Location: Ames, Iowa.
 - Contact: ng1308@iastate.edu | +1 515-916-2251.
 - Current Roles: ISSO Office Assistant at Iowa State University (processing I-9 verifications, SUNAPSIS) and Dining Student Worker.
-- Key Projects:
-  1. Calmify: Native Android mental health platform built in a 4-person team for COMS 3090 at Iowa State University (Java, Spring Boot, MySQL, WebSockets with typing indicators & read receipts, 30+ activities, video demo on YouTube).
-  2. CyBot Autonomous Navigation & Sensing Platform: TI TM4C123 ARM Cortex-M4 microcontroller, bare-metal C, IR + ultrasonic sensor fusion, PWM servo sweep, duplex UART control.
-  3. Rangam Graphics: Commercial production website for a 33+ year commercial printing and packaging company (HTML/CSS/JS, live on Netlify).
-  4. NASA SpaceApps 3D Celestial Orbit Visualization Engine: Three.js and WebGL compute engine simulating planetary trajectories and Keplerian math at 60 FPS.
-- Technical Skills: C (Bare-Metal), Java, Python, HTML/CSS/JS, ARM Assembly, TI TM4C123, UART, SPI, I2C, PWM, Oscilloscopes, Android SDK, Spring Boot, MySQL, WebSockets, GitLab CI/CD.
+- Key Projects (Software First):
+  1. Calmify: Native Android mental health platform built in a 4-person Agile sprint for COMS 3090 at Iowa State University (Java, Spring Boot, MySQL, WebSockets with typing indicators & read receipts, 30+ activities, role-based auth, AI assistant, video demo on YouTube).
+  2. Rangam Graphics: Production commercial website engineered for an established 33+ year printing and packaging house (responsive web architecture, zero-layout-shift catalog, instant WhatsApp lead routing, live on Netlify).
+  3. NASA SpaceApps 3D Celestial Orbit Visualization Engine: High-performance 3D astrophysics simulation engine built with Three.js and WebGL compute shaders, rendering planetary trajectories and Keplerian math at 60 FPS (Regional Winner).
+  4. CyBot Autonomous Navigation & Sensing Platform: Bare-metal C on TI TM4C123 ARM Cortex-M4 microcontroller for CPR E 288 (differential drive, IR + ultrasonic sensor fusion, PWM servo sweep, duplex UART telemetry).
+- Technical Skills: Java, Python, TypeScript, JavaScript, HTML/CSS, C, Android SDK, Spring Boot, React, Node.js, WebSockets, REST APIs, Three.js, MySQL, Git/GitHub, GitLab CI/CD, TI TM4C123.
 
-Task: Answer the visitor's question in a professional, technically precise, and concise manner (2-4 sentences or structured bullet points). Emphasize Nakshatra's strengths in low-level systems, reliable software, and openness to Fall 2026 engineering positions.
+Task: Answer the visitor's question in a professional, technically precise, and concise manner (2-4 sentences or structured bullet points). Emphasize Nakshatra's software development skills, strong foundation in software engineering principles, and openness to Fall 2026 Computer Science / Computer Engineering roles.
 
 Visitor Question: "${question}"`;
 
@@ -345,17 +345,17 @@ Visitor Question: "${question}"`;
       });
 
       return res.json({
-        reply: response.text || "Nakshatra Gupta is a Computer Engineering student at Iowa State University specializing in embedded firmware and high-performance software, open for Fall 2026 roles."
+        reply: response.text || "Nakshatra Gupta is a Computer Engineering student at Iowa State University (2+2 transfer from Nirma University BS CSE) with a strong hold over software development and principles of software engineering, open for Fall 2026 Computer Science / Computer Engineering roles."
       });
     } else {
       // Rule-based fallback if GEMINI_API_KEY is not configured yet
       const q = question.toLowerCase();
-      let fallbackReply = "Nakshatra Gupta is a Computer Engineering undergraduate at Iowa State University (Expected May 2027), actively seeking Fall 2026 internships, co-ops, and engineering opportunities in embedded systems, robotics, and software architecture.";
+      let fallbackReply = "Nakshatra Gupta is a Computer Engineering undergraduate at Iowa State University (Expected May 2027, 2+2 transfer from Nirma University BS CSE), actively seeking Fall 2026 Computer Science / Computer Engineering internships, co-ops, and opportunities post-graduation.";
 
       if (q.includes("project") || q.includes("calmify") || q.includes("cybot")) {
-        fallbackReply = "Nakshatra's flagship projects include Calmify (a native Android mental wellness platform with Spring Boot and WebSockets), CyBot (an autonomous rover on TI Tiva TM4C123 bare-metal C), Rangam Graphics (a commercial production web platform), and NASA SpaceApps (3D WebGL Keplerian orbit simulation).";
+        fallbackReply = "Nakshatra's flagship projects include Calmify (a native Android mental wellness platform with Spring Boot and WebSockets), Rangam Graphics (a commercial production web platform), NASA SpaceApps (3D WebGL Keplerian orbit simulation), and CyBot (an autonomous rover on TI Tiva TM4C123 bare-metal C).";
       } else if (q.includes("skill") || q.includes("language") || q.includes("c ") || q.includes("rust") || q.includes("python")) {
-        fallbackReply = "Nakshatra's technical stack spans Bare-Metal C, Java, Python, ARM Assembly, HTML/CSS/JS, Texas Instruments TM4C123, UART/SPI/I2C protocols, PWM timers, Android SDK, Spring Boot, WebSockets, and Three.js/WebGL.";
+        fallbackReply = "Nakshatra's technical stack spans Java, Python, TypeScript, JavaScript, HTML/CSS, C, Android SDK, Spring Boot, WebSockets, MySQL, Three.js/WebGL, and TI TM4C123 ARM Cortex-M4.";
       } else if (q.includes("contact") || q.includes("email") || q.includes("hire") || q.includes("reach")) {
         fallbackReply = "You can reach Nakshatra directly via academic email at ng1308@iastate.edu, phone at +1 515-916-2251, or by submitting a dispatch in the Contact section of this portfolio.";
       }
@@ -365,7 +365,7 @@ Visitor Question: "${question}"`;
   } catch (error: any) {
     console.error("[GEMINI ASSISTANT ERROR]", error);
     return res.json({
-      reply: "Nakshatra Gupta is a Computer Engineering undergraduate at Iowa State University (Class of '27) with deep experience in embedded systems, Android SDK, and WebGL, available for Fall 2026 roles. Please reach out to ng1308@iastate.edu."
+      reply: "Nakshatra Gupta is a Computer Engineering undergraduate at Iowa State University (2+2 transfer from Nirma University BS CSE) with strong software development skills and principles of software engineering, available for Fall 2026 roles. Please reach out to ng1308@iastate.edu."
     });
   }
 });

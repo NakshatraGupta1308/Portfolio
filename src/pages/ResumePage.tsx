@@ -16,17 +16,29 @@ export const ResumePage: React.FC = () => {
 
   const copyPlaintextResume = () => {
     const textContent = `NAKSHATRA GUPTA
-Computer Engineering Undergraduate - Iowa State University
+Computer Engineering Student (2+2 Transfer: Nirma University BS CSE -> Iowa State University BS CE)
+Knows principles of software engineering with strong hold over software development
 Location: Ames, Iowa
-Target: Fall 2026 & Beyond (Internship / Co-op / Full-Time)
+Target: Fall 2026 & Beyond (Computer Science / Computer Engineering Internships & Co-ops)
+Email: ng1308@iastate.edu | Phone: +1 515-916-2251
 
 EDUCATION:
 - Iowa State University (Ames, Iowa)
   B.S. in Computer Engineering (Expected Graduation: May 2027)
-  Relevant Coursework: Embedded Systems, Computer Architecture, Software Development Practice
+  Relevant Coursework: Software Development Practice (COMS 3090), Embedded Systems (CPR E 288), Computer Architecture
 - Nirma University (Ahmedabad, India)
-  B.S. in Computer Science & Engineering (Transferred, July 2023 - May 2025)
-  Relevant Coursework: Operating Systems, Data Structures & Algorithms, Software Development Principles
+  B.S. in Computer Science & Engineering (2+2 Articulation Transfer, July 2023 - May 2025)
+  Relevant Coursework: Data Structures & Algorithms, Operating Systems, Database Management Systems, Software Engineering Principles
+
+SOFTWARE PROJECTS:
+- Calmify (COMS 3090 - Team Lead / Full-Stack Android):
+  Native Android mental health application built with Java, Spring Boot microservices, MySQL database, and duplex WebSockets for live counsellor chat with typing indicators and read receipts. Role-based access across 30+ activities.
+- Rangam Graphics (Production Web Developer):
+  Architected and deployed commercial responsive web platform for commercial printing studio with Netlify Edge hosting, WhatsApp API integration, and inquiry pipelines.
+- NASA SpaceApps Hackathon (Browser 3D Graphics Software):
+  Interactive 3D celestial orbit simulation software using Three.js and WebGL. Rendered near-Earth orbital trajectories and planetary coordinates at 60 FPS.
+- CyBot Autonomous Sensing (CPR E 288 - Hardware Lab Foundation):
+  Autonomous mobile platform in Embedded C with TI Tiva TM4C123 microcontroller, IR/ultrasonic sensor fusion, and UART telemetry.
 
 WORK EXPERIENCE:
 - Iowa State University ISSO (Aug 2026 - Present)
@@ -34,16 +46,11 @@ WORK EXPERIENCE:
 - Iowa State University Dining Services (Aug 2025 - Present)
   Dining Student Worker: Fast-paced operations, sanitation protocols, high-density team coordination.
 
-LEADERSHIP & COMMUNITY:
-- Comic Con India (Ahmedabad) - Volunteer (Mar 2025)
-  Crowd management and high-density logistical communications.
-- Concert Events (India) - Volunteer (Mar 2025)
-  Logistical routing and perimeter event monitoring.
-
 TECHNICAL SKILLS:
-- Programming: C (Bare-Metal), Java, Python, HTML / CSS / JavaScript
-- Hardware & Tools: Tiva TM4C123GH6PM, UART, GPIO, Timers, PWM Servos, Oscilloscopes, Logic Analyzers, Git, MATLAB
-- Core Concepts: OOP, Data Structures, Microcontroller I/O, Hardware Interrupts, Algorithm Analysis`;
+- Languages: Java, Python, TypeScript / JavaScript, C, SQL, HTML5, CSS3
+- Web & Mobile: Android SDK, Spring Boot, React, WebSockets, Three.js / WebGL, REST APIs, MySQL
+- Developer Tools: Git, GitLab CI/CD, Netlify, Linux, Postman, Vite
+- CS Foundations: Data Structures & Algorithms, Object-Oriented Architecture, System Design, Concurrency, Hardware Interfacing`;
 
     if (navigator.clipboard) {
       navigator.clipboard.writeText(textContent).then(() => {
@@ -66,17 +73,17 @@ TECHNICAL SKILLS:
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-1.5 text-[#ffffff]">
               <span className="w-2 h-2 rounded-full bg-[#00ff66]"></span>
-              RECORD: CERTIFIED
+              DOSSIER: CERTIFIED
             </span>
             <span className="hidden sm:inline text-[rgba(255,255,255,0.12)]">/</span>
-            <span className="hidden sm:inline">REG_ID: ISU-CPRE-2027</span>
+            <span className="hidden sm:inline">TRAJECTORY: 2+2 NIRMA (BS CSE) → ISU (BS CE)</span>
             <span className="hidden md:inline text-[rgba(255,255,255,0.12)]">/</span>
-            <span className="hidden md:inline">TARGET_CYCLE: FALL 2026+</span>
+            <span className="hidden md:inline text-[#ff2a3b]">FOCUS: SOFTWARE PRINCIPLES &amp; SYSTEMS</span>
           </div>
           <div className="flex items-center gap-4 text-[#8d9099]">
             <span>LOC: AMES, IA [US]</span>
             <span className="text-[rgba(255,255,255,0.12)]">/</span>
-            <span className="text-[#ff2a3b] font-semibold">REVISION: V.FALL26.04</span>
+            <span className="text-[#00ff66] font-semibold">TARGET: FALL 2026 &amp; BEYOND (CS / CPR E)</span>
           </div>
         </div>
       </section>
@@ -96,7 +103,7 @@ TECHNICAL SKILLS:
                 RESUME &amp; DOSSIER
               </h1>
               <p className="font-body text-sm sm:text-base text-[#8d9099]">
-                Computer Engineering undergraduate at Iowa State University specializing in low-level microcontroller systems, bare-metal hardware integration, and reliable software architecture.
+                2+2 Computer Science &amp; Engineering transfer student from Nirma University (BS CSE) to Iowa State University (BS Computer Engineering). Holds a strong foundation in principles of software engineering, full-stack software development, native Android applications, responsive web platforms, and embedded computing.
               </p>
             </div>
 
@@ -172,20 +179,20 @@ TECHNICAL SKILLS:
                 </div>
                 <div className="grid grid-cols-2 gap-2 font-mono text-[13px]">
                   <div className="p-2 bg-[#0d0e10] border border-[rgba(255,255,255,0.06)]">
-                    <div className="text-[#52545d] text-[10px]">MAJOR</div>
-                    <div className="text-[#ffffff] font-semibold">Computer Eng.</div>
+                    <div className="text-[#52545d] text-[10px]">PROGRAM</div>
+                    <div className="text-[#ffffff] font-semibold text-xs">2+2 Transfer (BS CSE &amp; CE)</div>
+                  </div>
+                  <div className="p-2 bg-[#0d0e10] border border-[rgba(255,255,255,0.06)]">
+                    <div className="text-[#52545d] text-[10px]">FOCUS</div>
+                    <div className="text-[#ff2a3b] font-semibold text-xs">Software Development</div>
                   </div>
                   <div className="p-2 bg-[#0d0e10] border border-[rgba(255,255,255,0.06)]">
                     <div className="text-[#52545d] text-[10px]">GRADUATION</div>
                     <div className="text-[#ffffff] font-semibold">May 2027</div>
                   </div>
                   <div className="p-2 bg-[#0d0e10] border border-[rgba(255,255,255,0.06)]">
-                    <div className="text-[#52545d] text-[10px]">CURRENT ROLE</div>
-                    <div className="text-[#ffffff] font-semibold">ISSO Assistant</div>
-                  </div>
-                  <div className="p-2 bg-[#0d0e10] border border-[rgba(255,255,255,0.06)]">
-                    <div className="text-[#52545d] text-[10px]">LOOKING FOR</div>
-                    <div className="text-[#00ff66] font-semibold">Fall 2026 &amp; Beyond</div>
+                    <div className="text-[#52545d] text-[10px]">TARGET ROLES</div>
+                    <div className="text-[#00ff66] font-semibold text-xs">CS / CE Internships</div>
                   </div>
                 </div>
               </div>
@@ -198,15 +205,19 @@ TECHNICAL SKILLS:
                 <div className="flex items-center justify-between pb-2 border-b border-[rgba(255,255,255,0.08)]">
                   <div className="flex items-center gap-2">
                     <span className="font-mono text-[13px] text-[#ff2a3b] font-bold">01 //</span>
-                    <h2 className="font-display text-xl uppercase text-[#ffffff] tracking-tight">Academic Trajectory</h2>
+                    <h2 className="font-display text-xl uppercase text-[#ffffff] tracking-tight">Academic Trajectory (2+2 Transfer)</h2>
                   </div>
-                  <span className="font-mono text-[11px] text-[#52545d] uppercase">DEGREE &amp; INSTITUTION</span>
+                  <span className="font-mono text-[11px] text-[#00ff66] uppercase">ARTICULATION PROGRAM</span>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <div className="bg-[#18191d] border border-[rgba(255,255,255,0.1)] p-6 space-y-3 hover:bg-[#1f2022] transition-colors">
+                  {/* Current Institution: Iowa State */}
+                  <div className="bg-[#18191d] border border-[rgba(255,255,255,0.1)] p-6 space-y-3 hover:bg-[#1f2022] transition-colors border-l-2 border-l-[#ff2a3b]">
                     <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
                       <div>
-                        <div className="font-display text-xl text-[#ffffff] font-semibold">Iowa State University</div>
+                        <div className="flex items-center gap-2">
+                          <span className="font-display text-xl text-[#ffffff] font-semibold">Iowa State University</span>
+                          <span className="px-2 py-0.5 bg-[#0d0e10] text-[#00ff66] font-mono text-[10px] uppercase border border-[rgba(0,255,102,0.3)]">CURRENT</span>
+                        </div>
                         <div className="font-mono text-[13px] text-[#ff2a3b]">Ames, Iowa - United States</div>
                       </div>
                       <div className="px-2 py-1 bg-[#0d0e10] text-[#8d9099] font-mono text-[11px] uppercase shrink-0 sm:text-right border border-[rgba(255,255,255,0.06)]">
@@ -214,40 +225,51 @@ TECHNICAL SKILLS:
                       </div>
                     </div>
                     <div className="text-[#ffffff] font-body text-base font-semibold">
-                      Bachelor of Science in Computer Engineering
+                      Bachelor of Science in Computer Engineering (B.S. CprE)
                     </div>
+                    <p className="font-body text-xs text-[#8d9099] leading-relaxed">
+                      Completing the upper-division portion of the 2+2 transfer curriculum, focusing on full-stack software development practices, distributed systems architecture, algorithm optimization, and embedded systems foundations.
+                    </p>
                     <div className="space-y-1 pt-1">
                       <div className="font-mono text-[11px] uppercase text-[#52545d]">
-                        Relevant Coursework:
+                        Relevant ISU Coursework:
                       </div>
                       <div className="flex flex-wrap gap-1.5">
-                        <span className="px-2 py-1 bg-[#0d0e10] font-mono text-[11px] text-[#8d9099]">Embedded Systems</span>
+                        <span className="px-2 py-1 bg-[#0d0e10] font-mono text-[11px] text-[#ffffff] border border-[rgba(255,255,255,0.06)]">COMS 3090: Software Development Practice</span>
+                        <span className="px-2 py-1 bg-[#0d0e10] font-mono text-[11px] text-[#8d9099]">CPR E 288: Embedded Systems &amp; Lab</span>
                         <span className="px-2 py-1 bg-[#0d0e10] font-mono text-[11px] text-[#8d9099]">Computer Architecture</span>
-                        <span className="px-2 py-1 bg-[#0d0e10] font-mono text-[11px] text-[#8d9099]">Software Development Practice</span>
                       </div>
                     </div>
                   </div>
 
-                  <div className="bg-[#18191d] border border-[rgba(255,255,255,0.1)] p-6 space-y-3 hover:bg-[#1f2022] transition-colors">
+                  {/* Transfer Institution: Nirma University */}
+                  <div className="bg-[#18191d] border border-[rgba(255,255,255,0.1)] p-6 space-y-3 hover:bg-[#1f2022] transition-colors border-l-2 border-l-[#52545d]">
                     <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
                       <div>
-                        <div className="font-display text-xl text-[#ffffff] font-semibold">Nirma University</div>
+                        <div className="flex items-center gap-2">
+                          <span className="font-display text-xl text-[#ffffff] font-semibold">Nirma University</span>
+                          <span className="px-2 py-0.5 bg-[#0d0e10] text-[#ffb3af] font-mono text-[10px] uppercase border border-[rgba(255,179,175,0.3)]">FOUNDATION (2+2)</span>
+                        </div>
                         <div className="font-mono text-[13px] text-[#8d9099]">Ahmedabad, Gujarat - India</div>
                       </div>
                       <div className="px-2 py-1 bg-[#0d0e10] text-[#8d9099] font-mono text-[11px] uppercase shrink-0 sm:text-right border border-[rgba(255,255,255,0.06)]">
-                        July 2023 - May 2025 (Transferred)
+                        July 2023 - May 2025 (Transferred to ISU)
                       </div>
                     </div>
                     <div className="text-[#ffffff] font-body text-base font-semibold">
-                      Bachelor of Science in Computer Science &amp; Engineering
+                      Bachelor of Science in Computer Science &amp; Engineering (BS CSE)
                     </div>
+                    <p className="font-body text-xs text-[#8d9099] leading-relaxed">
+                      Completed two years of rigorous core Computer Science Engineering curriculum at Institute of Technology, Nirma University, building robust foundations in algorithms, data structures, relational databases, and operating systems before transitioning to Iowa State.
+                    </p>
                     <div className="space-y-1 pt-1">
                       <div className="font-mono text-[11px] uppercase text-[#52545d]">
-                        Relevant Coursework:
+                        Relevant Nirma Coursework:
                       </div>
                       <div className="flex flex-wrap gap-1.5">
-                        <span className="px-2 py-1 bg-[#0d0e10] font-mono text-[11px] text-[#8d9099]">Operating Systems</span>
                         <span className="px-2 py-1 bg-[#0d0e10] font-mono text-[11px] text-[#8d9099]">Data Structures &amp; Algorithms</span>
+                        <span className="px-2 py-1 bg-[#0d0e10] font-mono text-[11px] text-[#8d9099]">Operating Systems</span>
+                        <span className="px-2 py-1 bg-[#0d0e10] font-mono text-[11px] text-[#8d9099]">Database Management Systems</span>
                         <span className="px-2 py-1 bg-[#0d0e10] font-mono text-[11px] text-[#8d9099]">Software Development Principles</span>
                       </div>
                     </div>
@@ -323,50 +345,146 @@ TECHNICAL SKILLS:
                 </div>
               </div>
 
-              {/* 03. Featured Projects */}
+              {/* 03. Featured Software & Systems Projects */}
               <div className="space-y-4">
                 <div className="flex items-center justify-between pb-2 border-b border-[rgba(255,255,255,0.08)]">
                   <div className="flex items-center gap-2">
                     <span className="font-mono text-[13px] text-[#ff2a3b] font-bold">03 //</span>
-                    <h2 className="font-display text-xl uppercase text-[#ffffff] tracking-tight">Featured Projects</h2>
+                    <h2 className="font-display text-xl uppercase text-[#ffffff] tracking-tight">Featured Software &amp; Systems Projects</h2>
                   </div>
                   <span className="font-mono text-[11px] text-[#52545d] uppercase">ENGINEERING LOG</span>
                 </div>
-                <div className="bg-[#18191d] border border-[rgba(255,255,255,0.1)] p-6 space-y-3 border-l-2 border-l-[#ff2a3b]">
-                  <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
-                    <div>
-                      <div className="flex items-center gap-2 font-display text-xl text-[#ffffff] font-semibold">
-                        <span>Calmify</span>
-                        <span className="text-[#52545d]">/</span>
-                        <span className="text-[#ff2a3b] text-sm font-mono uppercase tracking-wider">Android Mental Wellness App</span>
+
+                <div className="space-y-4">
+                  {/* Project 1: Calmify */}
+                  <div className="bg-[#18191d] border border-[rgba(255,255,255,0.1)] p-6 space-y-3 border-l-2 border-l-[#ff2a3b]">
+                    <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+                      <div>
+                        <div className="flex items-center gap-2 font-display text-xl text-[#ffffff] font-semibold">
+                          <span>Calmify</span>
+                          <span className="text-[#52545d]">/</span>
+                          <span className="text-[#ff2a3b] text-sm font-mono uppercase tracking-wider">Full-Stack Android App</span>
+                        </div>
+                        <div className="font-mono text-[13px] text-[#8d9099] pt-0.5">Iowa State University (COMS 3090)</div>
                       </div>
-                      <div className="font-mono text-[13px] text-[#8d9099] pt-0.5">Iowa State University (COMS 3090)</div>
+                      <div className="px-2 py-1 bg-[#0d0e10] text-[#ff2a3b] font-mono text-[11px] uppercase shrink-0 sm:text-right border border-[rgba(255,255,255,0.06)]">
+                        Jan 2026 - May 2026
+                      </div>
                     </div>
-                    <div className="px-2 py-1 bg-[#0d0e10] text-[#ff2a3b] font-mono text-[11px] uppercase shrink-0 sm:text-right border border-[rgba(255,255,255,0.06)]">
-                      Jan 2026 - May 2026
+                    <p className="font-body text-sm text-[#8d9099] leading-relaxed">
+                      Native Android full-stack mental health platform engineered in a 4-person team for COMS 3090. Built real-time duplex WebSocket chat with typing indicators and read receipts, appointment scheduling engine, AI chat assistant, and role-based permissions across 30+ activities with continuous GitLab CI/CD.
+                    </p>
+                    <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
+                      <div className="flex flex-wrap gap-1.5">
+                        {['Android SDK', 'Java', 'WebSockets', 'Spring Boot', 'MySQL', 'Volley & Glide', 'GitLab CI/CD'].map(t => (
+                          <span key={t} className="px-2 py-0.5 bg-[#0d0e10] font-mono text-[11px] text-[#8d9099] uppercase border border-[rgba(255,255,255,0.06)]">
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+                      <a
+                        className="flex items-center gap-1.5 px-3 py-1.5 bg-[#ff2a3b] text-[#ffffff] font-mono text-[11px] uppercase font-semibold hover:bg-[#ff4d5d] transition-colors shrink-0"
+                        href="https://www.youtube.com/watch?v=qTwxhTLsqMM"
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        <span className="material-symbols-outlined text-sm leading-none">smart_display</span>
+                        <span>Video Demo</span>
+                        <span className="material-symbols-outlined text-xs leading-none">open_in_new</span>
+                      </a>
                     </div>
                   </div>
-                  <p className="font-body text-sm text-[#8d9099] leading-relaxed">
-                    Native Android full-stack platform built for Iowa State University COMS 3090. Developed WebSocket chat with typing indicators and read receipts, appointment booking, AI chat assistant, admin dashboard, role-based UI across 30+ activities, and automated GitLab CI/CD.
-                  </p>
-                  <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
-                    <div className="flex flex-wrap gap-1.5">
-                      {['Android SDK', 'Java', 'WebSockets', 'Spring Boot', 'MySQL', 'Volley & Glide', 'GitLab CI/CD'].map(t => (
+
+                  {/* Project 2: Rangam Graphics */}
+                  <div className="bg-[#18191d] border border-[rgba(255,255,255,0.1)] p-6 space-y-3 border-l-2 border-l-[#00ff66]">
+                    <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+                      <div>
+                        <div className="flex items-center gap-2 font-display text-xl text-[#ffffff] font-semibold">
+                          <span>Rangam Graphics</span>
+                          <span className="text-[#52545d]">/</span>
+                          <span className="text-[#00ff66] text-sm font-mono uppercase tracking-wider">Commercial Web Platform</span>
+                        </div>
+                        <div className="font-mono text-[13px] text-[#8d9099] pt-0.5">Commercial Production Deployment</div>
+                      </div>
+                      <div className="px-2 py-1 bg-[#0d0e10] text-[#00ff66] font-mono text-[11px] uppercase shrink-0 sm:text-right border border-[rgba(0,255,102,0.2)]">
+                        Production Live
+                      </div>
+                    </div>
+                    <p className="font-body text-sm text-[#8d9099] leading-relaxed">
+                      Architected and deployed a production web platform for a commercial printing and packaging enterprise. Features structured catalog showcases, responsive mobile-first UI, and automated WhatsApp inquiry routing for customer lead capture.
+                    </p>
+                    <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
+                      <div className="flex flex-wrap gap-1.5">
+                        {['HTML5', 'CSS3', 'JavaScript', 'Netlify', 'WhatsApp API', 'Responsive UI'].map(t => (
+                          <span key={t} className="px-2 py-0.5 bg-[#0d0e10] font-mono text-[11px] text-[#8d9099] uppercase border border-[rgba(255,255,255,0.06)]">
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+                      <a
+                        className="flex items-center gap-1.5 px-3 py-1.5 bg-[#1f2022] text-[#ffffff] font-mono text-[11px] uppercase font-semibold hover:bg-[#ff2a3b] transition-colors shrink-0 border border-[rgba(255,255,255,0.1)]"
+                        href="https://wondrous-druid-2535ff.netlify.app/"
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        <span>Launch Live</span>
+                        <span className="material-symbols-outlined text-xs leading-none">open_in_new</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Project 3: NASA SpaceApps */}
+                  <div className="bg-[#18191d] border border-[rgba(255,255,255,0.1)] p-6 space-y-3">
+                    <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+                      <div>
+                        <div className="flex items-center gap-2 font-display text-xl text-[#ffffff] font-semibold">
+                          <span>NASA SpaceApps</span>
+                          <span className="text-[#52545d]">/</span>
+                          <span className="text-[#ffb3af] text-sm font-mono uppercase tracking-wider">3D Orbit Simulation</span>
+                        </div>
+                        <div className="font-mono text-[13px] text-[#8d9099] pt-0.5">NASA Space Apps Hackathon Winner</div>
+                      </div>
+                      <div className="px-2 py-1 bg-[#0d0e10] text-[#ffb3af] font-mono text-[11px] uppercase shrink-0 sm:text-right border border-[rgba(255,255,255,0.06)]">
+                        Hackathon Project
+                      </div>
+                    </div>
+                    <p className="font-body text-sm text-[#8d9099] leading-relaxed">
+                      Engineered interactive 3D celestial orbit simulation software running in browser using Three.js and WebGL. Rendered near-Earth orbital trajectories, celestial coordinates, and dynamic planetary lighting with zero lag.
+                    </p>
+                    <div className="flex flex-wrap gap-1.5 pt-2">
+                      {['Three.js', 'JavaScript', 'WebGL', '3D Graphics', 'Orbital Math'].map(t => (
                         <span key={t} className="px-2 py-0.5 bg-[#0d0e10] font-mono text-[11px] text-[#8d9099] uppercase border border-[rgba(255,255,255,0.06)]">
                           {t}
                         </span>
                       ))}
                     </div>
-                    <a
-                      className="flex items-center gap-1.5 px-3 py-1.5 bg-[#ff2a3b] text-[#ffffff] font-mono text-[11px] uppercase font-semibold hover:bg-[#ff4d5d] transition-colors shrink-0"
-                      href="https://www.youtube.com/watch?v=qTwxhTLsqMM"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      <span className="material-symbols-outlined text-sm leading-none">smart_display</span>
-                      <span>Video Demo</span>
-                      <span className="material-symbols-outlined text-xs leading-none">open_in_new</span>
-                    </a>
+                  </div>
+
+                  {/* Project 4: CyBot (Hardware Lab) */}
+                  <div className="bg-[#18191d] border border-[rgba(255,255,255,0.1)] p-6 space-y-3">
+                    <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+                      <div>
+                        <div className="flex items-center gap-2 font-display text-xl text-[#ffffff] font-semibold">
+                          <span>CyBot Autonomous Robot</span>
+                          <span className="text-[#52545d]">/</span>
+                          <span className="text-[#8d9099] text-sm font-mono uppercase tracking-wider">Hardware Systems Lab</span>
+                        </div>
+                        <div className="font-mono text-[13px] text-[#8d9099] pt-0.5">Iowa State University (CPR E 288)</div>
+                      </div>
+                      <div className="px-2 py-1 bg-[#0d0e10] text-[#8d9099] font-mono text-[11px] uppercase shrink-0 sm:text-right border border-[rgba(255,255,255,0.06)]">
+                        Hardware Lab
+                      </div>
+                    </div>
+                    <p className="font-body text-sm text-[#8d9099] leading-relaxed">
+                      Engineered autonomous navigation and obstacle avoidance for mobile robot using TI Tiva TM4C123 microcontroller, Embedded C, IR and ultrasonic sensors, PWM servo calibration, and UART telemetry.
+                    </p>
+                    <div className="flex flex-wrap gap-1.5 pt-2">
+                      {['Embedded C', 'TI TM4C123', 'UART', 'PWM Servos', 'IR & Ultrasonic', 'Sensor Fusion'].map(t => (
+                        <span key={t} className="px-2 py-0.5 bg-[#0d0e10] font-mono text-[11px] text-[#8d9099] uppercase border border-[rgba(255,255,255,0.06)]">
+                          {t}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -427,36 +545,44 @@ TECHNICAL SKILLS:
                 <div className="bg-[#18191d] border border-[rgba(255,255,255,0.1)] p-6 space-y-5">
                   <div className="space-y-2">
                     <div className="flex items-center justify-between font-mono text-[11px] uppercase text-[#52545d]">
-                      <span>Category: Programming &amp; Scripting</span>
-                      <span>PROFICIENCY INDEX</span>
+                      <span>Category: Languages &amp; Programming Core</span>
+                      <span className="text-[#ff2a3b]">PRIMARY SOFTWARE FOCUS</span>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 font-mono text-[13px]">
                       <div className="p-2.5 bg-[#0d0e10] border border-[rgba(255,255,255,0.06)] flex items-center justify-between">
-                        <span className="text-[#ffffff] font-semibold">C (Bare-Metal)</span>
-                        <span className="text-[#ff2a3b] text-xs uppercase font-bold">Primary</span>
-                      </div>
-                      <div className="p-2.5 bg-[#0d0e10] border border-[rgba(255,255,255,0.06)] flex items-center justify-between">
                         <span className="text-[#ffffff] font-semibold">Java</span>
-                        <span className="text-[#8d9099] text-xs uppercase">Core OOP</span>
+                        <span className="text-[#ff2a3b] text-xs uppercase font-bold">Core OOP / Android</span>
                       </div>
                       <div className="p-2.5 bg-[#0d0e10] border border-[rgba(255,255,255,0.06)] flex items-center justify-between">
                         <span className="text-[#ffffff] font-semibold">Python</span>
-                        <span className="text-[#8d9099] text-xs uppercase">Data / Scripting</span>
+                        <span className="text-[#8d9099] text-xs uppercase">Algorithms / Scripting</span>
                       </div>
                       <div className="p-2.5 bg-[#0d0e10] border border-[rgba(255,255,255,0.06)] flex items-center justify-between">
-                        <span className="text-[#ffffff] font-semibold">HTML / CSS / JS</span>
-                        <span className="text-[#8d9099] text-xs uppercase">Web Front-end</span>
+                        <span className="text-[#ffffff] font-semibold">TypeScript &amp; JavaScript</span>
+                        <span className="text-[#8d9099] text-xs uppercase">Modern Web &amp; Apps</span>
+                      </div>
+                      <div className="p-2.5 bg-[#0d0e10] border border-[rgba(255,255,255,0.06)] flex items-center justify-between">
+                        <span className="text-[#ffffff] font-semibold">SQL (MySQL)</span>
+                        <span className="text-[#8d9099] text-xs uppercase">Relational DB</span>
+                      </div>
+                      <div className="p-2.5 bg-[#0d0e10] border border-[rgba(255,255,255,0.06)] flex items-center justify-between">
+                        <span className="text-[#ffffff] font-semibold">C (Systems / Bare-Metal)</span>
+                        <span className="text-[#8d9099] text-xs uppercase">Low-Level Lab</span>
+                      </div>
+                      <div className="p-2.5 bg-[#0d0e10] border border-[rgba(255,255,255,0.06)] flex items-center justify-between">
+                        <span className="text-[#ffffff] font-semibold">HTML5 / CSS3</span>
+                        <span className="text-[#8d9099] text-xs uppercase">Semantic Web</span>
                       </div>
                     </div>
                   </div>
 
                   <div className="space-y-2 pt-2 border-t border-[rgba(255,255,255,0.06)]">
                     <div className="flex items-center justify-between font-mono text-[11px] uppercase text-[#52545d]">
-                      <span>Category: Hardware, Peripherals &amp; Lab Instrumentation</span>
-                      <span>SIGNAL &amp; HARDWARE</span>
+                      <span>Category: Web, Mobile &amp; Backend Frameworks</span>
+                      <span className="text-[#00ff66]">PRODUCTION APIS</span>
                     </div>
                     <div className="flex flex-wrap gap-2">
-                      {['TI TM4C123', 'UART / SPI / I2C', 'GPIO Configuration', 'PWM Timers', 'Oscilloscopes', 'Logic Analyzers', 'GitLab CI/CD', 'Android SDK', 'WebSockets', 'Spring Boot', 'MySQL', 'Volley & Glide'].map(h => (
+                      {['Android SDK', 'Spring Boot', 'React', 'WebSockets', 'RESTful APIs', 'Three.js / WebGL', 'MySQL', 'Volley & Glide', 'Tailwind CSS'].map(h => (
                         <span key={h} className="px-2.5 py-1.5 bg-[#0d0e10] text-[#ffffff] font-mono text-[13px] border border-[rgba(255,255,255,0.06)]">
                           {h}
                         </span>
@@ -466,17 +592,31 @@ TECHNICAL SKILLS:
 
                   <div className="space-y-2 pt-2 border-t border-[rgba(255,255,255,0.06)]">
                     <div className="flex items-center justify-between font-mono text-[11px] uppercase text-[#52545d]">
-                      <span>Category: Theoretical Foundations</span>
-                      <span>SYSTEM KERNEL</span>
+                      <span>Category: Developer Tooling &amp; Infrastructure</span>
+                      <span>DEV OPS &amp; CI/CD</span>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {['Git & GitHub', 'GitLab CI/CD', 'Netlify Edge', 'Linux (Ubuntu/Bash)', 'Vite / npm', 'Postman', 'VS Code & Android Studio'].map(d => (
+                        <span key={d} className="px-2.5 py-1.5 bg-[#0d0e10] text-[#8d9099] font-mono text-[12px] border border-[rgba(255,255,255,0.06)]">
+                          {d}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="space-y-2 pt-2 border-t border-[rgba(255,255,255,0.06)]">
+                    <div className="flex items-center justify-between font-mono text-[11px] uppercase text-[#52545d]">
+                      <span>Category: Theoretical Foundations &amp; Software Concepts</span>
+                      <span>COMPUTER SCIENCE CORE</span>
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 font-mono text-[11px] text-[#8d9099] uppercase">
                       {[
-                        'Object-Oriented Programming',
-                        'Data Structures',
-                        'Microcontroller I/O',
-                        'Hardware Interrupts (ISR)',
-                        'Algorithm Analysis',
-                        'Memory Pointers & Stack'
+                        'Data Structures & Algorithms',
+                        'Object-Oriented Architecture',
+                        'Relational Database Modeling',
+                        'Full-Stack System Design',
+                        'Operating Systems & Concurrency',
+                        'Hardware / Software Interfacing'
                       ].map(t => (
                         <div key={t} className="p-2 bg-[#0d0e10] border border-[rgba(255,255,255,0.06)] flex items-center gap-1.5">
                           <span className="w-1.5 h-1.5 bg-[#ff2a3b] rounded-full shrink-0"></span>
@@ -486,26 +626,6 @@ TECHNICAL SKILLS:
                     </div>
                   </div>
                 </div>
-              </div>
-
-              {/* Direct Audit Badge */}
-              <div className="p-6 bg-[#18191d] border border-[rgba(255,255,255,0.12)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div className="space-y-1">
-                  <div className="flex items-center gap-2 text-[#00ff66] font-mono text-[11px] uppercase">
-                    <span className="material-symbols-outlined text-sm">verified_user</span>
-                    <span>Verified Academic &amp; Professional Record</span>
-                  </div>
-                  <div className="font-display text-xl text-[#ffffff]">Fall 2026 &amp; Beyond Candidate</div>
-                  <div className="font-mono text-[13px] text-[#8d9099]">
-                    Official institutional transcripts and lab references accessible upon request.
-                  </div>
-                </div>
-                <a
-                  className="px-5 py-3 bg-[#ffffff] text-[#090a0c] font-mono text-[13px] uppercase font-semibold hover:bg-[#ff2a3b] hover:text-[#ffffff] transition-colors shrink-0 text-center"
-                  href="mailto:ng1308@iastate.edu?subject=Inquiry:%20Fall%202026%20Engineering%20Opportunity"
-                >
-                  Request Full Packet
-                </a>
               </div>
             </div>
           </div>
