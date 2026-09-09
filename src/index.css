@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface-deep: #090a0c;
+  --color-surface: #121315;
+  --color-surface-raised: #121316;
+  --color-surface-card: #18191d;
+  --color-surface-container-lowest: #0d0e10;
+  --color-surface-container-low: #1b1c1e;
+  --color-surface-container: #1f2022;
+  --color-surface-container-high: #292a2c;
+  --color-surface-container-highest: #343537;
+  --color-surface-bright: #38393b;
+  --color-surface-dim: #121315;
+  --color-on-surface: #e3e2e5;
+  --color-on-background: #e3e2e5;
+  --color-text-stark: #ffffff;
+  --color-text-muted: #8d9099;
+  --color-text-dim: #52545d;
+  --color-accent-crimson: #ff2a3b;
+  --color-accent-crimson-hover: #ff4d5d;
+  --color-signal-active: #00ff66;
+  --color-primary: #ffb3af;
+  --color-primary-container: #ff5355;
+  --color-border-hairline: rgba(255, 255, 255, 0.12);
+  --color-border-subtle: rgba(255, 255, 255, 0.06);
+  --color-border-crimson: rgba(255, 42, 59, 0.4);
+
+  --font-meta-index: 'JetBrains Mono', monospace;
+  --font-meta-tag: 'JetBrains Mono', monospace;
+  --font-headline-editorial: 'Newsreader', serif;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-headline-lg: 'Space Grotesk', sans-serif;
+  --font-headline-sm: 'Space Grotesk', sans-serif;
+  --font-body-lg: 'Manrope', sans-serif;
+  --font-body-md: 'Manrope', sans-serif;
+
+  --spacing-space-2xs: 0.25rem;
+  --spacing-space-xs: 0.5rem;
+  --spacing-space-sm: 0.75rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-space-xl: 2rem;
+  --spacing-space-2xl: 3rem;
+  --spacing-space-3xl: 4.5rem;
+  --spacing-space-4xl: 6rem;
+  --spacing-space-section: 8rem;
+  --spacing-gutter-desktop: 2rem;
+  --spacing-gutter-mobile: 1rem;
+}
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #090a0c;
+    color: #e3e2e5;
+    font-family: 'Manrope', sans-serif;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #090a0c;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #292a2c;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff2a3b;
+  }
+}
+
+/* Specific text styling classes matching design specs */
+.text-display {
+  font-size: 84px;
+  line-height: 88px;
+  letter-spacing: -0.04em;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .text-display {
+    font-size: 44px;
+    line-height: 48px;
+    letter-spacing: -0.03em;
+  }
+}
+
+.text-display-mobile {
+  font-size: 44px;
+  line-height: 48px;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+}
+
+.text-headline-editorial {
+  font-size: 56px;
+  line-height: 62px;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 768px) {
+  .text-headline-editorial {
+    font-size: 34px;
+    line-height: 40px;
+    letter-spacing: -0.01em;
+  }
+}
+
+.text-headline-lg {
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+.text-headline-sm {
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+
+.text-body-lg {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.text-body-md {
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.text-meta-index {
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+}
+
+.text-meta-tag {
+  font-size: 11px;
+  line-height: 14px;
+  letter-spacing: 0.14em;
+  font-weight: 500;
+}
+
