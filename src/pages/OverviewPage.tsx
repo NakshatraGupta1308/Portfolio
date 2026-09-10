@@ -313,12 +313,69 @@ export const OverviewPage: React.FC = () => {
             </div>
           </div>
 
-          {/* PROJECT 02: RANGAM GRAPHICS */}
+          {/* PROJECT 02: CYBOT (HARDWARE LAB FOUNDATION) */}
+          <div className="bg-[#18191d] border border-[rgba(255,255,255,0.12)] p-6 sm:p-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div className="lg:col-span-7 space-y-4">
+                <div className="flex flex-wrap items-center gap-2 font-mono text-[13px]">
+                  <span className="text-[#ff2a3b] font-bold">PROJECT // 02</span>
+                  <span className="text-[#52545d]">/</span>
+                  <span className="text-[#ffb3af] uppercase font-mono text-[11px]">HARDWARE &amp; SYSTEMS LAB</span>
+                  <span className="text-[#52545d]">/</span>
+                  <span className="text-[#8d9099] font-mono text-[11px]">IOWA STATE UNIVERSITY (CPR E 288)</span>
+                </div>
+                <h3 className="font-display text-2xl sm:text-3xl text-[#ffffff] uppercase">
+                  CyBot Autonomous Navigation &amp; Sensing Platform
+                </h3>
+                <div className="inline-block bg-[#121315] px-2.5 py-1 text-[#ffb3af] font-mono text-[11px] border border-[rgba(255,255,255,0.06)]">
+                  ★ FOUNDATIONAL HARDWARE MILESTONE: Grounding software principles in physical execution and sensor interfacing
+                </div>
+                <p className="font-body text-sm text-[#8d9099] leading-relaxed">
+                  Engineered autonomous navigation and obstacle avoidance for a mobile robot utilizing the Texas Instruments Tiva TM4C123 microcontroller. Interfaced IR and ultrasonic sensors for distance detection and obstacle scanning, calibrated PWM servo angles, and implemented UART serial protocols to relay telemetry and execute movement commands for structured aisle navigation.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 py-1">
+                  <div className="bg-[#121315] p-3 border border-[rgba(255,255,255,0.06)]">
+                    <span className="block font-mono text-[11px] text-[#52545d] uppercase">Microcontroller</span>
+                    <span className="font-mono text-[13px] text-[#ffffff] font-semibold">Tiva TM4C123</span>
+                  </div>
+                  <div className="bg-[#121315] p-3 border border-[rgba(255,255,255,0.06)]">
+                    <span className="block font-mono text-[11px] text-[#52545d] uppercase">Sensors</span>
+                    <span className="font-mono text-[13px] text-[#ffffff] font-semibold">IR + Ultrasonic</span>
+                  </div>
+                  <div className="bg-[#121315] p-3 border border-[rgba(255,255,255,0.06)]">
+                    <span className="block font-mono text-[11px] text-[#52545d] uppercase">Firmware</span>
+                    <span className="font-mono text-[13px] text-[#ff2a3b] font-semibold">Embedded C</span>
+                  </div>
+                </div>
+                <div className="flex flex-wrap items-center gap-1 font-mono text-[11px] uppercase text-[#52545d] pt-1">
+                  <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">Servo PWM</span>
+                  <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">UART Communication</span>
+                  <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">Obstacle Avoidance</span>
+                  <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">Sensor Calibration</span>
+                </div>
+              </div>
+              <div className="lg:col-span-5">
+                <div className="relative bg-[#090a0c] p-1.5 overflow-hidden border border-[rgba(255,255,255,0.12)]">
+                  <img
+                    alt="CyBot Autonomous Navigation Robot"
+                    className="w-full aspect-[16/10] object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbmIxFGTBcT83FtICeDy4coyNfmq8zDzoBetDRfnWd3oOIV5lDBp7duHDWgNQ4S2lL2QVdDPK-6Es3crED_y4GSG26tezn_h6gix2vtP0h2MJsv2BMabIJe4j98MSr8WXnLN4GZKnmUBykwfuzbSjjvJ1QUx2apCznWbj22VZKIz50l9tgyHYJl8krXAqzHX34OeGCHwadPburfUUAebyORYme5GyElFwL9yMCSxWuWzM3KVEajnBXjQrFUQjP7L4htHo"
+                  />
+                  <div className="p-2 flex justify-between items-center text-[#52545d] font-mono text-[11px]">
+                    <span>CYBOT PLATFORM</span>
+                    <span>CPR E 288 HARDWARE LAB</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* PROJECT 03: RANGAM GRAPHICS */}
           <div className="bg-[#18191d] border border-[rgba(255,255,255,0.12)] p-6 sm:p-8">
             <div className="space-y-4">
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <div className="flex items-center gap-2 font-mono text-[13px]">
-                  <span className="text-[#ff2a3b] font-bold">PROJECT // 02</span>
+                  <span className="text-[#ff2a3b] font-bold">PROJECT // 03</span>
                   <span className="text-[#52545d]">/</span>
                   <span className="text-[#00ff66] uppercase font-mono text-[11px]">CLIENT WORK</span>
                   <span className="text-[#52545d]">/</span>
@@ -369,11 +426,91 @@ export const OverviewPage: React.FC = () => {
             </div>
           </div>
 
-          {/* PROJECT 03: NASA SPACEAPPS */}
+          {/* PROJECT 04: KARD (REAL-TIME MULTIPLAYER CARD GAME) */}
+          <div className="bg-[#18191d] border border-[rgba(255,255,255,0.12)] p-6 sm:p-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div className="lg:col-span-7 space-y-4">
+                <div className="flex flex-wrap items-center gap-2 font-mono text-[13px]">
+                  <span className="text-[#ff2a3b] font-bold">PROJECT // 04</span>
+                  <span className="text-[#52545d]">/</span>
+                  <span className="text-[#00ff66] uppercase font-mono text-[11px]">FULL-STACK &amp; MULTIPLAYER</span>
+                  <span className="text-[#52545d]">/</span>
+                  <span className="text-[#8d9099] font-mono text-[11px]">JAVA SPRING BOOT + REACT</span>
+                </div>
+                <h3 className="font-display text-2xl sm:text-3xl text-[#ffffff] uppercase">
+                  KARD : Real-Time Multiplayer Card Game
+                </h3>
+                <p className="font-body text-sm text-[#8d9099] leading-relaxed">
+                  A full-stack, real-time multiplayer card game built from scratch. Features room creation and join via live lobby, synchronized WebSocket (STOMP) state management across players, complete card ruleset (Skip, Reverse, Draw Two, Wild, Wild Draw Four), color picker, UNO callout overlay, real-time game logs, sound effects, card animations, and dynamic mobile-responsive card sizing.
+                </p>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 py-1">
+                  <div className="bg-[#121315] p-3 border border-[rgba(255,255,255,0.06)]">
+                    <span className="block font-mono text-[11px] text-[#52545d] uppercase">Backend</span>
+                    <span className="font-mono text-[13px] text-[#ffffff] font-semibold">Spring Boot (Java)</span>
+                  </div>
+                  <div className="bg-[#121315] p-3 border border-[rgba(255,255,255,0.06)]">
+                    <span className="block font-mono text-[11px] text-[#52545d] uppercase">Sync Protocol</span>
+                    <span className="font-mono text-[13px] text-[#ff2a3b] font-semibold">WebSocket STOMP</span>
+                  </div>
+                  <div className="bg-[#121315] p-3 border border-[rgba(255,255,255,0.06)]">
+                    <span className="block font-mono text-[11px] text-[#52545d] uppercase">Frontend</span>
+                    <span className="font-mono text-[13px] text-[#ffffff] font-semibold">React + Vite</span>
+                  </div>
+                  <div className="bg-[#121315] p-3 border border-[rgba(255,255,255,0.06)]">
+                    <span className="block font-mono text-[11px] text-[#52545d] uppercase">Deployment</span>
+                    <span className="font-mono text-[13px] text-[#00ff66] font-semibold">Render + Vercel</span>
+                  </div>
+                </div>
+                <div className="flex flex-wrap items-center gap-3 pt-1 font-mono text-[13px]">
+                  <a
+                    className="bg-[#ff2a3b] text-[#ffffff] px-4 py-2 uppercase font-semibold hover:bg-[#ff4d5d] transition-colors flex items-center gap-1.5"
+                    href="https://kard-thegame.vercel.app/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <span className="material-symbols-outlined text-sm">sports_esports</span>
+                    <span>Play Live Game</span>
+                  </a>
+                  <a
+                    className="bg-[#1f2022] text-[#ffffff] px-4 py-2 uppercase font-semibold hover:bg-[#292a2c] transition-colors flex items-center gap-1.5 border border-[rgba(255,255,255,0.1)]"
+                    href="https://github.com/NakshatraGupta1308/kard-thegame"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <span className="material-symbols-outlined text-sm">code</span>
+                    <span>GitHub Code</span>
+                  </a>
+                  <div className="flex flex-wrap gap-1 font-mono text-[11px] uppercase text-[#52545d]">
+                    <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">Java</span>
+                    <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">Spring Boot</span>
+                    <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">STOMP WSS</span>
+                    <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">React</span>
+                  </div>
+                </div>
+              </div>
+              <div className="lg:col-span-5">
+                <div className="relative bg-[#090a0c] p-1.5 overflow-hidden border border-[rgba(255,255,255,0.12)]">
+                  <div className="relative w-full aspect-[16/10] overflow-hidden group">
+                    <img
+                      alt="KARD - The Multiplayer Card Game Preview"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      src="/assets/kard-thumbnail.svg"
+                    />
+                  </div>
+                  <div className="p-2 flex justify-between items-center text-[#52545d] font-mono text-[11px]">
+                    <span>KARD LOBBY &amp; ARENA</span>
+                    <span className="text-[#00ff66]">LIVE ON VERCEL</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* PROJECT 05: NASA SPACEAPPS */}
           <div className="bg-[#18191d] border border-[rgba(255,255,255,0.12)] p-6 sm:p-8">
             <div className="space-y-4">
               <div className="flex items-center gap-2 font-mono text-[13px]">
-                <span className="text-[#ff2a3b] font-bold">PROJECT // 03</span>
+                <span className="text-[#ff2a3b] font-bold">PROJECT // 05</span>
                 <span className="text-[#52545d]">/</span>
                 <span className="font-mono text-[11px] text-[#8d9099] uppercase">NASA SPACE APPS HACKATHON</span>
                 <span className="text-[#52545d]">/</span>
@@ -395,8 +532,7 @@ export const OverviewPage: React.FC = () => {
                   <span className="font-mono text-[13px] text-[#ffffff] font-semibold">WebGL Shaders</span>
                 </div>
                 <div className="bg-[#121315] p-3 border border-[rgba(255,255,255,0.06)]">
-                  <span className="block font-mono text-[11px] text-[#52545d] uppercase">Focus</span>
-                  <span className="font-mono text-[13px] text-[#ff2a3b] font-semibold">Orbit Simulation</span>
+                  <span className="block font-mono text-[11px] text-[#ff2a3b] font-semibold">Orbit Simulation</span>
                 </div>
                 <div className="bg-[#121315] p-3 border border-[rgba(255,255,255,0.06)]">
                   <span className="block font-mono text-[11px] text-[#52545d] uppercase">Honor</span>
@@ -410,64 +546,15 @@ export const OverviewPage: React.FC = () => {
                   <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">WebGL</span>
                   <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">Orbital Math</span>
                 </div>
-                <span className="font-mono text-[11px] uppercase text-[#52545d]">60 FPS BROWSER COMPUTATION</span>
-              </div>
-            </div>
-          </div>
-
-          {/* PROJECT 04: CYBOT (HARDWARE LAB FOUNDATION) */}
-          <div className="bg-[#18191d] border border-[rgba(255,255,255,0.12)] p-6 sm:p-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              <div className="lg:col-span-7 space-y-4">
-                <div className="flex flex-wrap items-center gap-2 font-mono text-[13px]">
-                  <span className="text-[#ff2a3b] font-bold">PROJECT // 04</span>
-                  <span className="text-[#52545d]">/</span>
-                  <span className="text-[#ffb3af] uppercase font-mono text-[11px]">HARDWARE &amp; SYSTEMS LAB</span>
-                  <span className="text-[#52545d]">/</span>
-                  <span className="text-[#8d9099] font-mono text-[11px]">IOWA STATE UNIVERSITY (CPR E 288)</span>
-                </div>
-                <h3 className="font-display text-2xl sm:text-3xl text-[#ffffff] uppercase">
-                  CyBot Autonomous Navigation &amp; Sensing Platform
-                </h3>
-                <div className="inline-block bg-[#121315] px-2.5 py-1 text-[#ffb3af] font-mono text-[11px] border border-[rgba(255,255,255,0.06)]">
-                  ★ FOUNDATIONAL HARDWARE MILESTONE: Grounding software principles in physical execution and sensor interfacing
-                </div>
-                <p className="font-body text-sm text-[#8d9099] leading-relaxed">
-                  Engineered autonomous navigation and obstacle avoidance for a mobile robot utilizing the Texas Instruments Tiva TM4C123 microcontroller. Interfaced IR and ultrasonic sensors for distance detection and obstacle scanning, calibrated PWM servo angles, and implemented UART serial protocols to relay telemetry and execute movement commands for structured aisle navigation.
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 py-1">
-                  <div className="bg-[#121315] p-3 border border-[rgba(255,255,255,0.06)]">
-                    <span className="block font-mono text-[11px] text-[#52545d] uppercase">Microcontroller</span>
-                    <span className="font-mono text-[13px] text-[#ffffff] font-semibold">Tiva TM4C123</span>
-                  </div>
-                  <div className="bg-[#121315] p-3 border border-[rgba(255,255,255,0.06)]">
-                    <span className="block font-mono text-[11px] text-[#52545d] uppercase">Sensors</span>
-                    <span className="font-mono text-[13px] text-[#ffffff] font-semibold">IR + Ultrasonic</span>
-                  </div>
-                  <div className="bg-[#121315] p-3 border border-[rgba(255,255,255,0.06)]">
-                    <span className="block font-mono text-[11px] text-[#52545d] uppercase">Firmware</span>
-                    <span className="font-mono text-[13px] text-[#ff2a3b] font-semibold">Embedded C</span>
-                  </div>
-                </div>
-                <div className="flex flex-wrap items-center gap-1 font-mono text-[11px] uppercase text-[#52545d] pt-1">
-                  <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">Servo PWM</span>
-                  <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">UART Communication</span>
-                  <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">Obstacle Avoidance</span>
-                  <span className="bg-[#090a0c] px-2 py-1 text-[#8d9099]">Sensor Calibration</span>
-                </div>
-              </div>
-              <div className="lg:col-span-5">
-                <div className="relative bg-[#090a0c] p-1.5 overflow-hidden border border-[rgba(255,255,255,0.12)]">
-                  <img
-                    alt="CyBot Autonomous Navigation Robot"
-                    className="w-full aspect-[16/10] object-cover"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbmIxFGTBcT83FtICeDy4coyNfmq8zDzoBetDRfnWd3oOIV5lDBp7duHDWgNQ4S2lL2QVdDPK-6Es3crED_y4GSG26tezn_h6gix2vtP0h2MJsv2BMabIJe4j98MSr8WXnLN4GZKnmUBykwfuzbSjjvJ1QUx2apCznWbj22VZKIz50l9tgyHYJl8krXAqzHX34OeGCHwadPburfUUAebyORYme5GyElFwL9yMCSxWuWzM3KVEajnBXjQrFUQjP7L4htHo"
-                  />
-                  <div className="p-2 flex justify-between items-center text-[#52545d] font-mono text-[11px]">
-                    <span>CYBOT PLATFORM</span>
-                    <span>CPR E 288 HARDWARE LAB</span>
-                  </div>
-                </div>
+                <a
+                  className="bg-[#ff2a3b] text-[#ffffff] px-4 py-2 uppercase font-semibold hover:bg-[#ff4d5d] transition-colors flex items-center gap-1.5 font-mono text-[13px]"
+                  href="https://github.com/NakshatraGupta1308/SpaceApps_Astro6"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>View SpaceApps Repo</span>
+                  <span className="material-symbols-outlined text-sm">open_in_new</span>
+                </a>
               </div>
             </div>
           </div>
@@ -546,9 +633,10 @@ export const OverviewPage: React.FC = () => {
                   </div>
                   <div className="bg-[#090a0c] p-3 font-mono text-[11px] text-[#8d9099] space-y-1 border border-[rgba(255,255,255,0.06)]">
                     <div>[01] FULL-STACK ANDROID &amp; SPRING BOOT • CALMIFY</div>
-                    <div>[02] COMMERCIAL WEB ARCHITECTURE • RANGAM GRAPHICS</div>
-                    <div>[03] 3D GRAPHICS &amp; SPATIAL MATH • NASA SPACEAPPS</div>
-                    <div>[04] EMBEDDED C SENSOR SYSTEMS • CYBOT (CPR E 288)</div>
+                    <div>[02] EMBEDDED C SENSOR SYSTEMS • CYBOT (CPR E 288)</div>
+                    <div>[03] COMMERCIAL WEB ARCHITECTURE • RANGAM GRAPHICS</div>
+                    <div>[04] MULTIPLAYER WEBSOCKET ENGINE • KARD</div>
+                    <div>[05] 3D GRAPHICS &amp; ASTROPHYSICS • NASA SPACEAPPS</div>
                   </div>
                   <div className="pt-2 flex justify-between items-center font-mono text-[11px] text-[#52545d] uppercase">
                     <span>LOCATION: AMES, IA</span>

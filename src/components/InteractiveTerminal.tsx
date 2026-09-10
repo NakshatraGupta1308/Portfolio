@@ -141,11 +141,12 @@ export const InteractiveTerminal: React.FC<InteractiveTerminalProps> = ({
         newLogs.push({
           type: 'output',
           text: `IDENTITY REGISTRY:
-  Subject:            Alexander Vex
-  Title:              Principal Systems Architect & Cybernetics Researcher
-  Clearance:          Level-4 Restricted Systems Access
-  Primary Focus:      Fault-Tolerant Distributed Consensus, Bare-Metal Kernels, Edge AI Acceleration
-  PGP Key:            8B94 A3C7 E219 40BF 91E8 5D02 C72A 4F90 18DC 39E1`
+  Subject:            Nakshatra Gupta
+  Education:          Iowa State University (B.S. Computer Engineering, 2+2 Transfer)
+  Email:              nixngaps@gmail.com
+  GitHub:             https://github.com/NakshatraGupta1308
+  LinkedIn:           https://www.linkedin.com/in/nakshatra-gupta-13aug2005
+  Primary Focus:      Full-Stack Engineering, Real-Time WebSockets, Embedded Systems, 3D WebGL`
         });
         break;
 

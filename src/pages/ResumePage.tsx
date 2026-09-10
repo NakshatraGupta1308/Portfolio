@@ -396,7 +396,34 @@ TECHNICAL SKILLS:
                     </div>
                   </div>
 
-                  {/* Project 2: Rangam Graphics */}
+                  {/* Project 2: CyBot (Hardware Lab) */}
+                  <div className="bg-[#18191d] border border-[rgba(255,255,255,0.1)] p-6 space-y-3">
+                    <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+                      <div>
+                        <div className="flex items-center gap-2 font-display text-xl text-[#ffffff] font-semibold">
+                          <span>CyBot Autonomous Robot</span>
+                          <span className="text-[#52545d]">/</span>
+                          <span className="text-[#ffb3af] text-sm font-mono uppercase tracking-wider">Hardware Systems Lab</span>
+                        </div>
+                        <div className="font-mono text-[13px] text-[#8d9099] pt-0.5">Iowa State University (CPR E 288)</div>
+                      </div>
+                      <div className="px-2 py-1 bg-[#0d0e10] text-[#8d9099] font-mono text-[11px] uppercase shrink-0 sm:text-right border border-[rgba(255,255,255,0.06)]">
+                        Hardware Lab
+                      </div>
+                    </div>
+                    <p className="font-body text-sm text-[#8d9099] leading-relaxed">
+                      Engineered autonomous navigation and obstacle avoidance for mobile robot using TI Tiva TM4C123 microcontroller, Embedded C, IR and ultrasonic sensors, PWM servo calibration, and UART telemetry.
+                    </p>
+                    <div className="flex flex-wrap gap-1.5 pt-2">
+                      {['Embedded C', 'TI TM4C123', 'UART', 'PWM Servos', 'IR & Ultrasonic', 'Sensor Fusion'].map(t => (
+                        <span key={t} className="px-2 py-0.5 bg-[#0d0e10] font-mono text-[11px] text-[#8d9099] uppercase border border-[rgba(255,255,255,0.06)]">
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Project 3: Rangam Graphics */}
                   <div className="bg-[#18191d] border border-[rgba(255,255,255,0.1)] p-6 space-y-3 border-l-2 border-l-[#00ff66]">
                     <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
                       <div>
@@ -434,7 +461,56 @@ TECHNICAL SKILLS:
                     </div>
                   </div>
 
-                  {/* Project 3: NASA SpaceApps */}
+                  {/* Project 4: KARD (Multiplayer Card Game) */}
+                  <div className="bg-[#18191d] border border-[rgba(255,255,255,0.1)] p-6 space-y-3 border-l-2 border-l-[#ff2a3b]">
+                    <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+                      <div>
+                        <div className="flex items-center gap-2 font-display text-xl text-[#ffffff] font-semibold">
+                          <span>KARD</span>
+                          <span className="text-[#52545d]">/</span>
+                          <span className="text-[#ff2a3b] text-sm font-mono uppercase tracking-wider">Multiplayer Card Game</span>
+                        </div>
+                        <div className="font-mono text-[13px] text-[#8d9099] pt-0.5">Full-Stack Java Spring Boot &amp; React</div>
+                      </div>
+                      <div className="px-2 py-1 bg-[#0d0e10] text-[#00ff66] font-mono text-[11px] uppercase shrink-0 sm:text-right border border-[rgba(0,255,102,0.2)]">
+                        Production Live
+                      </div>
+                    </div>
+                    <p className="font-body text-sm text-[#8d9099] leading-relaxed">
+                      A real-time multiplayer card game built from scratch. Features room lobby system, STOMP WebSocket duplex sync across players, standard UNO-style ruleset (Skip, Reverse, Draw Two, Wilds), interactive color picker, overlay notifications, sound effects, and card draw animations.
+                    </p>
+                    <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
+                      <div className="flex flex-wrap gap-1.5">
+                        {['Java', 'Spring Boot', 'WebSocket (STOMP)', 'React', 'Vite', 'Render', 'Vercel'].map(t => (
+                          <span key={t} className="px-2 py-0.5 bg-[#0d0e10] font-mono text-[11px] text-[#8d9099] uppercase border border-[rgba(255,255,255,0.06)]">
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <a
+                          className="flex items-center gap-1.5 px-3 py-1.5 bg-[#ff2a3b] text-[#ffffff] font-mono text-[11px] uppercase font-semibold hover:bg-[#ff4d5d] transition-colors shrink-0"
+                          href="https://kard-thegame.vercel.app/"
+                          rel="noreferrer"
+                          target="_blank"
+                        >
+                          <span>Play Game</span>
+                          <span className="material-symbols-outlined text-xs leading-none">open_in_new</span>
+                        </a>
+                        <a
+                          className="flex items-center gap-1.5 px-3 py-1.5 bg-[#1f2022] text-[#ffffff] font-mono text-[11px] uppercase font-semibold hover:bg-[#292a2c] transition-colors shrink-0 border border-[rgba(255,255,255,0.1)]"
+                          href="https://github.com/NakshatraGupta1308/kard-thegame"
+                          rel="noreferrer"
+                          target="_blank"
+                        >
+                          <span>Code</span>
+                          <span className="material-symbols-outlined text-xs leading-none">code</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Project 5: NASA SpaceApps */}
                   <div className="bg-[#18191d] border border-[rgba(255,255,255,0.1)] p-6 space-y-3">
                     <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
                       <div>
@@ -446,45 +522,29 @@ TECHNICAL SKILLS:
                         <div className="font-mono text-[13px] text-[#8d9099] pt-0.5">NASA Space Apps Hackathon Winner</div>
                       </div>
                       <div className="px-2 py-1 bg-[#0d0e10] text-[#ffb3af] font-mono text-[11px] uppercase shrink-0 sm:text-right border border-[rgba(255,255,255,0.06)]">
-                        Hackathon Project
+                        Hackathon Winner
                       </div>
                     </div>
                     <p className="font-body text-sm text-[#8d9099] leading-relaxed">
                       Engineered interactive 3D celestial orbit simulation software running in browser using Three.js and WebGL. Rendered near-Earth orbital trajectories, celestial coordinates, and dynamic planetary lighting with zero lag.
                     </p>
-                    <div className="flex flex-wrap gap-1.5 pt-2">
-                      {['Three.js', 'JavaScript', 'WebGL', '3D Graphics', 'Orbital Math'].map(t => (
-                        <span key={t} className="px-2 py-0.5 bg-[#0d0e10] font-mono text-[11px] text-[#8d9099] uppercase border border-[rgba(255,255,255,0.06)]">
-                          {t}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Project 4: CyBot (Hardware Lab) */}
-                  <div className="bg-[#18191d] border border-[rgba(255,255,255,0.1)] p-6 space-y-3">
-                    <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
-                      <div>
-                        <div className="flex items-center gap-2 font-display text-xl text-[#ffffff] font-semibold">
-                          <span>CyBot Autonomous Robot</span>
-                          <span className="text-[#52545d]">/</span>
-                          <span className="text-[#8d9099] text-sm font-mono uppercase tracking-wider">Hardware Systems Lab</span>
-                        </div>
-                        <div className="font-mono text-[13px] text-[#8d9099] pt-0.5">Iowa State University (CPR E 288)</div>
+                    <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
+                      <div className="flex flex-wrap gap-1.5">
+                        {['Three.js', 'JavaScript', 'WebGL', '3D Graphics', 'Orbital Math'].map(t => (
+                          <span key={t} className="px-2 py-0.5 bg-[#0d0e10] font-mono text-[11px] text-[#8d9099] uppercase border border-[rgba(255,255,255,0.06)]">
+                            {t}
+                          </span>
+                        ))}
                       </div>
-                      <div className="px-2 py-1 bg-[#0d0e10] text-[#8d9099] font-mono text-[11px] uppercase shrink-0 sm:text-right border border-[rgba(255,255,255,0.06)]">
-                        Hardware Lab
-                      </div>
-                    </div>
-                    <p className="font-body text-sm text-[#8d9099] leading-relaxed">
-                      Engineered autonomous navigation and obstacle avoidance for mobile robot using TI Tiva TM4C123 microcontroller, Embedded C, IR and ultrasonic sensors, PWM servo calibration, and UART telemetry.
-                    </p>
-                    <div className="flex flex-wrap gap-1.5 pt-2">
-                      {['Embedded C', 'TI TM4C123', 'UART', 'PWM Servos', 'IR & Ultrasonic', 'Sensor Fusion'].map(t => (
-                        <span key={t} className="px-2 py-0.5 bg-[#0d0e10] font-mono text-[11px] text-[#8d9099] uppercase border border-[rgba(255,255,255,0.06)]">
-                          {t}
-                        </span>
-                      ))}
+                      <a
+                        className="flex items-center gap-1.5 px-3 py-1.5 bg-[#1f2022] text-[#ffffff] font-mono text-[11px] uppercase font-semibold hover:bg-[#ff2a3b] transition-colors shrink-0 border border-[rgba(255,255,255,0.1)]"
+                        href="https://github.com/NakshatraGupta1308/SpaceApps_Astro6"
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        <span>GitHub Repo</span>
+                        <span className="material-symbols-outlined text-xs leading-none">open_in_new</span>
+                      </a>
                     </div>
                   </div>
                 </div>
