@@ -269,7 +269,7 @@ export const ProjectsPage: React.FC = () => {
                   </div>
                   <a
                     className="inline-flex items-center gap-2 px-4 py-2 bg-[#1f2022] text-[#ffffff] font-mono text-[11px] uppercase tracking-wider font-semibold hover:bg-[#ff2a3b] transition-colors border border-[rgba(255,255,255,0.1)]"
-                    href="https://github.com"
+                    href="https://github.com/NakshatraGupta1308"
                     target="_blank"
                     rel="noreferrer"
                   >

@@ -154,7 +154,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectScreen, onToggleTerminal
                 <span>OPEN CLI</span>
               </button>
               <a
-                href="https://github.com"
+                href="https://github.com/NakshatraGupta1308"
                 target="_blank"
                 rel="noreferrer"
                 className="px-2.5 py-1 bg-[#121316] border border-[rgba(255,255,255,0.15)] text-[#8d9099] hover:text-[#ffffff] hover:border-[#ff2a3b] flex items-center space-x-1"
@@ -163,12 +163,12 @@ export const Footer: React.FC<FooterProps> = ({ onSelectScreen, onToggleTerminal
                 <ExternalLink size={10} />
               </a>
               <a
-                href="https://arxiv.org"
+                href="https://www.linkedin.com/in/nakshatra-gupta-13aug2005"
                 target="_blank"
                 rel="noreferrer"
                 className="px-2.5 py-1 bg-[#121316] border border-[rgba(255,255,255,0.15)] text-[#8d9099] hover:text-[#ffffff] hover:border-[#ff2a3b] flex items-center space-x-1"
               >
-                <span>ARXIV</span>
+                <span>LINKEDIN</span>
                 <ExternalLink size={10} />
               </a>
             </div>

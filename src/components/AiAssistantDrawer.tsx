@@ -81,7 +81,7 @@ export const AiAssistantDrawer: React.FC<AiAssistantDrawerProps> = ({ isOpen, on
   const getClientFallbackResponse = (q: string): string => {
     const lower = q.toLowerCase();
     if (lower.includes('availab') || lower.includes('fall 2026') || lower.includes('intern') || lower.includes('co-op') || lower.includes('hire') || lower.includes('full-time') || lower.includes('start') || lower.includes('graduat') || lower.includes('role') || lower.includes('job')) {
-      return "Nakshatra Gupta is actively seeking Computer Science / Computer Engineering Internships and Co-ops for Fall 2026, and full-time opportunities post-graduation (May 2027), with an emphasis on software development. Contact: ng1308@iastate.edu | +1 515-916-2251.";
+      return "Nakshatra Gupta is actively seeking Computer Science / Computer Engineering Internships and Co-ops for Fall 2026, and full-time opportunities post-graduation (May 2027), with an emphasis on software development. Contact: nixngaps@gmail.com | +1 515-916-2251.";
     }
     if (lower.includes('transfer') || lower.includes('nirma') || lower.includes('2+2') || lower.includes('background') || lower.includes('education') || lower.includes('degree') || lower.includes('school') || lower.includes('iowa state')) {
       return "Nakshatra is a 2+2 Transfer student from Nirma University (Ahmedabad, India), where he pursued a B.S. in Computer Science and Engineering (BS CSE). He transferred to Iowa State University to complete his B.S. in Computer Engineering (CPR E '27). He knows principles of software engineering and has a strong hold over software development, full-stack systems, and real-time computing.";
@@ -104,10 +104,10 @@ export const AiAssistantDrawer: React.FC<AiAssistantDrawerProps> = ({ isOpen, on
     if (lower.includes('skill') || lower.includes('language') || lower.includes('stack') || lower.includes('c ') || lower.includes('c,') || lower.includes('python') || lower.includes('java')) {
       return "Technical Languages & Frameworks: Java, Python, TypeScript/JavaScript, HTML/CSS, C, Android SDK, Spring Boot, MySQL, WebSockets, Three.js, React, Node.js, and Git/GitHub. Embedded tools: TI TM4C123 ARM Cortex-M4, UART, SPI, I2C, and Oscilloscopes.";
     }
-    if (lower.includes('contact') || lower.includes('email') || lower.includes('phone') || lower.includes('reach')) {
-      return "You can reach Nakshatra Gupta directly at ng1308@iastate.edu, via phone at +1 515-916-2251, or submit an inquiry using the Direct Dispatch form on the Contact page.";
+    if (lower.includes('contact') || lower.includes('email') || lower.includes('phone') || lower.includes('reach') || lower.includes('github') || lower.includes('linkedin')) {
+      return "You can reach Nakshatra Gupta directly at nixngaps@gmail.com, via phone at +1 515-916-2251, check his GitHub at github.com/NakshatraGupta1308, connect on LinkedIn at linkedin.com/in/nakshatra-gupta-13aug2005, or submit an inquiry using the Contact page.";
     }
-    return "Nakshatra Gupta is a 2+2 Transfer student from Nirma University (BS CSE) to Iowa State University (BS Computer Engineering) who knows principles of software engineering and has a strong hold over software development, full-stack Android & web development, and real-time systems. You can ask about his projects (Calmify, Rangam Graphics, NASA SpaceApps, CyBot) or contact him at ng1308@iastate.edu.";
+    return "Nakshatra Gupta is a 2+2 Transfer student from Nirma University (BS CSE) to Iowa State University (BS Computer Engineering) who knows principles of software engineering and has a strong hold over software development, full-stack Android & web development, and real-time systems. You can ask about his projects (Calmify, Rangam Graphics, NASA SpaceApps, CyBot) or contact him at nixngaps@gmail.com.";
   };
 
   if (!isOpen) return null;

@@ -605,28 +605,43 @@ export const OverviewPage: React.FC = () => {
           </div>
 
           {/* Contact Channels Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono text-[13px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 font-mono text-[13px]">
             <a
               className="bg-[#18191d] border border-[rgba(255,255,255,0.08)] p-4 group hover:border-[#ff2a3b] transition-colors block"
-              href="mailto:ng1308@iastate.edu"
+              href="mailto:nixngaps@gmail.com"
             >
-              <span className="block font-mono text-[11px] uppercase text-[#52545d] mb-1">Academic Primary Email</span>
-              <span className="text-[#ffffff] font-semibold group-hover:text-[#ff2a3b] transition-colors">ng1308@iastate.edu</span>
+              <span className="block font-mono text-[11px] uppercase text-[#52545d] mb-1">Primary Email</span>
+              <span className="text-[#ffffff] font-semibold group-hover:text-[#ff2a3b] transition-colors truncate block">nixngaps@gmail.com</span>
               <span className="block font-mono text-[11px] text-[#8d9099] mt-2">→ Direct Mail Dispatch</span>
+            </a>
+            <a
+              className="bg-[#18191d] border border-[rgba(255,255,255,0.08)] p-4 group hover:border-[#ff2a3b] transition-colors block"
+              href="https://github.com/NakshatraGupta1308"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span className="block font-mono text-[11px] uppercase text-[#52545d] mb-1">GitHub Profile</span>
+              <span className="text-[#ffffff] font-semibold group-hover:text-[#ff2a3b] transition-colors truncate block">NakshatraGupta1308</span>
+              <span className="block font-mono text-[11px] text-[#8d9099] mt-2">→ Repositories &amp; Code</span>
+            </a>
+            <a
+              className="bg-[#18191d] border border-[rgba(255,255,255,0.08)] p-4 group hover:border-[#ff2a3b] transition-colors block"
+              href="https://www.linkedin.com/in/nakshatra-gupta-13aug2005"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span className="block font-mono text-[11px] uppercase text-[#52545d] mb-1">LinkedIn Network</span>
+              <span className="text-[#ffffff] font-semibold group-hover:text-[#ff2a3b] transition-colors truncate block">nakshatra-gupta</span>
+              <span className="block font-mono text-[11px] text-[#8d9099] mt-2">→ Professional Profile</span>
             </a>
             <a
               className="bg-[#18191d] border border-[rgba(255,255,255,0.08)] p-4 group hover:border-[#ff2a3b] transition-colors block"
               href="tel:+15159162251"
             >
-              <span className="block font-mono text-[11px] uppercase text-[#52545d] mb-1">Voice / SMS Telephony</span>
+              <span className="block font-mono text-[11px] uppercase text-[#52545d] mb-1">Voice / SMS</span>
               <span className="text-[#ffffff] font-semibold group-hover:text-[#ff2a3b] transition-colors">+1 515-916-2251</span>
               <span className="block font-mono text-[11px] text-[#8d9099] mt-2">→ Central Time (CT)</span>
             </a>
-            <div className="bg-[#18191d] border border-[rgba(255,255,255,0.08)] p-4 block">
-              <span className="block font-mono text-[11px] uppercase text-[#52545d] mb-1">Physical Station</span>
-              <span className="text-[#ffffff] font-semibold">Ames, IA, USA</span>
-              <span className="block font-mono text-[11px] text-[#8d9099] mt-2">Iowa State University Campus</span>
-            </div>
           </div>
         </div>
       </section>

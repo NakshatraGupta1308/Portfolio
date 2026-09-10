@@ -71,7 +71,7 @@ export const NavigationFooter: React.FC = () => {
         <div className="flex items-center gap-4 font-mono text-[11px] uppercase tracking-widest">
           <a
             className="text-[#8d9099] hover:text-[#ff2a3b] transition-colors"
-            href="https://github.com"
+            href="https://github.com/NakshatraGupta1308"
             rel="noreferrer"
             target="_blank"
           >
@@ -80,7 +80,7 @@ export const NavigationFooter: React.FC = () => {
           <span className="text-[#52545d]">/</span>
           <a
             className="text-[#8d9099] hover:text-[#ff2a3b] transition-colors"
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/nakshatra-gupta-13aug2005"
             rel="noreferrer"
             target="_blank"
           >
@@ -89,7 +89,7 @@ export const NavigationFooter: React.FC = () => {
           <span className="text-[#52545d]">/</span>
           <a
             className="text-[#8d9099] hover:text-[#ff2a3b] transition-colors"
-            href="mailto:ng1308@iastate.edu"
+            href="mailto:nixngaps@gmail.com"
           >
             Email
           </a>

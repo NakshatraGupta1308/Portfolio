@@ -49,6 +49,10 @@ export const ContactPage: React.FC = () => {
               <div className="pt-2 space-y-1 text-xs">
                 <div className="flex justify-between">
                   <span className="text-[#8d9099]">Primary Email:</span>
+                  <span className="text-[#ffffff]">nixngaps@gmail.com</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-[#8d9099]">Academic Email:</span>
                   <span className="text-[#ffffff]">ng1308@iastate.edu</span>
                 </div>
                 <div className="flex justify-between">
@@ -104,18 +108,18 @@ export const ContactPage: React.FC = () => {
             {/* Email Card */}
             <div className="bg-[#18191d] border border-[rgba(255,255,255,0.1)] p-5 space-y-2 hover:border-[#ff2a3b] transition-colors">
               <div className="flex items-center justify-between text-[#52545d] font-mono text-[11px] uppercase">
-                <span>PRIMARY ACADEMIC INBOX</span>
-                <span className="text-[#00ff66]">MONITORED</span>
+                <span>PRIMARY INBOX</span>
+                <span className="text-[#00ff66]">DIRECT ACCESS</span>
               </div>
               <div className="text-[#ffffff] font-mono text-base font-semibold">
-                ng1308@iastate.edu
+                nixngaps@gmail.com
               </div>
               <p className="font-body text-xs text-[#8d9099] leading-relaxed">
-                Direct institutional address at Iowa State University for internship opportunities, technical audits, and academic correspondences.
+                Direct personal and recruitment inbox for software engineering opportunities, co-ops, and collaboration. (Academic: ng1308@iastate.edu)
               </p>
               <div className="pt-2">
                 <a
-                  href="mailto:ng1308@iastate.edu?subject=Inquiry:%20CS%20/%20CPR%20E%20Opportunity"
+                  href="mailto:nixngaps@gmail.com?subject=Inquiry:%20Software%20Engineering%20Opportunity"
                   className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#1f2022] hover:bg-[#ff2a3b] text-[#ffffff] font-mono text-[11px] uppercase tracking-wider transition-colors border border-[rgba(255,255,255,0.1)]"
                 >
                   <span className="material-symbols-outlined text-sm">mail</span>
@@ -170,16 +174,16 @@ export const ContactPage: React.FC = () => {
               <div className="text-[#52545d] text-[11px] uppercase">NETWORK LINKS</div>
               <div className="space-y-2">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/NakshatraGupta1308"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center justify-between p-2 bg-[#090a0c] hover:bg-[#1f2022] text-[#8d9099] hover:text-[#ffffff] transition-colors border border-[rgba(255,255,255,0.06)]"
                 >
-                  <span>GitHub Repository</span>
+                  <span>GitHub (@NakshatraGupta1308)</span>
                   <span className="material-symbols-outlined text-sm">open_in_new</span>
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/nakshatra-gupta-13aug2005"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center justify-between p-2 bg-[#090a0c] hover:bg-[#1f2022] text-[#8d9099] hover:text-[#ffffff] transition-colors border border-[rgba(255,255,255,0.06)]"

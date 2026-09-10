@@ -32,7 +32,7 @@ ${message.trim()}
 ---
 Transmitted via Nakshatra Gupta Systems Portfolio`;
 
-    const mailto = `mailto:ng1308@iastate.edu?subject=${encodeURIComponent(formattedSubject)}&body=${encodeURIComponent(emailBody)}`;
+    const mailto = `mailto:nixngaps@gmail.com?subject=${encodeURIComponent(formattedSubject)}&body=${encodeURIComponent(emailBody)}`;
 
     try {
       const res = await fetch('/api/contact', {
@@ -91,7 +91,7 @@ Transmitted via Nakshatra Gupta Systems Portfolio`;
 
   const handleCopyInquiry = () => {
     if (receipt?.mailtoUrl) {
-      navigator.clipboard.writeText(`To: ng1308@iastate.edu\nSubject: ${subject || inquiryType}\nSender: ${email}\nMessage: ${message}`);
+      navigator.clipboard.writeText(`To: nixngaps@gmail.com\nSubject: ${subject || inquiryType}\nSender: ${email}\nMessage: ${message}`);
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
     }
@@ -117,7 +117,7 @@ Transmitted via Nakshatra Gupta Systems Portfolio`;
           </div>
           <p className="text-[#8d9099] leading-relaxed">
             {receipt.isStaticFallback
-              ? "Your dispatch packet has been formatted for Nakshatra Gupta (ng1308@iastate.edu). You can launch your mail client with one click to transmit it directly or copy the formatted message."
+              ? "Your dispatch packet has been formatted for Nakshatra Gupta (nixngaps@gmail.com). You can launch your mail client with one click to transmit it directly or copy the formatted message."
               : "Your inquiry has been stored in the verified backend systems queue. A copy has been routed for Nakshatra's review."}
           </p>
           <div className="p-3 bg-[#121316] border border-[rgba(255,255,255,0.08)] flex flex-col sm:flex-row justify-between text-[11px] text-[#8d9099] gap-1">

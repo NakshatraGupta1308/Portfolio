@@ -46,11 +46,12 @@ const RESUME_DATA = {
     role: "Computer Engineering Student (2+2 Transfer · Nirma BS CSE to Iowa State BS CE)",
     institution: "Iowa State University",
     location: "Ames, Iowa, United States",
-    email: "ng1308@iastate.edu",
+    email: "nixngaps@gmail.com",
+    academicEmail: "ng1308@iastate.edu",
     phone: "+1 515-916-2251",
     targetTerm: "Computer Science / Computer Engineering Internships · Fall 2026 & Beyond",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
+    linkedin: "https://www.linkedin.com/in/nakshatra-gupta-13aug2005",
+    github: "https://github.com/NakshatraGupta1308",
     portfolioUrl: "https://wondrous-druid-2535ff.netlify.app/"
   },
   education: [
@@ -323,7 +324,8 @@ Here is the factual profile and background on Nakshatra Gupta:
 - Qualifications & Strengths: Nakshatra knows principles of software engineering and has a strong hold over software development (full-stack web development, Android applications, backend systems, and interactive graphics). His projects are primarily software-focused (Calmify, Rangam Graphics, NASA SpaceApps), with CyBot serving as his foundational embedded hardware lab. He is interested in jobs related to software rather than hardware.
 - Availability: Actively interviewing for Computer Science / Computer Engineering Internships and Co-ops for Fall 2026, and full-time opportunities post-graduation (May 2027). Open to relocation across the US.
 - Location: Ames, Iowa.
-- Contact: ng1308@iastate.edu | +1 515-916-2251.
+- Contact: Email: nixngaps@gmail.com | Academic Email: ng1308@iastate.edu | Phone: +1 515-916-2251.
+- Profiles: GitHub: https://github.com/NakshatraGupta1308 | LinkedIn: https://www.linkedin.com/in/nakshatra-gupta-13aug2005.
 - Current Roles: ISSO Office Assistant at Iowa State University (processing I-9 verifications, SUNAPSIS) and Dining Student Worker.
 - Key Projects (Software First):
   1. Calmify: Native Android mental health platform built in a 4-person Agile sprint for COMS 3090 at Iowa State University (Java, Spring Boot, MySQL, WebSockets with typing indicators & read receipts, 30+ activities, role-based auth, AI assistant, video demo on YouTube).
@@ -356,8 +358,8 @@ Visitor Question: "${question}"`;
         fallbackReply = "Nakshatra's flagship projects include Calmify (a native Android mental wellness platform with Spring Boot and WebSockets), Rangam Graphics (a commercial production web platform), NASA SpaceApps (3D WebGL Keplerian orbit simulation), and CyBot (an autonomous rover on TI Tiva TM4C123 bare-metal C).";
       } else if (q.includes("skill") || q.includes("language") || q.includes("c ") || q.includes("rust") || q.includes("python")) {
         fallbackReply = "Nakshatra's technical stack spans Java, Python, TypeScript, JavaScript, HTML/CSS, C, Android SDK, Spring Boot, WebSockets, MySQL, Three.js/WebGL, and TI TM4C123 ARM Cortex-M4.";
-      } else if (q.includes("contact") || q.includes("email") || q.includes("hire") || q.includes("reach")) {
-        fallbackReply = "You can reach Nakshatra directly via academic email at ng1308@iastate.edu, phone at +1 515-916-2251, or by submitting a dispatch in the Contact section of this portfolio.";
+      } else if (q.includes("contact") || q.includes("email") || q.includes("hire") || q.includes("reach") || q.includes("github") || q.includes("linkedin")) {
+        fallbackReply = "You can reach Nakshatra directly at nixngaps@gmail.com, connect on LinkedIn (linkedin.com/in/nakshatra-gupta-13aug2005), view his GitHub (github.com/NakshatraGupta1308), or call +1 515-916-2251.";
       }
 
       return res.json({ reply: fallbackReply });
@@ -365,7 +367,7 @@ Visitor Question: "${question}"`;
   } catch (error: any) {
     console.error("[GEMINI ASSISTANT ERROR]", error);
     return res.json({
-      reply: "Nakshatra Gupta is a Computer Engineering undergraduate at Iowa State University (2+2 transfer from Nirma University BS CSE) with strong software development skills and principles of software engineering, available for Fall 2026 roles. Please reach out to ng1308@iastate.edu."
+      reply: "Nakshatra Gupta is a Computer Engineering undergraduate at Iowa State University (2+2 transfer from Nirma University BS CSE) with strong software development skills and principles of software engineering, available for Fall 2026 roles. Please reach out to nixngaps@gmail.com."
     });
   }
 });

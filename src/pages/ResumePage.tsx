@@ -20,7 +20,8 @@ Computer Engineering Student (2+2 Transfer: Nirma University BS CSE -> Iowa Stat
 Knows principles of software engineering with strong hold over software development
 Location: Ames, Iowa
 Target: Fall 2026 & Beyond (Computer Science / Computer Engineering Internships & Co-ops)
-Email: ng1308@iastate.edu | Phone: +1 515-916-2251
+Email: nixngaps@gmail.com | Phone: +1 515-916-2251
+GitHub: https://github.com/NakshatraGupta1308 | LinkedIn: https://www.linkedin.com/in/nakshatra-gupta-13aug2005
 
 EDUCATION:
 - Iowa State University (Ames, Iowa)
