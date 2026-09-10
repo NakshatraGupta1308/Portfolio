@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import kardThumbnail from '../assets/kard-thumbnail.svg';
 
 export const OverviewPage: React.FC = () => {
   return (
@@ -494,7 +495,17 @@ export const OverviewPage: React.FC = () => {
                     <img
                       alt="KARD - The Multiplayer Card Game Preview"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      src="/assets/kard-thumbnail.svg"
+                      src={kardThumbnail}
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (!target.dataset.fallback) {
+                          target.dataset.fallback = '1';
+                          target.src = './assets/kard-thumbnail.svg';
+                        } else if (target.dataset.fallback === '1') {
+                          target.dataset.fallback = '2';
+                          target.src = 'https://raw.githubusercontent.com/NakshatraGupta1308/Portfolio/main/public/assets/kard-thumbnail.svg';
+                        }
+                      }}
                     />
                   </div>
                   <div className="p-2 flex justify-between items-center text-[#52545d] font-mono text-[11px]">
