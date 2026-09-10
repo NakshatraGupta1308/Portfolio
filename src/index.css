@@ -153,3 +153,17 @@
   font-weight: 500;
 }
 
+/* Hardware Reticle Custom Cursor rules on desktop fine-pointer devices */
+@media (pointer: fine) {
+  html.has-hardware-cursor,
+  html.has-hardware-cursor body,
+  html.has-hardware-cursor a,
+  html.has-hardware-cursor button,
+  html.has-hardware-cursor [role="button"],
+  html.has-hardware-cursor select,
+  html.has-hardware-cursor input[type="submit"],
+  html.has-hardware-cursor input[type="button"] {
+    cursor: none !important;
+  }
+}
+

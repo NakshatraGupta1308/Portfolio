@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { soundEngine } from '../utils/audioFeedback';
 
 interface NavigationHeaderProps {
   onToggleQnA?: () => void;
@@ -9,6 +10,12 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({ onToggleQnA 
   const location = useLocation();
   const currentPath = location.pathname;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [sfxMuted, setSfxMuted] = useState(() => soundEngine.getMuted());
+
+  const handleToggleSfx = () => {
+    const newMuted = soundEngine.toggleMute();
+    setSfxMuted(newMuted);
+  };
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-[#090a0c]/90 backdrop-blur-md border-b border-[rgba(255,255,255,0.12)]">
@@ -72,6 +79,19 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({ onToggleQnA 
 
         {/* Right Status Indicator & Quick Q&A & Profile Avatar */}
         <div className="flex items-center gap-3 shrink-0">
+          {/* Tactile Audio Feedback Toggle */}
+          <button
+            onClick={handleToggleSfx}
+            className="flex items-center gap-1.5 px-2 py-1 bg-[#121316] border border-[rgba(255,255,255,0.1)] hover:border-[#ff2a3b]/50 text-[#8d9099] hover:text-[#ffffff] text-[11px] font-mono tracking-wider transition-all cursor-pointer"
+            title={sfxMuted ? 'Unmute tactical drum click sound' : 'Mute tactical drum click sound'}
+            aria-label="Toggle drum click sound feedback"
+          >
+            <span className={`material-symbols-outlined text-[14px] ${sfxMuted ? 'text-[#52545d]' : 'text-[#ff2a3b]'}`}>
+              {sfxMuted ? 'volume_off' : 'volume_up'}
+            </span>
+            <span className="hidden sm:inline">{sfxMuted ? 'SFX: OFF' : 'SFX: ON'}</span>
+          </button>
+
           {/* Quick Q&A Trigger */}
           {onToggleQnA && (
             <button
@@ -155,6 +175,15 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({ onToggleQnA 
               <span>Quick Q&amp;A / FAQ</span>
             </button>
           )}
+          <button
+            onClick={handleToggleSfx}
+            className="w-full text-left py-2 text-[#8d9099] hover:text-[#ffffff] flex items-center gap-2 cursor-pointer border-t border-[rgba(255,255,255,0.06)] pt-3"
+          >
+            <span className={`material-symbols-outlined text-sm ${sfxMuted ? 'text-[#52545d]' : 'text-[#ff2a3b]'}`}>
+              {sfxMuted ? 'volume_off' : 'volume_up'}
+            </span>
+            <span>{sfxMuted ? 'Tactile Sound Effects: OFF' : 'Tactile Sound Effects: ON (Light Drum Kick)'}</span>
+          </button>
         </div>
       )}
     </header>

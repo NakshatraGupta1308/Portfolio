@@ -7,6 +7,7 @@ import { OverviewPage } from './pages/OverviewPage';
 import { ProjectsPage } from './pages/ProjectsPage';
 import { ResumePage } from './pages/ResumePage';
 import { ContactPage } from './pages/ContactPage';
+import { HardwareReticleCursor } from './components/HardwareReticleCursor';
 
 // Scroll to top helper on route change
 function ScrollToTop() {
@@ -23,6 +24,7 @@ export default function App() {
   return (
     <HashRouter>
       <ScrollToTop />
+      <HardwareReticleCursor />
       <div className="min-h-screen bg-[#090a0c] text-[#e3e2e5] font-body selection:bg-[#ff2a3b] selection:text-white flex flex-col justify-between">
         <NavigationHeader onToggleQnA={() => setIsQnAOpen(!isQnAOpen)} />
         
