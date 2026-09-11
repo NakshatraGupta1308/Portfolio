@@ -519,10 +519,10 @@ TECHNICAL SKILLS:
                           <span className="text-[#52545d]">/</span>
                           <span className="text-[#ffb3af] text-sm font-mono uppercase tracking-wider">3D Orbit Simulation</span>
                         </div>
-                        <div className="font-mono text-[13px] text-[#8d9099] pt-0.5">NASA Space Apps Hackathon Winner</div>
+                        <div className="font-mono text-[13px] text-[#8d9099] pt-0.5">NASA Space Apps Hackathon Project</div>
                       </div>
                       <div className="px-2 py-1 bg-[#0d0e10] text-[#ffb3af] font-mono text-[11px] uppercase shrink-0 sm:text-right border border-[rgba(255,255,255,0.06)]">
-                        Hackathon Winner
+                        Hackathon Project
                       </div>
                     </div>
                     <p className="font-body text-sm text-[#8d9099] leading-relaxed">

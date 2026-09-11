@@ -546,8 +546,8 @@ export const OverviewPage: React.FC = () => {
                   <span className="block font-mono text-[11px] text-[#ff2a3b] font-semibold">Orbit Simulation</span>
                 </div>
                 <div className="bg-[#121315] p-3 border border-[rgba(255,255,255,0.06)]">
-                  <span className="block font-mono text-[11px] text-[#52545d] uppercase">Honor</span>
-                  <span className="font-mono text-[13px] text-[#ffffff] font-semibold">SpaceApps Winner</span>
+                  <span className="block font-mono text-[11px] text-[#52545d] uppercase">Event</span>
+                  <span className="font-mono text-[13px] text-[#ffffff] font-semibold">NASA Hackathon</span>
                 </div>
               </div>
               <div className="flex flex-wrap items-center justify-between gap-4 pt-2 border-t border-[rgba(255,255,255,0.08)]">

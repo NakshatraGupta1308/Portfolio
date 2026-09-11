@@ -423,7 +423,7 @@ export const ProjectsPage: React.FC = () => {
                     </div>
                     <div className="flex items-center gap-2 font-mono text-[11px] text-[#52545d] uppercase">
                       <span>INDEX: 05 // 3D GRAPHICS &amp; SIMULATION</span>
-                      <span className="text-[#00ff66]">SPACEAPPS WINNER</span>
+                      <span className="text-[#00ff66]">HACKATHON BUILD</span>
                     </div>
                   </div>
                   <h2 className="font-display text-2xl sm:text-3xl text-[#ffffff] tracking-tight">
@@ -454,7 +454,7 @@ export const ProjectsPage: React.FC = () => {
 
                 <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-[rgba(255,255,255,0.08)]">
                   <div className="flex items-center gap-2 font-mono text-[11px] text-[#52545d] uppercase">
-                    <span>AWARD: NASA SPACEAPPS AMES REGIONAL</span>
+                    <span>EVENT: NASA SPACE APPS CHALLENGE</span>
                     <span>•</span>
                     <span>[EPHEMERIS] NASA JPL Horizons Trajectory Engine</span>
                   </div>
